@@ -20,14 +20,18 @@ public class ModelDirectionChange : MonoBehaviour
         _current = new Vector2();
         _default = GetComponent<SpriteRenderer>();
 
+        // basic
         _idle = Resources.Load<Sprite>(_default.sprite.name + "/Idle");
-        _faceLeft = Resources.Load<Sprite>(_default.sprite.name + "/Left");
-        _faceUpLeft = Resources.Load<Sprite>(_default.sprite.name + "/UpLeft");
         _faceUp = Resources.Load<Sprite>(_default.sprite.name + "/Up");
+        _faceDown = Resources.Load<Sprite>(_default.sprite.name + "/Down");
+        _faceRight = Resources.Load<Sprite>(_default.sprite.name + "/Right");
+        _faceLeft = Resources.Load<Sprite>(_default.sprite.name + "/Left");
+
+        // optional
+        _faceUpLeft = Resources.Load<Sprite>(_default.sprite.name + "/UpLeft");
         _faceUpRight = Resources.Load<Sprite>(_default.sprite.name + "/UpRight");
         _faceRight = Resources.Load<Sprite>(_default.sprite.name + "/Right");
-        _faceDownRight = Resources.Load<Sprite>(_default.sprite.name + "/DownRight");
-        _faceDown = Resources.Load<Sprite>(_default.sprite.name + "/Down");
+        _faceDownRight = Resources.Load<Sprite>(_default.sprite.name + "/DownRight");      
         _faceDownLeft = Resources.Load<Sprite>(_default.sprite.name + "/DownLeft");
     }
 
