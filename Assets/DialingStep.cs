@@ -11,7 +11,7 @@ public class DialingStep : MonoBehaviour {
 	    _manager = DialingManager.Find();
 	}
 
-    void OnMouseDown() {
+    void OnMouseUp() {
         Debug.Log("Rune clicked");
         _manager.SetSlot(name);
     }
