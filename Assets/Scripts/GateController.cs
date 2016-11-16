@@ -1,18 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using Assets;
+using Fungus;
 
 public class GateController : MonoBehaviour {
     public GameObject connectedGate;
-    private GateSystem _gateSystem;
     public string address;
 
+    private GateSystem _gateSystem;
+    private GameObject _player;
+    private DialingManager _dialingManager;
+
     void Start() {
-        var gateSystemObjects = GameObject.FindGameObjectsWithTag("GateSystem");
-        Debug.Assert(gateSystemObjects.Length == 1, "There should be only one GateSystem object");
-
-        _gateSystem = gateSystemObjects[0].GetComponent<GateSystem>();
-        Debug.Assert(_gateSystem != null, "Found a GateSystem object without the appropriate script.");
-
+        _gateSystem = GateSystem.FindGateSystem();
         _gateSystem.ConnectGate(address, this);
+
+        _player = GameObject.FindGameObjectWithTag("Player");
+        Debug.Assert(_player != null, "Player is missing!");
+
+        _dialingManager = GetComponentsInChildren<DialingManager>().FirstOrDefault();
+        Debug.Assert(_dialingManager != null, "Dialing Manager is missing!");
+    }
+
+    void OnMouseUp() {
+        Debug.Log("Klikam");
+        _dialingManager.Activate(_player); 
     }
 }

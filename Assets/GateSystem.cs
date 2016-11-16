@@ -22,4 +22,14 @@ public class GateSystem : MonoBehaviour {
             return false;
         }
     }
+
+    public static GateSystem FindGateSystem() {
+        var gateSystemObjects = GameObject.FindGameObjectsWithTag("GateSystem");
+        Debug.Assert(gateSystemObjects.Length == 1, "There should be only one GateSystem object");
+
+        var _gateSystem = gateSystemObjects[0].GetComponent<GateSystem>();
+        Debug.Assert(_gateSystem != null, "Found a GateSystem object without the appropriate script.");
+
+        return _gateSystem;
+    }
 }
