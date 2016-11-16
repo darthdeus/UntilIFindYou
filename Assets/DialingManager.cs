@@ -25,10 +25,13 @@ namespace Assets {
 
             if (CurrentAddress.Length == 5) {
                 Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
-                _gateSystem.DialAndMoveAddress(_player, CurrentAddress);
-                Debug.Log("FINAL ADDRESS: " + CurrentAddress);
+                if (_gateSystem.DialAndMoveAddress(_player, CurrentAddress)) {
+                    Debug.Log("Address dialed successfully " + CurrentAddress);
+                } else {
+                    Debug.Log("Invalid address " + CurrentAddress);
+                }
                 CurrentAddress = "";
-            } 
+            }
         }
 
         public static DialingManager Find() {
