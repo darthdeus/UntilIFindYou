@@ -7,13 +7,12 @@ public class DialingStep : MonoBehaviour {
     private DialingManager _manager;
     public string name;
     
-
-	// Use this for initialization
 	void Start () {
-	    _manager = GetComponentsInParent<DialingManager>().FirstOrDefault();
+	    _manager = DialingManager.Find();
 	}
 
     void OnMouseDown() {
+        Debug.Log("Rune clicked");
         _manager.SetSlot(name);
     }
 }
