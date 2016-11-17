@@ -22,7 +22,7 @@ public class AnimationTrigger : MonoBehaviour
     private IEnumerator PlayAnimation()
     {
         // Set random amount of seconds after which the animation will start
-        int range = 20;
+        int range = 10;
         float seconds = (float) Random.NextDouble() * range;
 
         // Suspending the execution for given time
