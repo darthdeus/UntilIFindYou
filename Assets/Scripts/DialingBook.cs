@@ -4,26 +4,43 @@ using System.Threading;
 using UnityEngine;
 
 namespace Assets {
-    public class DialingManager : MonoBehaviour {
+    public class DialingBook : MonoBehaviour {
         public string CurrentAddress;
         private GateSystem _gateSystem;
         private GameObject _player;
-        private AudioSource _audio;
+        private AudioSource _success;
+        private AudioSource _failure;
         private bool _readyToGo = false;
 
         void Start() {
             _gateSystem = GateSystem.Find();
-            _audio = GetComponent<AudioSource>();
+            var sounds = GetComponents<AudioSource>();
+
+            foreach (var sound in sounds) {
+                if (sound.clip.name == "Success") {
+                    _success = sound;
+                } else if (sound.clip.name == "Error") {
+                    _failure = sound;
+                }
+            }
+
             SetVisible(false);
         }
 
         void Update()
         {
-            if (!_audio.isPlaying && _readyToGo && _player != null)
+            // GATE TRAVELING
+            if (!_success.isPlaying && _readyToGo && _player != null)
             {
                 _gateSystem.DialAndMoveAddress(_player, CurrentAddress);
                 _readyToGo = false;
                 CurrentAddress = "";
+                SetVisible(false);
+
+                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
+                {
+                    renderer.material.color = Color.white;
+                }
             }
         }
 
@@ -32,8 +49,8 @@ namespace Assets {
             SetVisible(true);
 
             var x = _player.transform.position.x;
-            var z = _player.transform.position.z;
-            gameObject.transform.position = new Vector3(x, gameObject.transform.position.y, z);
+            var y = _player.transform.position.y;
+            gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
         }
 
         public void SetSlot(string slot) {
@@ -44,22 +61,23 @@ namespace Assets {
                 Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
 
                 if (_gateSystem.CheckCorrectAddress(CurrentAddress)) {
-                    _audio.Play();
+                    _success.Play();
                     _readyToGo = true;
+                    //GetComponent<SpriteRenderer>().material.color = Color.green;
                 } else {
                     CurrentAddress = "";
+                    _failure.Play();
                 }
-
                 SetVisible(false);
             }
         }
 
-        public static DialingManager Find() {
-            var objects = GameObject.FindGameObjectsWithTag("DialingManager");
-            Debug.Assert(objects.Length == 1, "There should be only one DialingManager");
+        public static DialingBook Find() {
+            var objects = GameObject.FindGameObjectsWithTag("DialingBook");
+            Debug.Assert(objects.Length == 1, "There should be only one DialingBook");
 
-            var manager = objects[0].GetComponent<DialingManager>();
-            Debug.Assert(manager != null, "Found a DialingManager without the appropriate component");
+            var manager = objects[0].GetComponent<DialingBook>();
+            Debug.Assert(manager != null, "Found a DialingBook without the appropriate component");
             return manager;
         }
 

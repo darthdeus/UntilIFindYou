@@ -9,7 +9,7 @@ public class GateController : MonoBehaviour {
 
     private GateSystem _gateSystem;
     private GameObject _player;
-    private DialingManager _dialingManager;
+    private DialingBook _dialingBook;
 
     void Start() {
         _gateSystem = GateSystem.Find();
@@ -18,11 +18,11 @@ public class GateController : MonoBehaviour {
         _player = GameObject.FindGameObjectWithTag("Player");
         Debug.Assert(_player != null, "Player is missing!");
 
-        _dialingManager = DialingManager.Find();
+        _dialingBook = DialingBook.Find();
     }
 
     void OnMouseUp() {
         Debug.Log("Gate clicked");
-        _dialingManager.Activate(_player); 
+        _dialingBook.Activate(_player); 
     }
 }
