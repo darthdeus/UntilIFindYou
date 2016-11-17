@@ -34,28 +34,20 @@ namespace Assets {
             {
                 _gateSystem.DialAndMoveAddress(_player, CurrentAddress);
                 _readyToGo = false;
-                CurrentAddress = "";
-                SetVisible(false);
-
-                foreach (var renderer in GetComponentsInChildren<SpriteRenderer>())
-                {
-                    renderer.material.color = Color.white;
-                }
+                
+                ResetBook();
+                ResetRunes();
             }
         }
 
         public void Activate(GameObject player) {
             _player = player;
             SetVisible(true);
-
-            var x = _player.transform.position.x;
-            var y = _player.transform.position.y;
-            gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
+            MoveBook();
         }
 
         public void SetSlot(string slot) {
             CurrentAddress += slot;
-            Debug.Log("Dialed: " + slot);
 
             if (CurrentAddress.Length == 5) {
                 Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
@@ -63,12 +55,12 @@ namespace Assets {
                 if (_gateSystem.CheckCorrectAddress(CurrentAddress)) {
                     _success.Play();
                     _readyToGo = true;
-                    //GetComponent<SpriteRenderer>().material.color = Color.green;
                 } else {
-                    CurrentAddress = "";
                     _failure.Play();
+                    ResetBook();
+                    ResetRunes();
                 }
-                SetVisible(false);
+                
             }
         }
 
@@ -81,11 +73,33 @@ namespace Assets {
             return manager;
         }
 
-        public void SetVisible(bool visible) {
+        // PRIVATE
+        private void SetVisible(bool visible) {
             GetComponent<SpriteRenderer>().enabled = visible;
-            foreach (var renderer in GetComponentsInChildren<SpriteRenderer>()) {
-                renderer.enabled = visible;
+            foreach (var r in GetComponentsInChildren<SpriteRenderer>()) {
+                r.enabled = visible;
             }
+        }
+
+        private void ResetRunes()
+        {
+            foreach (var r in GetComponentsInChildren<SpriteRenderer>())
+            {
+                r.material.color = Color.white;
+            }
+        }
+
+        private void ResetBook()
+        {
+            CurrentAddress = "";
+            SetVisible(false);
+        }
+
+        private void MoveBook()
+        {
+            var x = _player.transform.position.x;
+            var y = _player.transform.position.y;
+            gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
         }
     }
 }

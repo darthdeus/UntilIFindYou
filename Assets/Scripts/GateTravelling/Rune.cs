@@ -24,8 +24,6 @@ public class Rune : MonoBehaviour {
     }
 
     void OnMouseUp() {
-        Debug.Log("Rune clicked");
-
         GetComponent<SpriteRenderer>().material.color = Color.red;
 
         if (_book.CurrentAddress.Length < 4) {
