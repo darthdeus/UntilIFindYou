@@ -23,6 +23,15 @@ public class GateSystem : MonoBehaviour {
         }
     }
 
+    public bool CheckCorrectAddress(string address)
+    {
+        if (_connectedGates.ContainsKey(address)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static GateSystem Find() {
         var gateSystemObjects = GameObject.FindGameObjectsWithTag("GateSystem");
         Debug.Assert(gateSystemObjects.Length == 1, "There should be only one GateSystem object");
