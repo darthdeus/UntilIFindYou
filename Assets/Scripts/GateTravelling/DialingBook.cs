@@ -38,20 +38,6 @@ namespace Assets {
                 ResetBook();
                 ResetRunes();
             }
-
-            //RaycastHit hit = new RaycastHit();
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            //Debug.DrawRay(ray.origin, ray.direction);
-
-            //if (Physics.Raycast(ray, out hit))
-            //{
-
-            //    if (hit.collider.gameObject == this.gameObject) {       
-            //        ResetBook();
-            //        ResetRunes();
-            //    }
-            //}
         }
 
         public void Activate(GameObject player) {

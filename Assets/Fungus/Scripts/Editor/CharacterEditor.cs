@@ -35,7 +35,7 @@ namespace Fungus.EditorUtils
 
             Character t = target as Character;
 
-            EditorGUILayout.PropertyField(nameTextProp, new GUIContent("Name Text", "RuneName of the character display in the dialog"));
+            EditorGUILayout.PropertyField(nameTextProp, new GUIContent("Name Text", "Name of the character display in the dialog"));
             EditorGUILayout.PropertyField(nameColorProp, new GUIContent("Name Color", "Color of name text display in the dialog"));
             EditorGUILayout.PropertyField(soundEffectProp, new GUIContent("Sound Effect", "Sound to play when the character is talking. Overrides the setting in the Dialog."));
             EditorGUILayout.PropertyField(setSayDialogProp);
