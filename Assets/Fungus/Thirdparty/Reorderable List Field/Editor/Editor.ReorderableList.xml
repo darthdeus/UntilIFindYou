@@ -787,7 +787,7 @@
       <summary>
             Call to manually perform command.
             </summary>
-      <param name="commandName">Name of command. This is the text shown in the context menu.</param>
+      <param name="commandRuneName">Name of command. This is the text shown in the context menu.</param>
       <param name="itemIndex">Zero-based index of item which was right-clicked.</param>
       <param name="adaptor">Reorderable list adaptor.</param>
       <returns>
@@ -881,7 +881,7 @@
       <summary>
             Invoked to handle context command.
             </summary>
-      <param name="commandName">Name of command. This is the text shown in the context menu.</param>
+      <param name="commandRuneName">Name of command. This is the text shown in the context menu.</param>
       <param name="itemIndex">Zero-based index of item which was right-clicked.</param>
       <param name="adaptor">Reorderable list adaptor.</param>
       <returns>

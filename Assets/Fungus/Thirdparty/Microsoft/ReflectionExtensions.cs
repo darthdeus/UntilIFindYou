@@ -281,7 +281,7 @@ namespace MarkerMetro.Unity.WinLegacy.Reflection
             var props = type.GetProperties(bindingAttr);
             if (!props.Any()) return null;
             return props.FirstOrDefault(f => bindingAttr.HasFlag(BindingFlags.IgnoreCase) ?
-                f.Name.ToLower() == name.ToLower() : f.Name == name);
+                f.Name.ToLower() == name.ToLower() : f.RuneName == name);
 #else
             throw new NotImplementedException();
 #endif
