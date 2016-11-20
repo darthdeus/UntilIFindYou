@@ -5,9 +5,10 @@ using Assets;
 
 public class Rune : MonoBehaviour {
     private DialingBook _book;
-    public string name;
+    public string RuneName;
     private AudioSource _sound;
-    
+    private bool _alreadyClicked = false;
+
 	void Start () {
 	    _book = DialingBook.Find();
         var sounds = GetComponentsInParent<AudioSource>();
@@ -24,12 +25,22 @@ public class Rune : MonoBehaviour {
     }
 
     void OnMouseUp() {
-        GetComponent<SpriteRenderer>().material.color = Color.red;
 
         if (_book.CurrentAddress.Length < 4) {
             _sound.Play();
         }
+
+        if (_alreadyClicked) {
+            _book.UnsetSlot();
+            _alreadyClicked = false;
+
+            GetComponent<SpriteRenderer>().material.color = Color.white;
+        } else {
+            _book.SetSlot(RuneName);
+            _alreadyClicked = true;
+
+            GetComponent<SpriteRenderer>().material.color = Color.red;
+        }
         
-        _book.SetSlot(name);
     }
 }

@@ -48,6 +48,7 @@ namespace Assets {
 
         public void SetSlot(string slot) {
             CurrentAddress += slot;
+            Debug.Log(String.Format("SETING: {0}", CurrentAddress));
 
             if (CurrentAddress.Length == 5) {
                 Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
@@ -62,6 +63,15 @@ namespace Assets {
                 }
                 
             }
+        }
+
+        public void UnsetSlot()
+        {
+            if (CurrentAddress.Length > 0) {
+                CurrentAddress = CurrentAddress.Substring(0, CurrentAddress.Length - 1);
+            }
+
+            Debug.Log(String.Format("UNSETING: {0}", CurrentAddress));
         }
 
         public static DialingBook Find() {
