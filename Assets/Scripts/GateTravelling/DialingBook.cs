@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Threading;
 using UnityEngine;
 
 namespace Assets {
@@ -48,7 +46,7 @@ namespace Assets {
 
         public void SetSlot(string slot) {
             CurrentAddress += slot;
-            Debug.Log(String.Format("SETING: {0}", CurrentAddress));
+            Debug.Log(String.Format("SETTING: {0}", CurrentAddress));
 
             if (CurrentAddress.Length == 5) {
                 Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
@@ -71,7 +69,7 @@ namespace Assets {
                 CurrentAddress = CurrentAddress.Substring(0, CurrentAddress.Length - 1);
             }
 
-            Debug.Log(String.Format("UNSETING: {0}", CurrentAddress));
+            Debug.Log(String.Format("UNSETTING: {0}", CurrentAddress));
         }
 
         public static DialingBook Find() {
@@ -96,6 +94,11 @@ namespace Assets {
             foreach (var r in GetComponentsInChildren<SpriteRenderer>())
             {
                 r.material.color = Color.white;
+            }
+
+            foreach (var rune in GetComponentsInChildren<Rune>())
+            {
+                rune.Reset();
             }
         }
 
