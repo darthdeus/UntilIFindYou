@@ -13,4 +13,6 @@
 	// The description of the quest - more information about the goal in general.
 	void GetNumberOfTasks(out int TotalTaskNumber,out int FinishedTaskNumber);
 	// Gets number of finished tasks and tasks in total.
+	void MakeCompletable();
+	// Makes the quest capable of being completed (mostly by setting its status to true)
 }

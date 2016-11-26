@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Fungus;
 using System.Collections.Generic;
+using System;
 
 public abstract class Quest : MonoBehaviour, IQuest, IStatus {
 
@@ -50,4 +51,6 @@ public List<Task> Tasks;
 		}
     }
 	public abstract void UpdateStatus();
+
+    public void MakeCompletable() { QuestChart.SetBooleanVariable("Status", true); }
 }

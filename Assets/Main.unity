@@ -136,6 +136,176 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46b710e74bc21d141b9a8a741cbf9cd4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &47977531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 142980, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 47977532}
+  - 114: {fileID: 47977539}
+  - 114: {fileID: 47977538}
+  - 114: {fileID: 47977537}
+  - 114: {fileID: 47977536}
+  - 114: {fileID: 47977535}
+  - 114: {fileID: 47977534}
+  - 114: {fileID: 47977533}
+  m_Layer: 0
+  m_Name: FirstQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &47977532
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 467082, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.614538, y: -12.149528, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1271280728}
+  m_RootOrder: 0
+--- !u!114 &47977533
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Description
+  value: Teleport to Lava Planet
+--- !u!114 &47977534
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4580f28dd8581476b810b38eea2f1316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Title
+  value: Your First Journey
+--- !u!114 &47977535
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Active
+  value: 0
+--- !u!114 &47977536
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Completed
+  value: 0
+--- !u!114 &47977537
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 1
+  key: Status
+  value: 0
+--- !u!114 &47977538
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 11433304, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 188
+    y: 64
+    width: 120
+    height: 40
+  itemId: 0
+  blockName: FirstQuest
+  description: 
+  eventHandler: {fileID: 0}
+  commandList: []
+--- !u!114 &47977539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 868
+  selectedBlock: {fileID: 47977538}
+  selectedCommands: []
+  variables:
+  - {fileID: 47977537}
+  - {fileID: 47977536}
+  - {fileID: 47977535}
+  - {fileID: 47977534}
+  - {fileID: 47977533}
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
 --- !u!1 &51121285
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +465,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011154034186, guid: 2149cc9a3544a0d4e99725b77a43fc9d,
     type: 2}
   m_PrefabInternal: {fileID: 235448752}
+--- !u!114 &166136618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166136611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3282d2debeac9b945b3d520dacaf5aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quests: []
 --- !u!4 &218467870 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014098227110, guid: 46b710e74bc21d141b9a8a741cbf9cd4,
@@ -868,6 +1050,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000011972475028, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010861249694, guid: 41a120045a9ed624daea2c7f5320cf33, type: 2}
       propertyPath: m_LocalPosition.x
       value: -22.614538
@@ -904,8 +1096,44 @@ Prefab:
         type: 2}
       propertyPath: selectedBlock
       value: 
-      objectReference: {fileID: 1003618185}
-    m_RemovedComponents: []
+      objectReference: {fileID: 1003618177}
+    - target: {fileID: 114000011972475028, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1003618187}
+    - target: {fileID: 114000011972475028, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1003618187}
+    - target: {fileID: 114000011306246578, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: selectedCommands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1003618187}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1003618188}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1003618178}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1003618152}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1003618182}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 41a120045a9ed624daea2c7f5320cf33, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &884951354
@@ -1556,6 +1784,8 @@ GameObject:
   - 114: {fileID: 1003618155}
   - 114: {fileID: 1003618154}
   - 114: {fileID: 1003618153}
+  - 114: {fileID: 1003618187}
+  - 114: {fileID: 1003618188}
   - 114: {fileID: 1003618152}
   m_Layer: 0
   m_Name: SandPlanetNPC
@@ -1580,22 +1810,17 @@ Transform:
   m_RootOrder: 0
 --- !u!114 &1003618152
 MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 114000012858881672, guid: 41a120045a9ed624daea2c7f5320cf33,
-    type: 2}
-  m_PrefabInternal: {fileID: 858648046}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003618150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 32
+  itemId: 35
   indentLevel: 0
-  targetFlowchart: {fileID: 967317544}
-  targetBlock: {fileID: 967317532}
-  startIndex: 0
-  callMode: 0
 --- !u!114 &1003618153
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2208,7 +2433,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1003618152}
+  - {fileID: 1003618187}
 --- !u!114 &1003618178
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2222,7 +2447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 6
-  indentLevel: 0
+  indentLevel: 1
   text: Quest
   description: 
   targetBlock: {fileID: 1003618177}
@@ -2391,7 +2616,9 @@ MonoBehaviour:
   eventHandler: {fileID: 1003618184}
   commandList:
   - {fileID: 1003618183}
+  - {fileID: 1003618188}
   - {fileID: 1003618178}
+  - {fileID: 1003618152}
   - {fileID: 1003618182}
   - {fileID: 1003618181}
 --- !u!114 &1003618186
@@ -2418,7 +2645,7 @@ MonoBehaviour:
     y: -387
     width: 1443.0698
     height: 1081.5789
-  selectedBlock: {fileID: 1003618185}
+  selectedBlock: {fileID: 1003618177}
   selectedCommands: []
   variables: []
   description: 
@@ -2431,6 +2658,50 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &1003618187
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  targetFlowchart: {fileID: 47977539}
+  targetBlock: {fileID: 47977538}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1003618188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 47977536}
+  booleanData:
+    booleanRef: {fileID: 47977535}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1001 &1076558613
 Prefab:
   m_ObjectHideFlags: 0
@@ -2646,6 +2917,7 @@ Transform:
   m_Children:
   - {fileID: 1003618151}
   - {fileID: 967317528}
+  - {fileID: 1271280728}
   m_Father: {fileID: 0}
   m_RootOrder: 11
 --- !u!4 &1251813637 stripped
@@ -2653,6 +2925,35 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010087956206, guid: 45e584035a5c2c14ba4e9e178e99af7e,
     type: 2}
   m_PrefabInternal: {fileID: 786018498}
+--- !u!1 &1271280727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1271280728}
+  m_Layer: 0
+  m_Name: QuestCharts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1271280728
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271280727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 47977532}
+  m_Father: {fileID: 1248974226}
+  m_RootOrder: 2
 --- !u!4 &1278927731 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014098227110, guid: 46b710e74bc21d141b9a8a741cbf9cd4,

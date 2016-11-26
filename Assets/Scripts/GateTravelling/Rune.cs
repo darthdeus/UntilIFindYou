@@ -35,20 +35,20 @@ public class Rune : MonoBehaviour
             }
 
             if (_book.CurrentAddress.Length < 5)
-            if (_alreadyClicked)
-            {
-                _book.UnsetSlot();
-                _alreadyClicked = false;
+                if (_alreadyClicked)
+                {
+                    _book.UnsetSlot();
+                    _alreadyClicked = false;
 
-                GetComponent<SpriteRenderer>().material.color = Color.white;
-            }
-            else
-            {
-                _book.SetSlot(RuneName);
-                _alreadyClicked = true;
+                    GetComponent<SpriteRenderer>().material.color = Color.white;
+                }
+                else
+                {
+                    _book.SetSlot(RuneName);
+                    _alreadyClicked = true;
 
-                GetComponent<SpriteRenderer>().material.color = Color.red;
-            }
+                    GetComponent<SpriteRenderer>().material.color = Color.red;
+                }
         }
     }
     public void Reset()
