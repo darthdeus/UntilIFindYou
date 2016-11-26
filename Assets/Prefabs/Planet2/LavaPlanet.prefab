@@ -446,7 +446,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013683717932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: -0.77, z: 0}
+  m_LocalPosition: {x: -7.692325, y: 0.20023286, z: 0}
   m_LocalScale: {x: 9.647369, y: 9.647369, z: 1.2059212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1105,6 +1105,7 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 1
   waitTime: 5
+  canMove: 0
 --- !u!114 &114000010198727676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1132,6 +1133,7 @@ MonoBehaviour:
   isWalking: 0
   walkTime: 4
   waitTime: 1
+  canMove: 0
 --- !u!212 &212000010630265168
 SpriteRenderer:
   m_ObjectHideFlags: 1
