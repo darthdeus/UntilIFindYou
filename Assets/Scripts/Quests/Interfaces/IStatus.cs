@@ -5,4 +5,5 @@
 	string GetProgress(); 
 	// Returns a string giving player the information about progress. 
 	// ("3/5 Wood Collected", "Seek help in village", "Seek help in village (Completed)")
+	void UpdateStatus();
 }
