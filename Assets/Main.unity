@@ -151,8 +151,22 @@ GameObject:
   - 114: {fileID: 47977535}
   - 114: {fileID: 47977534}
   - 114: {fileID: 47977533}
+  - 114: {fileID: 47977541}
+  - 114: {fileID: 47977549}
+  - 114: {fileID: 47977548}
+  - 114: {fileID: 47977547}
+  - 114: {fileID: 47977546}
+  - 114: {fileID: 47977545}
+  - 114: {fileID: 47977544}
+  - 114: {fileID: 47977543}
+  - 114: {fileID: 47977553}
+  - 114: {fileID: 47977552}
+  - 114: {fileID: 47977551}
+  - 114: {fileID: 47977550}
+  - 114: {fileID: 47977542}
+  - 114: {fileID: 47977540}
   m_Layer: 0
-  m_Name: FirstQuest
+  m_Name: Your First Journey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,7 +182,10 @@ Transform:
   m_LocalPosition: {x: 22.614538, y: -12.149528, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 1131270125}
+  - {fileID: 1933136195}
+  - {fileID: 1089302702}
   m_Father: {fileID: 1271280728}
   m_RootOrder: 0
 --- !u!114 &47977533
@@ -255,15 +272,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 188
-    y: 64
-    width: 120
+    x: 198.95454
+    y: 36
+    width: 145
     height: 40
   itemId: 0
-  blockName: FirstQuest
+  blockName: YourFirstJourney
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 47977541}
+  - {fileID: 47977549}
+  - {fileID: 47977548}
+  - {fileID: 47977547}
 --- !u!114 &47977539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,14 +302,14 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.88000005
   scrollViewRect:
     serializedVersion: 2
-    x: -343
-    y: -340
-    width: 1114
-    height: 868
-  selectedBlock: {fileID: 47977538}
+    x: -350
+    y: -364
+    width: 1217.3636
+    height: 892
+  selectedBlock: {fileID: 47977546}
   selectedCommands: []
   variables:
   - {fileID: 47977537}
@@ -306,6 +327,338 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &47977540
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  indentLevel: 0
+  targetFlowchart: {fileID: 967317544}
+  targetBlock: {fileID: 967317532}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &47977541
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  storyText: Our village is already almost out of resources. We will need to search
+    other planets soon...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977542
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  storyText: Wish you good luck!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977543
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  targetFlowchart: {fileID: 967317544}
+  targetBlock: {fileID: 967317532}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &47977544
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: I hope you die...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977545
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 347.36362
+    y: 83.68182
+    width: 120
+    height: 40
+  itemId: 10
+  blockName: No
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 47977544}
+  - {fileID: 47977543}
+--- !u!114 &47977546
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 53.40909
+    y: 81.81818
+    width: 120
+    height: 40
+  itemId: 9
+  blockName: Yes
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 47977553}
+  - {fileID: 47977552}
+  - {fileID: 47977550}
+  - {fileID: 47977551}
+  - {fileID: 47977542}
+  - {fileID: 47977540}
+--- !u!114 &47977547
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  text: No
+  description: 
+  targetBlock: {fileID: 47977545}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &47977548
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  text: Yes
+  description: 
+  targetBlock: {fileID: 47977546}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &47977549
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: Would you please travel to other planet and try finding some resources?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977550
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  storyText: Travelling to the next planet is pretty simple.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977551
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  storyText: Just press all the runes in the second row of first page from left to
+    right and then hit the first two runes of the first row.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977552
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: Thank you so much!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &47977553
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47977531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  variable: {fileID: 47977535}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1 &51121285
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3282d2debeac9b945b3d520dacaf5aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Quests: []
+  Quests:
+  - {fileID: 1131270126}
 --- !u!4 &218467870 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014098227110, guid: 46b710e74bc21d141b9a8a741cbf9cd4,
@@ -804,6 +1158,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012148112114, guid: 936820dc76e754a5fb70ae5df1fa28d0,
     type: 2}
   m_PrefabInternal: {fileID: 368957350}
+--- !u!114 &571580598 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010616363774, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+    type: 2}
+  m_PrefabInternal: {fileID: 1402071914}
+  m_Script: {fileID: 11500000, guid: 43712bb0a4ab1614c8026f8ee4bedcec, type: 3}
 --- !u!1 &625827768 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011632053382, guid: 45e584035a5c2c14ba4e9e178e99af7e,
@@ -814,6 +1174,33 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010087956206, guid: 45e584035a5c2c14ba4e9e178e99af7e,
     type: 2}
   m_PrefabInternal: {fileID: 1499508307}
+--- !u!114 &625827773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625827768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef1ce5021e415742a07bf20b0896ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AssociatedQuest: {fileID: 1131270126}
+  AssociatedTask: {fileID: 1089302703}
+--- !u!114 &625827774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625827768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e48cc604f5c8e4bb4c7cbe7d67736f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AssociatedQuest: {fileID: 1131270126}
+  AssociatedTask: {fileID: 1933136196}
+  DialingBook: {fileID: 571580598}
 --- !u!1 &642581400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,6 +1447,16 @@ Prefab:
       propertyPath: commandList.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010674271876, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011306246578, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010861249694, guid: 41a120045a9ed624daea2c7f5320cf33, type: 2}
       propertyPath: m_LocalPosition.x
       value: -22.614538
@@ -1111,27 +1508,82 @@ Prefab:
         type: 2}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 1003618187}
+      objectReference: {fileID: 1003618154}
     - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
         type: 2}
       propertyPath: commandList.Array.data[1]
       value: 
-      objectReference: {fileID: 1003618188}
+      objectReference: {fileID: 1003618178}
     - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
         type: 2}
       propertyPath: commandList.Array.data[2]
       value: 
-      objectReference: {fileID: 1003618178}
+      objectReference: {fileID: 1003618152}
     - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
         type: 2}
       propertyPath: commandList.Array.data[3]
       value: 
-      objectReference: {fileID: 1003618152}
+      objectReference: {fileID: 1003618189}
     - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
         type: 2}
       propertyPath: commandList.Array.data[4]
       value: 
       objectReference: {fileID: 1003618182}
+    - target: {fileID: 114000010674271876, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1003618174}
+    - target: {fileID: 114000010674271876, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1003618154}
+    - target: {fileID: 114000010674271876, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1003618154}
+    - target: {fileID: 114000011306246578, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: blockViewHeight
+      value: 404
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[5]
+      value: 
+      objectReference: {fileID: 1003618181}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[6]
+      value: 
+      objectReference: {fileID: 1003618181}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: blockName
+      value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013640665182, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: commandList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1003618188}
+    - target: {fileID: 114000011306246578, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: zoom
+      value: 0.7554348
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012876587518, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: targetBlock
+      value: 
+      objectReference: {fileID: 1003618185}
+    - target: {fileID: 114000012876587518, guid: 41a120045a9ed624daea2c7f5320cf33,
+        type: 2}
+      propertyPath: text
+      value: <<<
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 41a120045a9ed624daea2c7f5320cf33, type: 2}
@@ -1752,8 +2204,6 @@ GameObject:
   - 4: {fileID: 1003618151}
   - 114: {fileID: 1003618186}
   - 114: {fileID: 1003618185}
-  - 114: {fileID: 1003618184}
-  - 114: {fileID: 1003618183}
   - 114: {fileID: 1003618182}
   - 114: {fileID: 1003618181}
   - 114: {fileID: 1003618180}
@@ -1787,6 +2237,30 @@ GameObject:
   - 114: {fileID: 1003618187}
   - 114: {fileID: 1003618188}
   - 114: {fileID: 1003618152}
+  - 114: {fileID: 1003618205}
+  - 114: {fileID: 1003618204}
+  - 114: {fileID: 1003618203}
+  - 114: {fileID: 1003618202}
+  - 114: {fileID: 1003618201}
+  - 114: {fileID: 1003618200}
+  - 114: {fileID: 1003618199}
+  - 114: {fileID: 1003618198}
+  - 114: {fileID: 1003618197}
+  - 114: {fileID: 1003618196}
+  - 114: {fileID: 1003618195}
+  - 114: {fileID: 1003618194}
+  - 114: {fileID: 1003618193}
+  - 114: {fileID: 1003618192}
+  - 114: {fileID: 1003618191}
+  - 114: {fileID: 1003618190}
+  - 114: {fileID: 1003618189}
+  - 114: {fileID: 1003618207}
+  - 114: {fileID: 1003618206}
+  - 114: {fileID: 1003618184}
+  - 114: {fileID: 1003618183}
+  - 114: {fileID: 1003618210}
+  - 114: {fileID: 1003618209}
+  - 114: {fileID: 1003618208}
   m_Layer: 0
   m_Name: SandPlanetNPC
   m_TagString: Untagged
@@ -1810,7 +2284,7 @@ Transform:
   m_RootOrder: 0
 --- !u!114 &1003618152
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003618150}
@@ -1853,9 +2327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 0
-  text: Goodbye
+  text: <<<
   description: 
-  targetBlock: {fileID: 1003618179}
+  targetBlock: {fileID: 1003618185}
   hideIfVisited: 0
   interactable:
     booleanRef: {fileID: 0}
@@ -2424,8 +2898,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 551.0699
-    y: 41.192955
+    x: -18.13874
+    y: -56.763885
     width: 120
     height: 40
   itemId: 7
@@ -2555,42 +3029,32 @@ MonoBehaviour:
 --- !u!114 &1003618183
 MonoBehaviour:
   m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 114000013209975138, guid: 41a120045a9ed624daea2c7f5320cf33,
-    type: 2}
-  m_PrefabInternal: {fileID: 858648046}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003618150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1
+  itemId: 56
   indentLevel: 0
-  storyText: Oh, hello there!
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1003618185}
+  startIndex: 0
+  callMode: 0
 --- !u!114 &1003618184
 MonoBehaviour:
   m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 114000010665012434, guid: 41a120045a9ed624daea2c7f5320cf33,
-    type: 2}
-  m_PrefabInternal: {fileID: 858648046}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003618150}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1003618185}
+  parentBlock: {fileID: 1003618207}
   message: Speak
 --- !u!114 &1003618185
 MonoBehaviour:
@@ -2611,14 +3075,14 @@ MonoBehaviour:
     width: 120
     height: 40
   itemId: 0
-  blockName: Hello
+  blockName: Menu
   description: 
-  eventHandler: {fileID: 1003618184}
+  eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 1003618183}
   - {fileID: 1003618188}
   - {fileID: 1003618178}
   - {fileID: 1003618152}
+  - {fileID: 1003618189}
   - {fileID: 1003618182}
   - {fileID: 1003618181}
 --- !u!114 &1003618186
@@ -2634,17 +3098,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -23.578934, y: 17.42112}
+  scrollPos: {x: 52.799164, y: 62.606102}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 0.67000014
+  blockViewHeight: 404
+  zoom: 0.7554348
   scrollViewRect:
     serializedVersion: 2
-    x: -372
-    y: -387
-    width: 1443.0698
-    height: 1081.5789
+    x: -561.1028
+    y: -480.4099
+    width: 2020.1145
+    height: 1174.9888
   selectedBlock: {fileID: 1003618177}
   selectedCommands: []
   variables: []
@@ -2677,7 +3141,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1003618188
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1003618150}
@@ -2702,6 +3166,519 @@ MonoBehaviour:
   stringData:
     stringRef: {fileID: 0}
     stringVal: 
+--- !u!114 &1003618189
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 53
+  indentLevel: 0
+  text: Gate Travelling
+  description: Learn How To Travel To Other Planets
+  targetBlock: {fileID: 1003618201}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &1003618190
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1003618201}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1003618191
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1003618201}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1003618192
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  indentLevel: 0
+  storyText: It is important to remember all the addresses you have come across because
+    every planet is accessed by entering an address... even our planet.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618193
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  indentLevel: 0
+  storyText: It is possible to find clues for addresses of other planets as well while
+    exploring foreign planets!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618194
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  indentLevel: 0
+  storyText: An Address is a sequence of FIVE runes.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618195
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 47
+  indentLevel: 0
+  text: Home Planet Address
+  description: 
+  targetBlock: {fileID: 1003618197}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &1003618196
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  text: Addresses
+  description: 
+  targetBlock: {fileID: 1003618198}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &1003618197
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 643.0973
+    y: 64.53506
+    width: 172
+    height: 40
+  itemId: 45
+  blockName: Home Planet Address
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1003618210}
+  - {fileID: 1003618209}
+  - {fileID: 1003618208}
+  - {fileID: 1003618190}
+--- !u!114 &1003618198
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 489.9874
+    y: 109.444305
+    width: 120
+    height: 40
+  itemId: 44
+  blockName: Addresses
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1003618194}
+  - {fileID: 1003618193}
+  - {fileID: 1003618192}
+  - {fileID: 1003618191}
+--- !u!114 &1003618199
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  text: The Gate
+  description: 
+  targetBlock: {fileID: 1003618205}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &1003618200
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  indentLevel: 0
+  text: <<<
+  description: 
+  targetBlock: {fileID: 1003618185}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &1003618201
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 437.70477
+    y: -9.283493
+    width: 137
+    height: 40
+  itemId: 41
+  blockName: Gate Travelling
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1003618199}
+  - {fileID: 1003618196}
+  - {fileID: 1003618195}
+  - {fileID: 1003618200}
+--- !u!114 &1003618202
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  storyText: Use your LEFT MOUSE BUTTON to interact with it. Then, you will be able
+    to insert an address of the planet you can explore.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618203
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  storyText: Do you see the Gate in a shape of a Tree on the southern part of the
+    village?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618204
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1003618201}
+  startIndex: 0
+  callMode: 0
+--- !u!114 &1003618205
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 346.9083
+    y: 93.89702
+    width: 120
+    height: 40
+  itemId: 36
+  blockName: The Gate
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1003618203}
+  - {fileID: 1003618202}
+  - {fileID: 1003618204}
+--- !u!114 &1003618206
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 55
+  indentLevel: 0
+  storyText: Oh, hello there!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618207
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 182.53412
+    y: -80.40991
+    width: 120
+    height: 40
+  itemId: 54
+  blockName: Hello
+  description: 
+  eventHandler: {fileID: 1003618184}
+  commandList:
+  - {fileID: 1003618206}
+  - {fileID: 1003618183}
+--- !u!114 &1003618208
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 59
+  indentLevel: 0
+  storyText: Hit them all in the sequence from first rune in first row to the second
+    rune in the second row and you are back home.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618209
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 58
+  indentLevel: 0
+  storyText: All you need is the first FIVE runes on the first page.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1003618210
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003618150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 57
+  indentLevel: 0
+  storyText: Our planet has a very simple address...
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!1001 &1076558613
 Prefab:
   m_ObjectHideFlags: 0
@@ -2790,6 +3767,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1991219e102a049aca41337e5ca110f3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1089302701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1089302702}
+  - 114: {fileID: 1089302703}
+  m_Layer: 0
+  m_Name: Task_InteractWithGate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089302702
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089302701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 47977532}
+  m_RootOrder: 2
+--- !u!114 &1089302703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1089302701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65820688205476c4bac997bc03c10437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompleted: 0
 --- !u!4 &1125003700 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014083211482, guid: 4e575bd92e4ab4af0b52fd4a5fac0c79,
@@ -2841,6 +3859,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e575bd92e4ab4af0b52fd4a5fac0c79, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1131270124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1131270125}
+  - 114: {fileID: 1131270126}
+  m_Layer: 0
+  m_Name: Quest_YourFirstJourney
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1131270125
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131270124}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.144632, y: 11.381395, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 47977532}
+  m_RootOrder: 0
+--- !u!114 &1131270126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131270124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8fad9f9247430d438d0f17708515091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestChart: {fileID: 47977539}
+  Tasks:
+  - {fileID: 1089302703}
+  - {fileID: 1933136196}
 --- !u!1001 &1144514993
 Prefab:
   m_ObjectHideFlags: 0
@@ -3736,6 +4798,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e575bd92e4ab4af0b52fd4a5fac0c79, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1933136194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1933136195}
+  - 114: {fileID: 1933136196}
+  m_Layer: 0
+  m_Name: Task_TravelToNewPlanet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1933136195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933136194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 47977532}
+  m_RootOrder: 1
+--- !u!114 &1933136196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933136194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b193f29e11bbe42bb133bff1d4970a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCompleted: 0
 --- !u!4 &1944749274 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013792255496, guid: 5d4828f0191a9462386a7acc9baf1676,
