@@ -34,6 +34,7 @@ public class Rune : MonoBehaviour
                 _sound.Play();
             }
 
+            if (_book.CurrentAddress.Length < 5)
             if (_alreadyClicked)
             {
                 _book.UnsetSlot();
@@ -52,6 +53,7 @@ public class Rune : MonoBehaviour
     }
     public void Reset()
     {
+        GetComponent<SpriteRenderer>().material.color = Color.white;
         _alreadyClicked = false;
     }
 }

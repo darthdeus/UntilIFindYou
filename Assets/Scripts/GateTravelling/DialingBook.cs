@@ -32,19 +32,21 @@ namespace Assets {
             {
                 _gateSystem.DialAndMoveAddress(_player, CurrentAddress);
                 _readyToGo = false;
-                
-                ResetBook();
-                ResetRunes();
+
+                SetVisible(false);
             }
         }
 
         public void Activate(GameObject player) {
             _player = player;
-            SetVisible(true);
+            ResetBook();
+            ResetRunes();
             MoveBook();
+            SetVisible(true);
         }
 
         public void SetSlot(string slot) {
+            if (CurrentAddress.Length < 5){
             CurrentAddress += slot;
             Debug.Log(String.Format("SETTING: {0}", CurrentAddress));
 
@@ -56,16 +58,15 @@ namespace Assets {
                     _readyToGo = true;
                 } else {
                     _failure.Play();
-                    ResetBook();
-                    ResetRunes();
+                    SetVisible(false);
                 }
-                
+            }
             }
         }
 
         public void UnsetSlot()
         {
-            if (CurrentAddress.Length > 0) {
+            if (CurrentAddress.Length > 0 && CurrentAddress.Length < 5) {
                 CurrentAddress = CurrentAddress.Substring(0, CurrentAddress.Length - 1);
             }
 
