@@ -36,9 +36,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012128553220}
   - 212: {fileID: 212000013520679028}
-  - 61: {fileID: 61000010889771062}
+  - 61: {fileID: 61000011541044230}
   m_Layer: 0
-  m_Name: Tree3 1
+  m_Name: Tree3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,8 +51,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010459359722}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 4.73, z: -0.3202132}
-  m_LocalScale: {x: 0.18536352, y: 0.18536352, z: 0.18536352}
+  m_LocalPosition: {x: 2.508, y: 2.0918462, z: 0.11186165}
+  m_LocalScale: {x: 0.18536353, y: 0.18536352, z: 0.18536352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000014165193320}
@@ -65,13 +65,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010383006042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.147, y: 3.649, z: 4.0584}
-  m_LocalScale: {x: 0.9566539, y: 0.9566538, z: 0.9566538}
+  m_LocalPosition: {x: -0.05, y: 3.7, z: 4.0584}
+  m_LocalScale: {x: 0.98267484, y: 0.9826747, z: 0.9826747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012128553220}
   m_RootOrder: 0
---- !u!61 &61000010889771062
+--- !u!61 &61000011541044230
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -82,9 +82,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.16, y: 0.3}
+  m_Offset: {x: -0.0906439, y: 0.27494276}
   serializedVersion: 2
-  m_Size: {x: 1.0085878, y: 2.2076328}
+  m_Size: {x: 2.258732, y: 3.1701162}
 --- !u!212 &212000010718240094
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 182389317
+  m_SortingLayerID: -1953377215
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9a16f94d96dc6b240ba4578a7ffad951, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1612284087
+  m_SortingLayerID: 331476895
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f45840fdfadcb124fa5df6e7bd18a704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
