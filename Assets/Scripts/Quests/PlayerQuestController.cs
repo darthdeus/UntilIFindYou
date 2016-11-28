@@ -11,7 +11,6 @@ public class PlayerQuestController : MonoBehaviour
         foreach (Quest _quest in Quests)
         {
             _quest.UpdateStatus();
-            _quest.FinishQuest();
         }
     }
 }
