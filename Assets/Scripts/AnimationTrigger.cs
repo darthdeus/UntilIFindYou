@@ -10,20 +10,20 @@ public class AnimationTrigger : MonoBehaviour
     private static readonly System.Random Random = new System.Random();
 
     // Use this for initialization
-    void Start ()
-	{
+    void Start()
+    {
         // Getting the animator component and storing it in a private field
-	    _animator = GetComponent<Animator>();
+        _animator = GetComponent<Animator>();
 
         // Starting a new coroutine which would not block main game loop
-	    StartCoroutine(PlayAnimation());
-	}
+        StartCoroutine(PlayAnimation());
+    }
 
     private IEnumerator PlayAnimation()
     {
         // Set random amount of seconds after which the animation will start
         int range = 10;
-        float seconds = (float) Random.NextDouble() * range;
+        float seconds = (float)Random.NextDouble() * range;
 
         // Suspending the execution for given time
         yield return new WaitForSeconds(seconds);
@@ -33,7 +33,8 @@ public class AnimationTrigger : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update () {
-	    // nothing here for now.. 
-	}
+    void Update()
+    {
+        // nothing here for now.. 
+    }
 }
