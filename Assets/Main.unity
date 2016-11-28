@@ -5475,7 +5475,7 @@ MonoBehaviour:
   - {fileID: 1737955564}
 --- !u!114 &1737955569
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737955546}
@@ -5498,7 +5498,7 @@ MonoBehaviour:
   - {fileID: 1737955570}
 --- !u!114 &1737955570
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737955546}
@@ -5523,7 +5523,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1737955571
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737955546}
@@ -7929,7 +7929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2038129328}
+  selectedFlowchart: {fileID: 1737955548}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
@@ -8042,6 +8042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sendingMessage: Speak
+  IntroChart: {fileID: 1299294609}
 --- !u!58 &2093376190
 CircleCollider2D:
   m_ObjectHideFlags: 0
