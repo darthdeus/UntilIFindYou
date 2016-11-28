@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using System.Collections;
 
 public class ResourceManager : MonoBehaviour {
     public enum ResourceType {
