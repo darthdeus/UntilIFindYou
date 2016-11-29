@@ -1,8 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Assets {
-    public class DialingBook : MonoBehaviour {
+namespace Assets
+{
+    public class DialingBook : MonoBehaviour
+    {
         public string CurrentAddress;
         private GateSystem _gateSystem;
         private GameObject _player;
@@ -10,14 +12,19 @@ namespace Assets {
         private AudioSource _failure;
         private bool _readyToGo = false;
 
-        void Start() {
+        void Start()
+        {
             _gateSystem = GateSystem.Find();
             var sounds = GetComponents<AudioSource>();
 
-            foreach (var sound in sounds) {
-                if (sound.clip.name == "Success") {
+            foreach (var sound in sounds)
+            {
+                if (sound.clip.name == "Success")
+                {
                     _success = sound;
-                } else if (sound.clip.name == "Error") {
+                }
+                else if (sound.clip.name == "Error")
+                {
                     _failure = sound;
                 }
             }
@@ -37,43 +44,55 @@ namespace Assets {
             }
         }
 
-        public void Activate(GameObject player) {
-            _player = player;
-            ResetBook();
-            ResetRunes();
-            MoveBook();
-            SetVisible(true);
+        public void Activate(GameObject player)
+        {
+            if (!_readyToGo)
+            {
+                _player = player;
+                ResetBook();
+                ResetRunes();
+                MoveBook();
+                SetVisible(true);
+            }
         }
 
-        public void SetSlot(string slot) {
-            if (CurrentAddress.Length < 5){
-            CurrentAddress += slot;
-            Debug.Log(String.Format("SETTING: {0}", CurrentAddress));
+        public void SetSlot(string slot)
+        {
+            if (CurrentAddress.Length < 5)
+            {
+                CurrentAddress += slot;
+                Debug.Log(String.Format("SETTING: {0}", CurrentAddress));
 
-            if (CurrentAddress.Length == 5) {
-                Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
+                if (CurrentAddress.Length == 5)
+                {
+                    Debug.Assert(_player != null, "Dialing wasn't activated, player is missing");
 
-                if (_gateSystem.CheckCorrectAddress(CurrentAddress)) {
-                    _success.Play();
-                    _readyToGo = true;
-                } else {
-                    _failure.Play();
-                    SetVisible(false);
+                    if (_gateSystem.CheckCorrectAddress(CurrentAddress))
+                    {
+                        _success.Play();
+                        _readyToGo = true;
+                    }
+                    else
+                    {
+                        _failure.Play();
+                        SetVisible(false);
+                    }
                 }
-            }
             }
         }
 
         public void UnsetSlot()
         {
-            if (CurrentAddress.Length > 0 && CurrentAddress.Length < 5) {
+            if (CurrentAddress.Length > 0 && CurrentAddress.Length < 5)
+            {
                 CurrentAddress = CurrentAddress.Substring(0, CurrentAddress.Length - 1);
             }
 
             Debug.Log(String.Format("UNSETTING: {0}", CurrentAddress));
         }
 
-        public static DialingBook Find() {
+        public static DialingBook Find()
+        {
             var objects = GameObject.FindGameObjectsWithTag("DialingBook");
             Debug.Assert(objects.Length == 1, "There should be only one DialingBook");
 
@@ -83,9 +102,11 @@ namespace Assets {
         }
 
         // PRIVATE
-        private void SetVisible(bool visible) {
+        private void SetVisible(bool visible)
+        {
             GetComponent<SpriteRenderer>().enabled = visible;
-            foreach (var r in GetComponentsInChildren<SpriteRenderer>()) {
+            foreach (var r in GetComponentsInChildren<SpriteRenderer>())
+            {
                 r.enabled = visible;
             }
         }
