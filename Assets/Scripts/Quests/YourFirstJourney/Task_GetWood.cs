@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class Task_GetWood : Task
 {
     public GameObject player;
-    ResourceManager ResourceManager;
+    PlayerInventory _playerInventory;
     public int TargetWoodAmount;
 
     /// <summary>
@@ -12,7 +13,7 @@ public class Task_GetWood : Task
     /// </summary>
     void Start()
     {
-        ResourceManager = player.GetComponent<ResourceManager>();
+        _playerInventory = player.GetComponent<PlayerInventory>();
     }
     public override string GetDescription()
     {
@@ -24,7 +25,7 @@ public class Task_GetWood : Task
         if (GetStatus())
             return "Success!";
         else
-            return "You have collected " + ResourceManager.ResourceCount(ResourceManager.ResourceType.Wood) + "/" + TargetWoodAmount + " wood.";
+            return "You have collected " + _playerInventory.ResourceCount(PlayerInventory.ResourceType.Wood) + "/" + TargetWoodAmount + " wood.";
     }
 
     public override bool GetStatus()
@@ -34,7 +35,7 @@ public class Task_GetWood : Task
 
     public override void UpdateStatus()
     {
-        if (ResourceManager.ResourceCount(ResourceManager.ResourceType.Wood) >= TargetWoodAmount)
+        if (_playerInventory.ResourceCount(PlayerInventory.ResourceType.Wood) >= TargetWoodAmount)
             isCompleted = true;
         else
             isCompleted = false;

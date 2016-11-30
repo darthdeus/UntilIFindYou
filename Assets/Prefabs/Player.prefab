@@ -24,6 +24,9 @@ GameObject:
   - 114: {fileID: 114000013916461200}
   - 114: {fileID: 114000011637569796}
   - 58: {fileID: 58000010870394574}
+  - 114: {fileID: 114000010225979162}
+  - 114: {fileID: 114000014020291968}
+  - 114: {fileID: 114000011765091140}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -75,6 +78,17 @@ CircleCollider2D:
   m_Offset: {x: 0.66, y: -4.3}
   serializedVersion: 2
   m_Radius: 2.64
+--- !u!114 &114000010225979162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011154034186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689abad2e684e4249a4b33b11f3d951b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000011637569796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,6 +100,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c709186c4a91ed4419a19e7559e08e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011765091140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011154034186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c96c23ce655b3c4e85d89d9355207a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ResourceInfoLabel: {fileID: 0}
 --- !u!114 &114000013916461200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +124,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+--- !u!114 &114000014020291968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011154034186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3282d2debeac9b945b3d520dacaf5aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestTexts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Quests:
+  - {fileID: 0}
 --- !u!212 &212000011038934486
 SpriteRenderer:
   m_ObjectHideFlags: 1
