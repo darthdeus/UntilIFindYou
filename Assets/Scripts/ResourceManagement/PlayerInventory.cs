@@ -8,7 +8,6 @@ namespace Assets.Scripts {
     public class PlayerInventory : MonoBehaviour {
         public readonly HashSet<ToolType> Tools = new HashSet<ToolType>();
         public readonly Dictionary<ResourceType, int> Resources = new Dictionary<ResourceType, int>();
-        public Text ResourceInfoText;
 
         public enum ResourceType {
             Wood,
@@ -19,6 +18,11 @@ namespace Assets.Scripts {
             Axe,
             Pickaxe
         }
+
+        public Dictionary<ResourceType, ToolType> RequiredTools = new Dictionary<ResourceType, ToolType>() {
+            {ResourceType.Wood, ToolType.Axe},
+            {ResourceType.Stone, ToolType.Pickaxe }
+        };
 
         public int ResourceCount(ResourceType type) {
             if (Resources.ContainsKey(type)) {
@@ -32,39 +36,21 @@ namespace Assets.Scripts {
             return Tools.Contains(type);
         }
 
-        void Start() {
-            var info = GameObject.Find("ResourceInfo");
-            Debug.Assert(info != null);
-
-            ResourceInfoText = info.GetComponent<Text>();
-            Debug.Assert(ResourceInfoText != null);
-        }
-
-        void Update() {
-            var builder = new StringBuilder();
-
-            foreach (var tool in Tools) {
-                builder.Append(tool.ToString());
-                builder.Append(", ");
-            }
-
-            builder.AppendLine();
-            foreach (var pair in Resources) {
-                builder.Append(string.Format("{0}: {1}, ", pair.Key, pair.Value));
-            }
-
-            ResourceInfoText.text = builder.ToString();
-        }
-
         public void PickupTool(ToolType toolType) {
             Tools.Add(toolType);
         }
 
-        public void PickupResource(ResourceType resourceType, int amount) {
-            if (Resources.ContainsKey(resourceType)) {
-                Resources[resourceType] += amount;
+        public bool PickupResource(ResourceType resourceType, int amount) {
+            var requiredTool = RequiredTools[resourceType];
+            if (HasTool(requiredTool)) {
+                if (Resources.ContainsKey(resourceType)) {
+                    Resources[resourceType] += amount;
+                } else {
+                    Resources[resourceType] = amount;
+                }
+                return true;
             } else {
-                Resources[resourceType] = amount;
+                return false;
             }
         }
     }
