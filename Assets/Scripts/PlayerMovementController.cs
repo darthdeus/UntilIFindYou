@@ -17,18 +17,4 @@ public class PlayerMovementController : MonoBehaviour {
 
         _rigidbody2D.velocity = new Vector2(x, y).normalized*movementSpeed;
     }
-
-    void OnCollisionEnter2D(Collision2D other) {
-        var gate = other.collider.GetComponent<GateController>();
-
-        // We've collided with a gate
-        if (gate != null) {
-            Debug.LogWarning("TODO - clean this up");
-            //Debug.Assert(gate.connectedGate != null);
-
-            //// TODO - replace this with a scene-specified position
-            //var exitOffset = new Vector3(0, -2, 0);
-            //transform.position = gate.connectedGate.transform.position + exitOffset;
-        }
-    }
 }

@@ -1,42 +1,40 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
-public class Task_GetWood : Task
-{
+public class Task_GetWood : Task {
     public GameObject player;
-    ResourceManager ResourceManager;
+    PlayerInventory _playerInventory;
     public int TargetWoodAmount;
 
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    void Start()
-    {
-        ResourceManager = player.GetComponent<ResourceManager>();
-    }
-    public override string GetDescription()
-    {
-        return "Use your Axe Tool to get " + TargetWoodAmount + " wood.";
+    private int CurrentWoodAmount {
+        get { return _playerInventory.ResourceCount(PlayerInventory.ResourceType.Wood); }
     }
 
-    public override string GetProgress()
-    {
-        if (GetStatus())
+    void Start() {
+        _playerInventory = player.GetComponent<PlayerInventory>();
+    }
+
+    public override string GetDescription() {
+        if (CurrentWoodAmount == 0) {
+            return string.Format("Use your Axe Tool to get {0} wood.", TargetWoodAmount);
+        } else {
+            return string.Format("Use your Axe Tool to get {0} more wood", TargetWoodAmount - CurrentWoodAmount);
+        }
+    }
+
+    public override string GetProgress() {
+        if (GetStatus()) {
             return "Success!";
-        else
-            return "You have collected " + ResourceManager.ResourceCount(ResourceManager.ResourceType.Wood) + "/" + TargetWoodAmount + " wood.";
+        } else {
+            return string.Format("You have collected {0}/{1} wood.", CurrentWoodAmount, TargetWoodAmount);
+        }
     }
 
-    public override bool GetStatus()
-    {
+    public override bool GetStatus() {
         return isCompleted;
     }
 
-    public override void UpdateStatus()
-    {
-        if (ResourceManager.ResourceCount(ResourceManager.ResourceType.Wood) >= TargetWoodAmount)
-            isCompleted = true;
-        else
-            isCompleted = false;
+    public override void UpdateStatus() {
+        isCompleted = CurrentWoodAmount >= TargetWoodAmount;
     }
 }

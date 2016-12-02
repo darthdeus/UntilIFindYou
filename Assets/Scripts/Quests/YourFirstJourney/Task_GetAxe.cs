@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class Task_GetAxe : Task
 {
     public GameObject player;
-    ResourceManager ResourceManager;
+    PlayerInventory _playerInventory;
 
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -11,7 +12,7 @@ public class Task_GetAxe : Task
     /// </summary>
     void Start()
     {
-        ResourceManager = player.GetComponent<ResourceManager>();
+        _playerInventory = player.GetComponent<PlayerInventory>();
     }
     public override string GetDescription()
     {
@@ -33,7 +34,7 @@ public class Task_GetAxe : Task
 
     public override void UpdateStatus()
     {
-        if (ResourceManager.HasTool(ResourceManager.ToolType.Axe))
+        if (_playerInventory.HasTool(PlayerInventory.ToolType.Axe))
             isCompleted = true;
         else
             isCompleted = false;

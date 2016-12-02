@@ -57,6 +57,7 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
         else
             return "All " + TotalTaskNumber + " tasks have been completed!";
     }
+
     public void GetNumberOfTasks(out int TotalTaskNumber, out int FinishedTaskNumber)
     {
         TotalTaskNumber = FinishedTaskNumber = 0;
