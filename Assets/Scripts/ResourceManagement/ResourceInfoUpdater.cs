@@ -13,6 +13,9 @@ namespace Assets.Scripts.ResourceManagement {
         public Text txtWoodCount;
         public Text txtStoneCount;
 
+        public Transform icon1Placeholder;
+        public Transform icon2Placeholder;
+
         void Start() {
             _playerInventory = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>();
         }
@@ -21,8 +24,19 @@ namespace Assets.Scripts.ResourceManagement {
             txtNoTools.SetActive(_playerInventory.Tools.Count == 0);
             txtAvailableTools.SetActive(_playerInventory.Tools.Count > 0);
 
-            axeIcon.GetComponent<SpriteRenderer>().enabled = _playerInventory.HasTool(PlayerInventory.ToolType.Axe);
-            pickaxeIcon.GetComponent<SpriteRenderer>().enabled = _playerInventory.HasTool(PlayerInventory.ToolType.Pickaxe);
+            bool hasAxe = _playerInventory.HasTool(PlayerInventory.ToolType.Axe);
+            bool hasPickaxe = _playerInventory.HasTool(PlayerInventory.ToolType.Pickaxe);
+
+
+            axeIcon.GetComponent<SpriteRenderer>().enabled = hasAxe;
+            pickaxeIcon.GetComponent<SpriteRenderer>().enabled = hasPickaxe;
+
+            if (hasAxe) {
+                axeIcon.transform.position = icon1Placeholder.position;
+                pickaxeIcon.transform.position = icon2Placeholder.position;
+            } else if (!hasAxe && hasPickaxe) {
+                pickaxeIcon.transform.position = icon1Placeholder.position;
+            }
 
             txtWoodCount.text = string.Format("Wood: {0}",
                                               _playerInventory.ResourceCount(PlayerInventory.ResourceType.Wood));
