@@ -262,7 +262,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1266772645
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b79f4fe70552a429ca5f146d3d39f3a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -608,7 +608,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1266772645
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 58f38a6f400dc4f4991785712f540938, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1635,6 +1635,143 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &420905786 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000014060533984, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+    type: 2}
+  m_PrefabInternal: {fileID: 1402071914}
+--- !u!60 &420905787
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 420905786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.465, y: -6.4449997}
+      - {x: 0.695, y: -6.4049997}
+      - {x: 0.895, y: -6.345}
+      - {x: 1.095, y: -6.245}
+      - {x: 1.1949999, y: -6.145}
+      - {x: 1.295, y: -6.1349998}
+      - {x: 1.305, y: -6.125}
+      - {x: 1.635, y: -6.125}
+      - {x: 1.645, y: -6.115}
+      - {x: 2.465, y: -6.115}
+      - {x: 2.475, y: -6.105}
+      - {x: 6.725, y: -6.105}
+      - {x: 6.7349997, y: -6.115}
+      - {x: 8.325, y: -6.115}
+      - {x: 8.335, y: -6.105}
+      - {x: 8.335, y: 5.255}
+      - {x: 8.325, y: 5.265}
+      - {x: 8.195, y: 5.275}
+      - {x: 8.025, y: 5.325}
+      - {x: 8.025, y: 5.4049997}
+      - {x: 8.005, y: 5.4249997}
+      - {x: 7.725, y: 5.435}
+      - {x: 7.615, y: 5.4449997}
+      - {x: 7.4449997, y: 5.4649997}
+      - {x: 7.065, y: 5.525}
+      - {x: 6.9649997, y: 5.555}
+      - {x: 6.7549996, y: 5.585}
+      - {x: 6.4449997, y: 5.6549997}
+      - {x: 6.295, y: 5.6949997}
+      - {x: 6.055, y: 5.775}
+      - {x: 5.995, y: 5.805}
+      - {x: 5.875, y: 5.835}
+      - {x: 5.745, y: 5.8849998}
+      - {x: 5.4849997, y: 5.995}
+      - {x: 5.1749997, y: 6.085}
+      - {x: 5.105, y: 6.105}
+      - {x: 4.835, y: 6.1749997}
+      - {x: 4.565, y: 6.2349997}
+      - {x: 4.355, y: 6.275}
+      - {x: 4.235, y: 6.295}
+      - {x: 3.855, y: 6.355}
+      - {x: 3.705, y: 6.375}
+      - {x: 3.5349998, y: 6.395}
+      - {x: 3.355, y: 6.415}
+      - {x: 2.995, y: 6.4449997}
+      - {x: 1.8349999, y: 6.4449997}
+      - {x: 1.735, y: 6.435}
+      - {x: 1.4549999, y: 6.395}
+      - {x: 1.235, y: 6.345}
+      - {x: 1.035, y: 6.285}
+      - {x: 0.805, y: 6.1549997}
+      - {x: 0.555, y: 5.935}
+      - {x: 0.415, y: 5.815}
+      - {x: 0.325, y: 5.7349997}
+      - {x: 0.015, y: 5.525}
+      - {x: -0.055, y: 5.615}
+      - {x: -0.295, y: 5.855}
+      - {x: -0.48499998, y: 6.015}
+      - {x: -0.60499996, y: 6.095}
+      - {x: -0.72499996, y: 6.165}
+      - {x: -0.995, y: 6.295}
+      - {x: -1.095, y: 6.315}
+      - {x: -1.245, y: 6.355}
+      - {x: -1.405, y: 6.3849998}
+      - {x: -1.5849999, y: 6.4049997}
+      - {x: -1.9549999, y: 6.4049997}
+      - {x: -1.9649999, y: 6.415}
+      - {x: -2.0449998, y: 6.415}
+      - {x: -2.055, y: 6.4049997}
+      - {x: -2.455, y: 6.4049997}
+      - {x: -2.635, y: 6.395}
+      - {x: -2.895, y: 6.375}
+      - {x: -3.095, y: 6.355}
+      - {x: -3.2749999, y: 6.335}
+      - {x: -3.495, y: 6.305}
+      - {x: -3.7649999, y: 6.265}
+      - {x: -4.125, y: 6.205}
+      - {x: -4.305, y: 6.185}
+      - {x: -4.545, y: 6.145}
+      - {x: -5.075, y: 6.035}
+      - {x: -5.4049997, y: 5.9849997}
+      - {x: -5.505, y: 5.955}
+      - {x: -5.7549996, y: 5.9049997}
+      - {x: -5.875, y: 5.8849998}
+      - {x: -5.975, y: 5.865}
+      - {x: -6.185, y: 5.825}
+      - {x: -6.285, y: 5.805}
+      - {x: -6.495, y: 5.765}
+      - {x: -6.595, y: 5.745}
+      - {x: -6.9049997, y: 5.685}
+      - {x: -7.0049996, y: 5.665}
+      - {x: -7.365, y: 5.595}
+      - {x: -7.9649997, y: 5.475}
+      - {x: -7.995, y: 5.4449997}
+      - {x: -8.005, y: 5.315}
+      - {x: -8.035, y: 5.295}
+      - {x: -8.075, y: 5.265}
+      - {x: -8.335, y: 5.265}
+      - {x: -8.335, y: -6.085}
+      - {x: -8.285, y: -6.095}
+      - {x: -7.2549996, y: -6.095}
+      - {x: -7.245, y: -6.105}
+      - {x: -6.2149997, y: -6.105}
+      - {x: -6.205, y: -6.115}
+      - {x: -5.1749997, y: -6.115}
+      - {x: -5.165, y: -6.125}
+      - {x: -4.1349998, y: -6.125}
+      - {x: -4.125, y: -6.1349998}
+      - {x: -3.095, y: -6.1349998}
+      - {x: -3.085, y: -6.145}
+      - {x: -2.055, y: -6.145}
+      - {x: -2.0449998, y: -6.1549997}
+      - {x: -1.135, y: -6.1549997}
+      - {x: -1.145, y: -6.245}
+      - {x: -1.0649999, y: -6.355}
+      - {x: -0.98499995, y: -6.3849998}
+      - {x: -0.85499996, y: -6.4249997}
+      - {x: -0.73499995, y: -6.4449997}
 --- !u!4 &435625281 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000012282270898, guid: e9a1d1bc3663d484bb3d4bd77a3baf1a,
@@ -1879,6 +2016,50 @@ Prefab:
         type: 2}
       propertyPath: Amount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012485975648, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012485975648, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.314
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013206642068, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013206642068, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.198
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013351474472, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013351474472, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.051
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010065313862, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097032810, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.432
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097032810, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010462257528, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010462257528, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.186
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
@@ -4684,7 +4865,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1266772645
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 43b2af05a5198475db3beff06761126e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5868,7 +6049,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1266772645
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6bfff6b5ccbc8f74aab6cdf8545baa73, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
