@@ -27,12 +27,15 @@ public class BlockCaller : MonoBehaviour
     {
         
         Destroy(others);
-        if (!isRunning.GetBooleanVariable("isRunning"))
+        transform.GetComponent<NPCMovement>() .canMove = false;
+
         if (!IntroChart.GetBooleanVariable("isRunning"))
         {
+
             isRunning.SetBooleanVariable("isRunning", true);
             IntroChart.SetBooleanVariable("isRunning", true);
             Flowchart.BroadcastFungusMessage(sendingMessage);
         }
+
     }
 }

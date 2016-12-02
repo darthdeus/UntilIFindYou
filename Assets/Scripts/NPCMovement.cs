@@ -6,15 +6,15 @@ public class NPCMovement : MonoBehaviour {
 	public float moveSpeed= 1 ;
 	private Rigidbody2D myRigidBody;
 	public bool isWalking;
-
+	
 
 
 	public float walkTime = 2,waitTime = 3;
 	private float walkCounter, waitCounter;
 
 	private int walkDirection;
-
 	public bool canMove;
+	
 
 	// Use this for initialization
 	void Start () 
@@ -34,7 +34,7 @@ public class NPCMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!canMove)
+		if (canMove == false)
 		{
 			myRigidBody.velocity = Vector2.zero;
 			return;
