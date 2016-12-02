@@ -65,12 +65,12 @@ namespace Assets {
             }
         }
 
-        public void Activate(GameObject player) {
+        public void Activate(GameObject player, GameObject gate) {
             if (!_readyToGo) {
                 _player = player;
                 ResetBook();
                 ResetRunes();
-                MoveBook();
+                MoveBook(gate);
                 SetVisible(true);
             }
         }
@@ -134,9 +134,9 @@ namespace Assets {
             SetVisible(false);
         }
 
-        private void MoveBook() {
-            var x = _player.transform.position.x;
-            var y = _player.transform.position.y;
+        private void MoveBook(GameObject gate) {
+            var x = gate.transform.position.x;
+            var y = gate.transform.position.y;
             gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
         }
     }

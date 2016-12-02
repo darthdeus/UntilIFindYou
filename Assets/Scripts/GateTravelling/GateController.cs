@@ -23,6 +23,6 @@ public class GateController : MonoBehaviour {
 
     void OnMouseUp() {
         Debug.Log("Gate clicked");
-        _dialingBook.Activate(_player); 
+        _dialingBook.Activate(_player, gameObject); 
     }
 }
