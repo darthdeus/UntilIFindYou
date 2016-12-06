@@ -6,10 +6,13 @@ public class QuestTextController : MonoBehaviour
     public Quest _quest;
     public Text taskText;
     Text questText;
+    QuestTextTweener _tweener;
+
     // Use this for initialization
     void Start()
     {
         questText = gameObject.GetComponent<Text>();
+        _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
     }
 
     // Update is called once per frame
@@ -35,6 +38,10 @@ public class QuestTextController : MonoBehaviour
                 taskText.text = "";
             }
         }
+
+        _tweener.Update();
+        _tweener.StartQuestTweening();
+        _tweener.StartTaskTweening();
     }
 
     Task GetFirstUnfinished()
