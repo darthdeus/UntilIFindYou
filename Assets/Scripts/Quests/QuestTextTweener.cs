@@ -46,12 +46,13 @@ public class QuestTextTweener
 
     Text TaskText;
     Vector3 TaskTextAbsolutePosition;
-    Vector3 taskTargetPosition = new Vector3(10, 0, 0);
-    float taskSpeed = 2.0f;
+    Vector3 taskTargetPositionOffset = new Vector3(6, 0, 0);
+    float taskSpeed = 3.0f;
     float taskThreshold = 0.5f;
     void TaskTweenUpdate()
     {
-        Vector3 direction = taskTargetPosition + TaskText.transform.position;
+        Vector3 taskTargetPosition = player.transform.position + TaskTextAbsolutePosition + taskTargetPositionOffset;
+        Vector3 direction = taskTargetPosition - TaskText.transform.position;
         if (direction.magnitude > taskThreshold)
         {
             direction.Normalize();
@@ -67,12 +68,13 @@ public class QuestTextTweener
 
     Text QuestText;
     Vector3 QuestTextAbsolutePosition;
-    Vector3 questTargetPosition = new Vector3(2, 0, 0);
-    float questSpeed = 2.0f;
+    Vector3 questTargetPositionOffset = new Vector3(6, 0, 0);
+    float questSpeed = 3.0f;
     float questThreshold = 0.5f;
     void QuestTweenUpdate()
     {
-        Vector3 direction = questTargetPosition + QuestText.transform.position;
+        Vector3 questTargetPosition = player.transform.position + QuestTextAbsolutePosition + questTargetPositionOffset;
+        Vector3 direction = questTargetPosition - QuestText.transform.position;
         if (direction.magnitude > questThreshold)
         {
             direction.Normalize();
