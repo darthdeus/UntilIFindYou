@@ -41,9 +41,9 @@ public class QuestTextController : MonoBehaviour
             }
         }
 
-        _tweener.QuestCompletedTweening();
-        _tweener.TaskCompletedTweening();
-        // _tweener.QuestStartedTweening();
+        // _tweener.QuestCompletedTweening();
+        // _tweener.TaskCompletedTweening();
+        _tweener.QuestStartedTweening();
         // _tweener.TaskStartedTweening();
         _tweener.TweeningUpdate();
     }
