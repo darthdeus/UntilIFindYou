@@ -4,14 +4,16 @@ using UnityEngine.UI;
 public class QuestTextController : MonoBehaviour
 {
     public Quest _quest;
-    public Text taskText;
     Text questText;
+    public Text taskText;
+    int taskIndex;
     QuestTextTweener _tweener;
 
     // Use this for initialization
     void Start()
     {
         questText = gameObject.GetComponent<Text>();
+        taskIndex = 0;
         _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
         questText.text = "";
         taskText.text = "";
@@ -30,7 +32,7 @@ public class QuestTextController : MonoBehaviour
             if (!_quest.GetStatus())
             {
                 questText.text = _quest.GetTitle();
-                Task CurrentTask = GetFirstUnfinishedTask();
+                Task CurrentTask = GetNextTask();
                 if (CurrentTask != null)
                     taskText.text = CurrentTask.GetDescription();
             }
@@ -40,19 +42,32 @@ public class QuestTextController : MonoBehaviour
                 taskText.text = "";
             }
         }
-
-        // _tweener.QuestCompletedTweening();
-        // _tweener.TaskCompletedTweening();
-        _tweener.QuestStartedTweening();
-        _tweener.TaskStartedTweening();
+        _tweener.StartTweening(_quest);
+        _tweener.StartTweening(GetNextTask());
         _tweener.TweeningUpdate();
     }
 
-    Task GetFirstUnfinishedTask()
+    // Checks tasks of active quest and returns the next task or the first unfinished task (in case one task has become unfinished after completion) 
+    Task GetNextTask()
     {
-        foreach (var task in _quest.Tasks)
-            if (!task.isCompleted)
-                return task;
+        if (_quest != null)
+        {
+            // Check for task that used to be finished but is no longer finished //
+            for (int i = 0; i < _quest.Tasks.Count; i++)
+                if (i > taskIndex) break;
+                else if (!_quest.Tasks[i].isCompleted && i > taskIndex)
+                {
+                    taskIndex = i;
+                    return _quest.Tasks[taskIndex];
+                }
+            // Return the next task no matter if it was finished or not // 
+            if (taskIndex < _quest.Tasks.Count)
+                if (_quest.Tasks[taskIndex].isCompleted)
+                    return _quest.Tasks[++taskIndex];
+                else
+                    return _quest.Tasks[taskIndex];
+        }
+        // Return null in case all tasks have been completed or there is no quest active for this instance. //
         return null;
     }
 }
