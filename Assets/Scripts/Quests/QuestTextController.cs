@@ -13,6 +13,8 @@ public class QuestTextController : MonoBehaviour
     {
         questText = gameObject.GetComponent<Text>();
         _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
+        questText.text = "";
+        taskText.text = "";
     }
 
     // Update is called once per frame
@@ -28,7 +30,7 @@ public class QuestTextController : MonoBehaviour
             if (!_quest.GetStatus())
             {
                 questText.text = _quest.GetTitle();
-                Task CurrentTask = GetFirstUnfinished();
+                Task CurrentTask = GetFirstUnfinishedTask();
                 if (CurrentTask != null)
                     taskText.text = CurrentTask.GetDescription();
             }
@@ -39,12 +41,14 @@ public class QuestTextController : MonoBehaviour
             }
         }
 
-        _tweener.Update();
-        _tweener.StartQuestTweening();
-        _tweener.StartTaskTweening();
+        _tweener.QuestCompletedTweening();
+        _tweener.TaskCompletedTweening();
+        // _tweener.QuestStartedTweening();
+        // _tweener.TaskStartedTweening();
+        _tweener.TweeningUpdate();
     }
 
-    Task GetFirstUnfinished()
+    Task GetFirstUnfinishedTask()
     {
         foreach (var task in _quest.Tasks)
             if (!task.isCompleted)
