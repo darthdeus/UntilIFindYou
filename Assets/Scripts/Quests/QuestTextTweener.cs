@@ -35,7 +35,7 @@ public class QuestTextTweener
         {
             QuestIsTweening = true;
             Debug.Log("Quest Completed Tweening Started.");
-            Tween += (s, ev) => QuestScaleUp(this, EventArgs.Empty, true);
+            Tween += QuestScaleUp;
         }
     }
 
@@ -111,33 +111,25 @@ public class QuestTextTweener
     Vector3 QuestTextDefaultScale;
     Vector3 QuestTextTargetScaleIncrease = new Vector3(0.08f, 0.08f, 0);
     Vector3 QuestTextScaleIncreaseSpeed = new Vector3(0.2f, 0.2f, 0);
-    void QuestScaleUp(object sender, EventArgs e, bool isFinishingAnim)
+    void QuestScaleUp(object sender, EventArgs e)
     {
         QuestText.transform.localScale += QuestTextScaleIncreaseSpeed * Time.deltaTime;
         if (QuestText.transform.localScale.magnitude >= QuestTextDefaultScale.magnitude + QuestTextTargetScaleIncrease.magnitude)
         {
             QuestText.transform.localScale = QuestTextDefaultScale + QuestTextTargetScaleIncrease;
-            Tween -= (s, ev) => QuestScaleUp(s, ev, isFinishingAnim);
-            Tween += (s, ev) => QuestScaleDown(sender, e, isFinishingAnim);
+            Tween -= QuestScaleUp;
+            Tween += QuestScaleDown;
         }
     }
-    void QuestScaleDown(object sender, EventArgs e, bool isFinishingAnim)
+    void QuestScaleDown(object sender, EventArgs e)
     {
         QuestText.transform.localScale -= QuestTextScaleIncreaseSpeed * Time.deltaTime;
         if (QuestText.transform.localScale.magnitude <= QuestTextDefaultScale.magnitude)
         {
             QuestText.transform.localScale = QuestTextDefaultScale;
-            Tween -= (s, ev) => QuestScaleDown(s, ev, isFinishingAnim);
-            if (isFinishingAnim)
-            {
-                Tween += QuestFadeOut;
-                Tween += QuestMoveRight;
-            }
-            else
-            {
-                QuestIsTweening = false;
-                Debug.Log(Tween.GetInvocationList().Length);
-            }
+            Tween -= QuestScaleDown;
+            Tween += QuestFadeOut;
+            Tween += QuestMoveRight;
         }
     }
 
@@ -175,7 +167,7 @@ public class QuestTextTweener
         {
             QuestIsTweening = true;
             Debug.Log("Quest Started Tweening Started.");
-            Tween += (s, ev) => QuestScaleUp(this, EventArgs.Empty, false);
+            Tween += QuestScaleUp;
         }
     }
 
