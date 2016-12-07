@@ -8,6 +8,8 @@ public class QuestTextTweener
     event EventHandler Tween;
     public bool TaskIsTweening;
     public bool QuestIsTweening;
+    bool TaskIsStarting;
+    bool QuestIsStarting;
     public QuestTextTweener(Text QuestText, Text TaskText, GameObject player)
     {
         this.TaskText = TaskText;
@@ -16,6 +18,9 @@ public class QuestTextTweener
 
         TaskIsTweening = false;
         QuestIsTweening = false;
+
+        TaskIsStarting = false;
+        QuestIsStarting = false;
 
         TaskTextAbsolutePosition = TaskText.transform.position - player.transform.position;
         QuestTextAbsolutePosition = QuestText.transform.position - player.transform.position;
@@ -70,8 +75,16 @@ public class QuestTextTweener
         {
             Tween -= TaskScaleDown;
             TaskText.transform.localScale = TaskTextDefaultScale;
-            Tween += TaskFadeOut;
-            Tween += TaskMoveRight;
+            if (!TaskIsStarting)
+            {
+                Tween += TaskFadeOut;
+                Tween += TaskMoveRight;
+            }
+            else
+            {
+                TaskIsStarting = false;
+                TaskIsTweening = false;
+            }
         }
     }
     Vector3 TaskTextAbsolutePosition;
@@ -106,6 +119,12 @@ public class QuestTextTweener
         Tween -= TaskFadeOut;
         TaskText.CrossFadeAlpha(0.00f, 1.00f, true);
     }
+    void TaskFadeIn(object sender, EventArgs e)
+    {
+        Tween -= TaskFadeIn;
+        TaskText.CrossFadeAlpha(0.00f, 0.00f, true);
+        TaskText.CrossFadeAlpha(1.00f, 1.00f, true);
+    }
 
     Text QuestText;
     Vector3 QuestTextDefaultScale;
@@ -128,8 +147,16 @@ public class QuestTextTweener
         {
             QuestText.transform.localScale = QuestTextDefaultScale;
             Tween -= QuestScaleDown;
-            Tween += QuestFadeOut;
-            Tween += QuestMoveRight;
+            if (!QuestIsStarting)
+            {
+                Tween += QuestFadeOut;
+                Tween += QuestMoveRight;
+            }
+            else
+            {
+                QuestIsStarting = false;
+                QuestIsTweening = false;
+            }
         }
     }
 
@@ -137,6 +164,12 @@ public class QuestTextTweener
     {
         Tween -= QuestFadeOut;
         QuestText.CrossFadeAlpha(0.00f, 1.00f, true);
+    }
+    void QuestFadeIn(object sender, EventArgs e)
+    {
+        Tween -= QuestFadeIn;
+        QuestText.CrossFadeAlpha(0.00f, 0.00f, true);
+        QuestText.CrossFadeAlpha(1.00f, 1.00f, true);
     }
     Vector3 QuestTextAbsolutePosition;
     Vector3 questTargetPositionOffset = new Vector3(6, 0, 0);
@@ -160,13 +193,14 @@ public class QuestTextTweener
             QuestIsTweening = false;
         }
     }
-
     public void QuestStartedTweening()
     {
         if (!QuestIsTweening)
         {
             QuestIsTweening = true;
+            QuestIsStarting = true;
             Debug.Log("Quest Started Tweening Started.");
+            Tween += QuestFadeIn;
             Tween += QuestScaleUp;
         }
     }
@@ -175,8 +209,10 @@ public class QuestTextTweener
     {
         if (!TaskIsTweening)
         {
+            TaskIsStarting = true;
             TaskIsTweening = true;
             Debug.Log("Task Started Tweening Started.");
+            Tween += TaskFadeIn;
             Tween += TaskScaleUp;
         }
     }
