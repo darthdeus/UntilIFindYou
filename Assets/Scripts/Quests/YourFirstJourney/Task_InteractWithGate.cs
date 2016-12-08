@@ -1,5 +1,13 @@
 ﻿public class Task_InteractWithGate : Task
 {
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        isCheckAllowed = false;
+    }
     public override string GetDescription()
     {
         return "Interact with the gate.";
