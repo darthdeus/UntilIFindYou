@@ -6317,6 +6317,7 @@ GameObject:
   - 114: {fileID: 1737955571}
   - 114: {fileID: 1737955570}
   - 114: {fileID: 1737955560}
+  - 114: {fileID: 1737955572}
   m_Layer: 0
   m_Name: Your First Journey
   m_TagString: Untagged
@@ -6367,8 +6368,9 @@ MonoBehaviour:
     y: -364
     width: 1478.6364
     height: 892
-  selectedBlock: {fileID: 1737955554}
-  selectedCommands: []
+  selectedBlock: {fileID: 1737955568}
+  selectedCommands:
+  - {fileID: 1737955572}
   variables:
   - {fileID: 1737955553}
   - {fileID: 1737955552}
@@ -6819,6 +6821,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1737955567}
   - {fileID: 1737955566}
+  - {fileID: 1737955572}
   - {fileID: 1737955565}
   - {fileID: 1737955564}
 --- !u!114 &1737955569
@@ -6882,6 +6885,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 1737955569}
   message: YFJCompl
+--- !u!114 &1737955572
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737955546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  text: Take the quest?
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  setMenuDialog: {fileID: 0}
 --- !u!1 &1754000849
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,6 +7837,9 @@ GameObject:
   - 114: {fileID: 2038129272}
   - 114: {fileID: 2038129271}
   - 114: {fileID: 2038129270}
+  - 114: {fileID: 2038129331}
+  - 114: {fileID: 2038129330}
+  - 114: {fileID: 2038129329}
   m_Layer: 0
   m_Name: SandPlanetNPC
   m_TagString: Untagged
@@ -8299,6 +8326,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2038129329}
   - {fileID: 2038129287}
   - {fileID: 2038129284}
   - {fileID: 2038129283}
@@ -9144,6 +9172,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2038129330}
   - {fileID: 2038129319}
   - {fileID: 2038129317}
   - {fileID: 2038129318}
@@ -9215,6 +9244,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 2038129331}
   - {fileID: 2038129295}
   - {fileID: 2038129322}
   - {fileID: 2038129294}
@@ -9245,7 +9275,7 @@ MonoBehaviour:
     y: -480.4099
     width: 2020.1145
     height: 1174.9888
-  selectedBlock: {fileID: 2038129321}
+  selectedBlock: {fileID: 2038129327}
   selectedCommands: []
   variables: []
   description: 
@@ -9258,6 +9288,69 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &2038129329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038129268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 62
+  indentLevel: 0
+  text: Learn about ...
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  setMenuDialog: {fileID: 0}
+--- !u!114 &2038129330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038129268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 61
+  indentLevel: 0
+  text: Ask about ...
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  setMenuDialog: {fileID: 0}
+--- !u!114 &2038129331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038129268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 60
+  indentLevel: 0
+  text: What can I do for you?
+  description: 
+  targetBlock: {fileID: 0}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  setMenuDialog: {fileID: 0}
 --- !u!1 &2074272890
 GameObject:
   m_ObjectHideFlags: 1
@@ -9285,7 +9378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2076450949}
+  selectedFlowchart: {fileID: 2038129328}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
