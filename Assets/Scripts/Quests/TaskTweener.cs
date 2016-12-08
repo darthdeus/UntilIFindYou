@@ -26,20 +26,23 @@ public class TaskTweener
         TaskTextDefaultScale = TaskText.transform.localScale;
         TaskTextAbsolutePosition = TaskText.transform.position - player.transform.position;
     }
-    public void StartTweening(Task _task)
+    public bool StartTweening(Task _task)
     {
         if (_task != null && TweenedTask == null)
         {
             TweenedTask = _task;
             Debug.Log("Task Tweening Started.");
 
-            if (!TweenedTask.isCompleted)
+            if (!TweenedTask.isCompleted || TaskText.text == "")
             {
                 _parent.Tween += TaskSetDescriptionText;
                 _parent.Tween += TaskFadeIn;
             }
             _parent.Tween += TaskScaleUp;
+
+            return true;
         }
+        return false;
     }
     void TaskScaleUp(object sender, EventArgs e)
     {
@@ -110,7 +113,7 @@ public class TaskTweener
     void TaskSetCompletedText(object sender, EventArgs e)
     {
         _parent.Tween -= TaskSetCompletedText;
-        TaskText.text = TweenedTask.GetDescription() + " ( Completed )";
+        TaskText.text = TweenedTask.GetDescription() + " (Completed)";
     }
     void ResetTaskText()
     {

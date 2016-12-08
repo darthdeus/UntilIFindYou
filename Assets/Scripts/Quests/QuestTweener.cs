@@ -26,20 +26,23 @@ public class QuestTweener
         QuestTextAbsolutePosition = QuestText.transform.position - player.transform.position;
         QuestTextDefaultScale = QuestText.transform.localScale;
     }
-    public void StartTweening(Quest _quest)
+    public bool StartTweening(Quest _quest)
     {
         if (_quest != null && TweenedQuest == null)
         {
             TweenedQuest = _quest;
             Debug.Log("Quest Tweening Started.");
 
-            if (!TweenedQuest.isCompleted())
+            if (!TweenedQuest.isCompleted() || QuestText.text == "")
             {
                 _parent.Tween += QuestSetTitleText;
                 _parent.Tween += QuestFadeIn;
             }
             _parent.Tween += QuestScaleUp;
+
+            return true;
         }
+        return false;
     }
     void QuestScaleUp(object sender, EventArgs e)
     {
@@ -110,7 +113,7 @@ public class QuestTweener
     void QuestSetCompletedTitleText(object sender, EventArgs e)
     {
         _parent.Tween -= QuestSetCompletedTitleText;
-        QuestText.text = TweenedQuest.GetTitle() + " ( Completed )";
+        QuestText.text = TweenedQuest.GetTitle() + " (Completed)";
     }
     void ResetQuestText()
     {

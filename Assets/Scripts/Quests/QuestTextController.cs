@@ -1,9 +1,40 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class QuestTextController : MonoBehaviour
 {
-    public Quest _quest;
+    public Quest _quest
+    {
+        get
+        {
+            return quest;
+        }
+        set
+        {
+            Task nextTask;
+            if (value != null)
+            {
+                quest = value;
+                _tweener.StartTweening(quest);
+                nextTask = GetNextTask(quest);
+                _tweener.StartTweening(nextTask);
+                if (nextTask.isCompleted)
+                    OnUpdate += RollTasks;
+            }
+            else if (value == null && quest != null)
+            {
+                _tweener.StartTweening(quest);
+                nextTask = GetNextTask(quest);
+                _tweener.StartTweening(nextTask);
+                if (nextTask.isCompleted)
+                    OnUpdate += RollTasks;
+                quest = value;
+            }
+        }
+    }
+    event EventHandler OnUpdate;
+    Quest quest;
     Text questText;
     public Text taskText;
     int taskIndex;
@@ -14,61 +45,53 @@ public class QuestTextController : MonoBehaviour
     {
         questText = gameObject.GetComponent<Text>();
         taskIndex = 0;
-        
+
         questText.text = "";
         taskText.text = "";
 
         _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
     }
 
+    void RollTasks(object sender, EventArgs e)
+    {
+        Task nextTask = GetNextTask(quest);
+        if (!nextTask.isCompleted)
+        {
+            if (_tweener.StartTweening(nextTask))
+                OnUpdate -= RollTasks;
+        }
+        else if (!_tweener.StartTweening(nextTask))
+            taskIndex--;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (_quest == null)
-        {
-            questText.text = "";
-            taskText.text = "";
-        }
-        else
-        {
-            if (!_quest.GetStatus())
-            {
-                questText.text = _quest.GetTitle();
-                Task CurrentTask = GetNextTask();
-                if (CurrentTask != null)
-                    taskText.text = CurrentTask.GetDescription();
-            }
-            else
-            {
-                questText.text = _quest.GetTitle() + " ( Completed )";
-                taskText.text = "";
-            }
-        }
-        _tweener.StartTweening(_quest);
-        _tweener.StartTweening(GetNextTask());
+        if (OnUpdate != null)
+            OnUpdate(this, EventArgs.Empty);
         _tweener.TweeningUpdate();
     }
 
     // Checks tasks of active quest and returns the next task or the first unfinished task (in case one task has become unfinished after completion) 
-    Task GetNextTask()
+    Task GetNextTask(Quest quest)
     {
-        if (_quest != null)
+        if (quest != null)
         {
             // Check for task that used to be finished but is no longer finished //
-            for (int i = 0; i < _quest.Tasks.Count; i++)
-                if (i > taskIndex) break;
-                else if (!_quest.Tasks[i].isCompleted && i > taskIndex)
+            for (int i = 0; i < quest.Tasks.Count; i++)
+                if (i >= taskIndex) break;
+                else if (!quest.Tasks[i].isCompleted && i > taskIndex)
                 {
                     taskIndex = i;
-                    return _quest.Tasks[taskIndex];
+                    return quest.Tasks[taskIndex];
                 }
             // Return the next task no matter if it was finished or not // 
-            if (_quest.Tasks[taskIndex].isCompleted)
-                if (taskIndex + 1 < _quest.Tasks.Count)
-                    return _quest.Tasks[++taskIndex];
+            if (quest.Tasks[taskIndex].isCompleted)
+                if (taskIndex + 1 < quest.Tasks.Count)
+                    return quest.Tasks[taskIndex++];
                 else
                     return null;
-            else return _quest.Tasks[taskIndex];
+            else return quest.Tasks[taskIndex];
         }
         // Return null in case all tasks have been completed or there is no quest active for this instance. //
         return null;
