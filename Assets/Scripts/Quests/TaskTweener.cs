@@ -28,6 +28,12 @@ public class TaskTweener
     }
     public bool StartTweening(Task _task)
     {
+        if (TweenedTask != null && ReferenceEquals(TweenedTask, _task))
+            if (TweenedTask.isCompleted)
+                _parent.Tween += TaskSetCompletedText;
+            else
+                _parent.Tween += TaskSetDescriptionText;
+
         if (_task != null && TweenedTask == null)
         {
             TweenedTask = _task;
@@ -38,10 +44,8 @@ public class TaskTweener
                 _parent.Tween += TaskSetDescriptionText;
                 _parent.Tween += TaskFadeIn;
             }
-            if (TweenedTask.isCompleted)
-            {
+            else if (TweenedTask.isCompleted)
                 _parent.Tween += TaskSetCompletedText;
-            }
             _parent.Tween += TaskScaleUp;
 
             return true;
@@ -108,7 +112,8 @@ public class TaskTweener
     void TaskSetDescriptionText(object sender, EventArgs e)
     {
         _parent.Tween -= TaskSetDescriptionText;
-        TaskText.text = TweenedTask.GetDescription();
+        if (TweenedTask != null)
+            TaskText.text = TweenedTask.GetDescription();
     }
     void TaskSetCompletedText(object sender, EventArgs e)
     {
