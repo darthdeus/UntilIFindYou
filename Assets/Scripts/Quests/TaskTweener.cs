@@ -38,6 +38,10 @@ public class TaskTweener
                 _parent.Tween += TaskSetDescriptionText;
                 _parent.Tween += TaskFadeIn;
             }
+            if (TweenedTask.isCompleted)
+            {
+                _parent.Tween += TaskSetCompletedText;
+            }
             _parent.Tween += TaskScaleUp;
 
             return true;
@@ -51,10 +55,6 @@ public class TaskTweener
         {
             _parent.Tween -= TaskScaleUp;
             TaskText.transform.localScale = TaskTextDefaultScale + TaskTextTargetScaleIncrease;
-            if (TweenedTask.isCompleted)
-            {
-                _parent.Tween += TaskSetCompletedText;
-            }
             _parent.Tween += TaskScaleDown;
         }
     }

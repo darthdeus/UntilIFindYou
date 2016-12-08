@@ -20,6 +20,6 @@
 
     public override void UpdateStatus_DONOTCALL()
     {
-
+        isCompleted = true;
     }
 }

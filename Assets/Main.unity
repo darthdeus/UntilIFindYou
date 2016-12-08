@@ -6337,9 +6337,8 @@ MonoBehaviour:
     y: -364
     width: 1478.6364
     height: 892
-  selectedBlock: {fileID: 1737955569}
-  selectedCommands:
-  - {fileID: 1737955570}
+  selectedBlock: {fileID: 1737955554}
+  selectedCommands: []
   variables:
   - {fileID: 1737955553}
   - {fileID: 1737955552}
@@ -6585,7 +6584,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &1737955560
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737955546}

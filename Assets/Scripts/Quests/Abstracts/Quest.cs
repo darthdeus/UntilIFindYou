@@ -16,9 +16,13 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
     // End of Variables //
     public List<Task> Tasks;
 
+    // Event executed when the quest is started //
     public event System.EventHandler OnStarted;
+    // Event executed when the quest is made completable //
     public event System.EventHandler OnMakeCompletable;
+    // Event executed when the status of the quest is updated //
     public event System.EventHandler OnStatusUpdate;
+    // Event executed when the quest is finished/completed //
     public event System.EventHandler OnFinished;
 
     public bool GetStatus()

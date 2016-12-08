@@ -22,7 +22,7 @@ public class GateClicked : MonoBehaviour
     /// </summary>
     void OnMouseUp()
     {
-        if (AssociatedQuest.isActive())
-            AssociatedTask.isCompleted = true;
+        if (!AssociatedTask.isCompleted && AssociatedQuest.isActive())
+            AssociatedTask.UpdateStatus();
     }
 }

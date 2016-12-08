@@ -13,22 +13,21 @@ public class QuestTextController : MonoBehaviour
         set
         {
             Task nextTask;
+            // If new quest is assigned, add handlers to it //
             if (value != null)
             {
                 quest = value;
-                _tweener.StartTweening(quest);
-                nextTask = GetNextTask(quest);
-                _tweener.StartTweening(nextTask);
-                if (nextTask.isCompleted)
-                    OnUpdate += RollTasks;
+                AddEventHandlersToQuest(quest);
             }
-            else if (value == null && quest != null)
+            _tweener.StartTweening(quest);      // Animation for the quest text
+            nextTask = GetNextTask(quest);      // Prepare next task
+            _tweener.StartTweening(nextTask);   // Animation for task text
+            if (nextTask != null && nextTask.isCompleted)
+                OnUpdate += RollTasks;
+            // If quest is removed, remove handlers from it //
+            if (value == null && quest != null)
             {
-                _tweener.StartTweening(quest);
-                nextTask = GetNextTask(quest);
-                _tweener.StartTweening(nextTask);
-                if (nextTask.isCompleted)
-                    OnUpdate += RollTasks;
+                RemoveEventHandlersFromQuest(quest);
                 quest = value;
             }
         }
@@ -52,16 +51,67 @@ public class QuestTextController : MonoBehaviour
         _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
     }
 
+    // Adds all basic events to a quest //
+    void AddEventHandlersToQuest(Quest quest)
+    {
+        quest.OnFinished += QuestTweeningEvent;
+        quest.OnMakeCompletable += QuestTweeningEvent;
+        foreach (Task task in quest.Tasks)
+        {
+            task.OnStatusUpdate += TaskTweeningEvent;
+            task.OnStatusUpdate += CheckQuestStatus;
+        }
+    }
+    // Removes all basic events from a quest //
+    void RemoveEventHandlersFromQuest(Quest quest)
+    {
+        quest.OnFinished -= QuestTweeningEvent;
+        quest.OnMakeCompletable -= QuestTweeningEvent;
+        foreach (Task task in quest.Tasks)
+        {
+            task.OnStatusUpdate -= TaskTweeningEvent;
+            task.OnStatusUpdate -= CheckQuestStatus;
+        }
+    }
+
+    // An event that checks the status of a quest (usually after finishing a task) //
+    void CheckQuestStatus(object sender, EventArgs e)
+    {
+        quest.UpdateStatus();
+    }
+    // An event that attempts to tween the quest text //
+    void QuestTweeningEvent(object sender, EventArgs e)
+    {
+        _tweener.StartTweening((Quest)sender);
+        GetNextTask((Quest)sender);
+    }
+    // An event that attempts to tween the task text //
+    void TaskTweeningEvent(object sender, EventArgs e)
+    {
+        _tweener.StartTweening((Task)sender);
+        if (((Task)sender).isCompleted)
+        {
+            GetNextTask(quest);
+            if (taskIndex < quest.Tasks.Count)
+            {
+                OnUpdate += RollTasks;
+            }
+        }
+    }
+    // Keeps tweening tasks and getting new ones until it gets an unfinished task //
     void RollTasks(object sender, EventArgs e)
     {
         Task nextTask = GetNextTask(quest);
-        if (!nextTask.isCompleted)
-        {
-            if (_tweener.StartTweening(nextTask))
-                OnUpdate -= RollTasks;
-        }
-        else if (!_tweener.StartTweening(nextTask))
-            taskIndex--;
+        if (nextTask != null)
+            if (!nextTask.isCompleted)
+            {
+                if (_tweener.StartTweening(nextTask))
+                {
+                    OnUpdate -= RollTasks;
+                }
+            }
+            else if (!_tweener.StartTweening(nextTask))
+                taskIndex--;
     }
 
     // Update is called once per frame
@@ -80,7 +130,7 @@ public class QuestTextController : MonoBehaviour
             // Check for task that used to be finished but is no longer finished //
             for (int i = 0; i < quest.Tasks.Count; i++)
                 if (i >= taskIndex) break;
-                else if (!quest.Tasks[i].isCompleted && i > taskIndex)
+                else if (!quest.Tasks[i].isCompleted && i < taskIndex)
                 {
                     taskIndex = i;
                     return quest.Tasks[taskIndex];

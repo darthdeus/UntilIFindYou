@@ -38,6 +38,10 @@ public class QuestTweener
                 _parent.Tween += QuestSetTitleText;
                 _parent.Tween += QuestFadeIn;
             }
+            if (TweenedQuest.isCompleted())
+            {
+                _parent.Tween += QuestSetCompletedTitleText;
+            }
             _parent.Tween += QuestScaleUp;
 
             return true;
@@ -51,10 +55,6 @@ public class QuestTweener
         {
             QuestText.transform.localScale = QuestTextDefaultScale + QuestTextTargetScaleIncrease;
             _parent.Tween -= QuestScaleUp;
-            if (TweenedQuest.isCompleted())
-            {
-                _parent.Tween += QuestSetCompletedTitleText;
-            }
             _parent.Tween += QuestScaleDown;
         }
     }

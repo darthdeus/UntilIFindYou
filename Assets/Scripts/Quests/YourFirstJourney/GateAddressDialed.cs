@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using Assets;
 
 public class GateAddressDialed : MonoBehaviour
@@ -16,7 +15,7 @@ public class GateAddressDialed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (AssociatedQuest.isActive() && DialingBook.CurrentAddress == "defab")
-            AssociatedTask.isCompleted = true;
+        if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "defab")
+            AssociatedTask.UpdateStatus();
     }
 }
