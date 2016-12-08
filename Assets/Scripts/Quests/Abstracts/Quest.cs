@@ -15,6 +15,16 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
     // Description - String
     // End of Variables //
     public List<Task> Tasks;
+
+    // Event executed when the quest is started //
+    public event System.EventHandler OnStarted;
+    // Event executed when the quest is made completable //
+    public event System.EventHandler OnMakeCompletable;
+    // Event executed when the status of the quest is updated //
+    public event System.EventHandler OnStatusUpdate;
+    // Event executed when the quest is finished/completed //
+    public event System.EventHandler OnFinished;
+
     public bool GetStatus()
     {
         return QuestChart.GetBooleanVariable("Status");
@@ -30,6 +40,8 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
     public void StartQuest()
     {
         QuestChart.SetBooleanVariable("Active", true);
+        if (OnStarted != null)
+            OnStarted(this, System.EventArgs.Empty);
     }
     public string GetTitle()
     {
@@ -47,6 +59,8 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
             QuestChart.SetBooleanVariable("Active", false);
             QuestChart.SetBooleanVariable("Completed", true);
         }
+        if (OnFinished != null)
+            OnFinished(this, System.EventArgs.Empty);
     }
     public string GetProgress()
     {
@@ -72,10 +86,19 @@ public abstract class Quest : MonoBehaviour, IQuest, IStatus
             }
         }
     }
-    public abstract void UpdateStatus();
+    public abstract void UpdateStatus_DONOTCALL();
+
+    public void UpdateStatus()
+    {
+        UpdateStatus_DONOTCALL();
+        if (OnStatusUpdate != null)
+            OnStatusUpdate(this, System.EventArgs.Empty);
+    }
 
     public void MakeCompletable()
     {
         QuestChart.SetBooleanVariable("Status", true);
+        if (OnMakeCompletable != null)
+            OnMakeCompletable(this, System.EventArgs.Empty);
     }
 }

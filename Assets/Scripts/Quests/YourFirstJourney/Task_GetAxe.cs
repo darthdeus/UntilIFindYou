@@ -32,7 +32,7 @@ public class Task_GetAxe : Task
         return isCompleted;
     }
 
-    public override void UpdateStatus()
+    public override void UpdateStatus_DONOTCALL()
     {
         if (_playerInventory.HasTool(PlayerInventory.ToolType.Axe))
             isCompleted = true;

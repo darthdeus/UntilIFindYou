@@ -17,10 +17,14 @@ public class PlayerQuestController : MonoBehaviour
         QuestControllers = new List<QuestTextController>();
         foreach (var questText in QuestTexts)
             QuestControllers.Add(questText.GetComponent<QuestTextController>());
+        foreach (Quest quest in Quests)
+        {
+            quest.OnStarted += PassQuestsToControllers;
+            quest.OnFinished += PassQuestsToControllers;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void PassQuestsToControllers(object sender, System.EventArgs e)
     {
         int activeQuestCounter = 0;
         foreach (Quest _quest in Quests)
@@ -34,6 +38,12 @@ public class PlayerQuestController : MonoBehaviour
                 activeQuestCounter++;
             }
         ResetRemainingQuestTexts(activeQuestCounter);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     void ResetRemainingQuestTexts(int activeQuestCounter)

@@ -1001,8 +1001,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -113}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -199}
+  m_SizeDelta: {x: 293, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291345591
 MonoBehaviour:
@@ -1039,7 +1039,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 12
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -1048,7 +1048,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &291345593
@@ -2542,8 +2542,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -83}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -145}
+  m_SizeDelta: {x: 293, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845161193
 MonoBehaviour:
@@ -2580,16 +2580,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 5
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &845161195
@@ -2609,7 +2609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f93474cced08ba429ec7b35ba17a627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quest: {fileID: 0}
   taskText: {fileID: 291345592}
 --- !u!4 &853645196
 Transform:
@@ -2862,8 +2861,8 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -173}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -308}
+  m_SizeDelta: {x: 293, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952667287
 MonoBehaviour:
@@ -2900,7 +2899,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 12
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2909,7 +2908,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &952667289
@@ -3042,8 +3041,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -143}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -253}
+  m_SizeDelta: {x: 293, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024302525
 MonoBehaviour:
@@ -3080,16 +3079,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 5
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &1024302527
@@ -3109,7 +3108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f93474cced08ba429ec7b35ba17a627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quest: {fileID: 0}
   taskText: {fileID: 952667288}
 --- !u!1 &1036619747
 GameObject:
@@ -3145,8 +3143,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -23}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -36}
+  m_SizeDelta: {x: 293, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036619749
 MonoBehaviour:
@@ -3183,16 +3181,16 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 5
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &1036619751
@@ -3212,7 +3210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f93474cced08ba429ec7b35ba17a627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _quest: {fileID: 0}
   taskText: {fileID: 1165393645}
 --- !u!1 &1056318391
 GameObject:
@@ -3664,8 +3661,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -124, y: -53}
-  m_SizeDelta: {x: 213.09998, y: 30}
+  m_AnchoredPosition: {x: -172, y: -94.000015}
+  m_SizeDelta: {x: 293, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165393644
 MonoBehaviour:
@@ -3702,7 +3699,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 64bd3e45f7a714f16b3c213f55f17fea, type: 3}
-    m_FontSize: 12
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3711,7 +3708,7 @@ MonoBehaviour:
     m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &1165393646
@@ -6281,7 +6278,6 @@ GameObject:
   - 114: {fileID: 1737955563}
   - 114: {fileID: 1737955562}
   - 114: {fileID: 1737955561}
-  - 114: {fileID: 1737955560}
   - 114: {fileID: 1737955559}
   - 114: {fileID: 1737955557}
   - 114: {fileID: 1737955558}
@@ -6290,6 +6286,7 @@ GameObject:
   - 114: {fileID: 1737955569}
   - 114: {fileID: 1737955571}
   - 114: {fileID: 1737955570}
+  - 114: {fileID: 1737955560}
   m_Layer: 0
   m_Name: Your First Journey
   m_TagString: Untagged
@@ -6329,11 +6326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 43.181793, y: 123.86359}
+  scrollPos: {x: -89.318115, y: 53.86361}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.40000018
   scrollViewRect:
     serializedVersion: 2
     x: -350
@@ -6588,31 +6585,19 @@ MonoBehaviour:
 --- !u!114 &1737955560
 MonoBehaviour:
   m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 114000010041980840, guid: 31100c97facd83c4389480204f55138a,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1737955546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 13
+  itemId: 21
   indentLevel: 0
-  variable: {fileID: 1737955551}
-  setOperator: 0
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
+  targetObject: {fileID: 399528845}
+  methodName: StartQuest
+  delay: 0
 --- !u!114 &1737955561
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9223,7 +9208,7 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 1
+  zoom: 0.55000025
   scrollViewRect:
     serializedVersion: 2
     x: -561.1028
@@ -9231,8 +9216,7 @@ MonoBehaviour:
     width: 2020.1145
     height: 1174.9888
   selectedBlock: {fileID: 2038129321}
-  selectedCommands:
-  - {fileID: 2038129296}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -9271,7 +9255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2038129328}
+  selectedFlowchart: {fileID: 1737955548}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
