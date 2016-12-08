@@ -11,6 +11,7 @@ namespace Assets {
         private AudioSource _failure;
         private bool _readyToGo = false;
         private SpriteRenderer _spriteRenderer;
+        private Animator _lightAnimator;
 
         private bool _isVisible {
             get { return _spriteRenderer.isVisible; }
@@ -19,6 +20,7 @@ namespace Assets {
         void Start() {
             _gateSystem = GateSystem.Find();
             _spriteRenderer = GetComponent<SpriteRenderer>();
+            _lightAnimator = GameObject.FindGameObjectWithTag("Light").GetComponent<Animator>();
 
             var sounds = GetComponents<AudioSource>();
 
@@ -38,7 +40,7 @@ namespace Assets {
             if (!_success.isPlaying && _readyToGo && _player != null) {
                 _gateSystem.DialAndMoveAddress(_player, CurrentAddress);
                 _readyToGo = false;
-
+                _lightAnimator.SetBool("isDialing", false);
                 SetVisible(false);
             }
 
@@ -86,6 +88,7 @@ namespace Assets {
                     if (_gateSystem.CheckCorrectAddress(CurrentAddress)) {
                         _success.Play();
                         _readyToGo = true;
+                        _lightAnimator.SetBool("isDialing", true);
                     } else {
                         _failure.Play();
                         SetVisible(false);
