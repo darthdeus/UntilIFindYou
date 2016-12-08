@@ -18,7 +18,7 @@ public class Task_GetWood : Task {
         if (CurrentWoodAmount == 0) {
             return string.Format("Use your Axe Tool to get {0} wood.", TargetWoodAmount);
         } else {
-            return string.Format("Use your Axe Tool to get {0} more wood", TargetWoodAmount - CurrentWoodAmount);
+            return string.Format("Use your Axe Tool to get {0} more wood.", TargetWoodAmount - CurrentWoodAmount);
         }
     }
 
@@ -34,7 +34,7 @@ public class Task_GetWood : Task {
         return isCompleted;
     }
 
-    public override void UpdateStatus() {
+    public override void UpdateStatus_DONOTCALL() {
         isCompleted = CurrentWoodAmount >= TargetWoodAmount;
     }
 }

@@ -14,9 +14,11 @@ public class QuestTextController : MonoBehaviour
     {
         questText = gameObject.GetComponent<Text>();
         taskIndex = 0;
-        _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
+        
         questText.text = "";
         taskText.text = "";
+
+        _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
     }
 
     // Update is called once per frame
@@ -61,11 +63,12 @@ public class QuestTextController : MonoBehaviour
                     return _quest.Tasks[taskIndex];
                 }
             // Return the next task no matter if it was finished or not // 
-            if (taskIndex < _quest.Tasks.Count)
-                if (_quest.Tasks[taskIndex].isCompleted)
+            if (_quest.Tasks[taskIndex].isCompleted)
+                if (taskIndex + 1 < _quest.Tasks.Count)
                     return _quest.Tasks[++taskIndex];
                 else
-                    return _quest.Tasks[taskIndex];
+                    return null;
+            else return _quest.Tasks[taskIndex];
         }
         // Return null in case all tasks have been completed or there is no quest active for this instance. //
         return null;

@@ -2,7 +2,7 @@
 
 public class Quest_YourFirstJourney : Quest
 {
-    public override void UpdateStatus()
+    public override void UpdateStatus_DONOTCALL()
     {
         foreach (Task _task in Tasks)
             _task.UpdateStatus();
