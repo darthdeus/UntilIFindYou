@@ -6,7 +6,11 @@
 			"type":"mono",
 			"request":"attach",
 			"address":"localhost",
+<<<<<<< HEAD
 			"port":5372
+=======
+			"port":1028
+>>>>>>> refs/remotes/origin/master
 		}
 	]
 }
