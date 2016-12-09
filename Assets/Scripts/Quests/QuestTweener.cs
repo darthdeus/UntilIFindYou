@@ -28,6 +28,12 @@ public class QuestTweener
     }
     public bool StartTweening(Quest _quest)
     {
+        if (TweenedQuest != null && ReferenceEquals(TweenedQuest, _quest))
+            if (TweenedQuest.isCompleted())
+                _parent.Tween += QuestSetCompletedTitleText;
+            else
+                _parent.Tween += QuestSetTitleText;
+
         if (_quest != null && TweenedQuest == null)
         {
             TweenedQuest = _quest;
@@ -38,10 +44,8 @@ public class QuestTweener
                 _parent.Tween += QuestSetTitleText;
                 _parent.Tween += QuestFadeIn;
             }
-            if (TweenedQuest.isCompleted())
-            {
+            else if (TweenedQuest.isCompleted())
                 _parent.Tween += QuestSetCompletedTitleText;
-            }
             _parent.Tween += QuestScaleUp;
 
             return true;

@@ -20,6 +20,7 @@ public class PlayerQuestController : MonoBehaviour
         foreach (Quest quest in Quests)
         {
             quest.OnStarted += PassQuestsToControllers;
+            quest.OnStarted += TaskAlreadyCompletedCheck;
             quest.OnFinished += PassQuestsToControllers;
         }
     }
@@ -38,6 +39,14 @@ public class PlayerQuestController : MonoBehaviour
                 activeQuestCounter++;
             }
         ResetRemainingQuestTexts(activeQuestCounter);
+    }
+
+    void TaskAlreadyCompletedCheck(object sender, System.EventArgs e)
+    {
+        foreach (Quest quest in Quests)
+            foreach (Task task in quest.Tasks)
+                if (task.isCheckAllowed)
+                    task.CheckStatus();
     }
 
     // Update is called once per frame
