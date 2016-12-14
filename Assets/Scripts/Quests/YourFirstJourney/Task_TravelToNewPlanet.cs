@@ -10,7 +10,7 @@
     }
     public override string GetDescription()
     {
-        return "Press all the runes in the second row of first page from left to right and then hit the first two runes of the first row";
+        return "The address of the planet is: stay run always yes moon.";
     }
 
     public override string GetProgress()

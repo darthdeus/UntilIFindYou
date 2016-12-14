@@ -268,6 +268,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!4 &49439068 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+    type: 2}
+  m_PrefabInternal: {fileID: 1337707475}
 --- !u!1 &51121285
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +650,80 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &172134783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 172134784}
+  - 222: {fileID: 172134786}
+  - 114: {fileID: 172134785}
+  m_Layer: 5
+  m_Name: RuneTooltip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &172134784
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172134783}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 358.8194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 182815973}
+  m_RootOrder: 6
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 344.4, y: -294.5}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &172134785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172134783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3647059, g: 0.21176472, b: 0.07058824, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Earth
+--- !u!222 &172134786
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172134783}
 --- !u!1 &182815969
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,6 +815,7 @@ RectTransform:
   - {fileID: 291345590}
   - {fileID: 1024302524}
   - {fileID: 952667286}
+  - {fileID: 172134784}
   - {fileID: 1783163070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4720,6 +4800,127 @@ Transform:
   m_Children: []
   m_Father: {fileID: 754894956}
   m_RootOrder: 0
+--- !u!1001 &1337707475
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.869
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014060533984, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_Name
+      value: DialingBook
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013591904430, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: yes
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011934764350, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: moon
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011680007640, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: friend
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011117293050, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: stay
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011497008626, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: run
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013708054872, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: always
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012077994252, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: life
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011173279176, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: death
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012965198544, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: enter
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010410498960, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013457523880, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: no
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010431756004, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: water
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012940918632, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: sun
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011822349264, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: air
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014192241946, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: earth
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1340966962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,52 +5208,6 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a1d1bc3663d484bb3d4bd77a3baf1a, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1402071914
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -21.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -2.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012516472290, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014060533984, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
-      propertyPath: m_Name
-      value: DialingBook
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1429415641
 GameObject:
@@ -6358,16 +6513,15 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.40000018
+  zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -350
     y: -364
     width: 1478.6364
     height: 892
-  selectedBlock: {fileID: 1737955568}
-  selectedCommands:
-  - {fileID: 1737955572}
+  selectedBlock: {fileID: 1737955554}
+  selectedCommands: []
   variables:
   - {fileID: 1737955553}
   - {fileID: 1737955552}
@@ -6474,7 +6628,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 53.40909
-    y: 81.81818
+    y: 82.81818
     width: 120
     height: 40
   itemId: 9
@@ -6546,8 +6700,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: Just press all the runes in the second row of first page from left to
-    right and then hit the first two runes of the first row.
+  storyText: 'The address is: stay run always yes moon'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -7017,7 +7170,7 @@ MonoBehaviour:
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010616363774, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
     type: 2}
-  m_PrefabInternal: {fileID: 1402071914}
+  m_PrefabInternal: {fileID: 1337707475}
   m_Script: {fileID: 11500000, guid: 43712bb0a4ab1614c8026f8ee4bedcec, type: 3}
 --- !u!1 &1777461271
 GameObject:
@@ -7118,7 +7271,7 @@ RectTransform:
   - {fileID: 1160081370}
   - {fileID: 754894956}
   m_Father: {fileID: 182815973}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 71, y: -67}
@@ -9266,14 +9419,14 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
-  zoom: 0.55000025
+  zoom: 0.96999985
   scrollViewRect:
     serializedVersion: 2
     x: -561.1028
     y: -480.4099
     width: 2020.1145
     height: 1174.9888
-  selectedBlock: {fileID: 2038129289}
+  selectedBlock: {fileID: 2038129321}
   selectedCommands: []
   variables: []
   description: 
@@ -9376,7 +9529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2038129328}
+  selectedFlowchart: {fileID: 1737955548}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
@@ -9661,6 +9814,34 @@ MonoBehaviour:
   isCompleted: 0
   isCheckAllowed: 1
   player: {fileID: 166136611}
+--- !u!1 &2092130812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2092130813}
+  m_Layer: 0
+  m_Name: RuneTooltipPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092130813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092130812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.47, y: -1.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 49439068}
+  m_RootOrder: 15
 --- !u!1 &2093376188
 GameObject:
   m_ObjectHideFlags: 0
