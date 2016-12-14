@@ -16,7 +16,7 @@ namespace Assets
         private Animator _lightAnimator;
         event EventHandler OnTeleportAnim;
 
-        private bool _isVisible
+        public bool _isVisible
         {
             get { return _spriteRenderer.isVisible; }
         }

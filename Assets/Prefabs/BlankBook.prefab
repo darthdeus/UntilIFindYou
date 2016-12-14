@@ -273,10 +273,11 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012385507306}
+  - 224: {fileID: 224000011456462962}
   - 212: {fileID: 212000013465815922}
   - 114: {fileID: 114000013591904430}
   - 60: {fileID: 60000014047796220}
+  - 222: {fileID: 222000014288094560}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -432,19 +433,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012516472290}
   m_RootOrder: 6
---- !u!4 &4000012385507306
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014131727294}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.35, y: 4.01, z: -0.86}
-  m_LocalScale: {x: 0.4717807, y: 0.471781, z: 0.471781}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000012516472290}
-  m_RootOrder: 0
 --- !u!4 &4000012516472290
 Transform:
   m_ObjectHideFlags: 1
@@ -456,7 +444,7 @@ Transform:
   m_LocalScale: {x: 0.24845073, y: 0.2484506, z: 0.2484506}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000012385507306}
+  - {fileID: 224000011456462962}
   - {fileID: 4000010754583264}
   - {fileID: 4000010253285030}
   - {fileID: 4000013973422878}
@@ -2651,3 +2639,27 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!222 &222000014288094560
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014131727294}
+--- !u!224 &224000011456462962
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014131727294}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.86}
+  m_LocalScale: {x: 0.4717807, y: 0.471781, z: 0.471781}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000012516472290}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.35, y: 4.01}
+  m_SizeDelta: {x: 3.44, y: 3.25}
+  m_Pivot: {x: 0.5, y: 0.5}
