@@ -6,6 +6,9 @@ public class NPCMovement : MonoBehaviour {
 	public float moveSpeed= 1 ;
 	private Rigidbody2D myRigidBody;
 	public bool isWalking;
+
+	private BlockCaller theBC;
+
 	
 
 
@@ -21,6 +24,8 @@ public class NPCMovement : MonoBehaviour {
 	{
 
 		myRigidBody = GetComponent<Rigidbody2D>();
+		
+		theBC = FindObjectOfType<BlockCaller>();
 
 		walkCounter = walkTime;
 		waitCounter = waitTime;
@@ -34,6 +39,13 @@ public class NPCMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		if(theBC.IntroChart.GetBooleanVariable("isRunning")==false)
+		{
+			canMove = true;
+			
+		}
+
+
 		if (canMove == false)
 		{
 			myRigidBody.velocity = Vector2.zero;
