@@ -153,6 +153,7 @@ GameObject:
   - 4: {fileID: 4000012270674972}
   - 212: {fileID: 212000012109569894}
   - 58: {fileID: 58000013206642986}
+  - 114: {fileID: 114000011810450866}
   m_Layer: 0
   m_Name: baobab (6)
   m_TagString: Untagged
@@ -453,6 +454,7 @@ GameObject:
   - 4: {fileID: 4000012485975648}
   - 212: {fileID: 212000011899746970}
   - 58: {fileID: 58000010163873964}
+  - 114: {fileID: 114000010586329962}
   m_Layer: 0
   m_Name: baobab (5)
   m_TagString: Untagged
@@ -505,6 +507,7 @@ GameObject:
   - 4: {fileID: 4000014097032810}
   - 212: {fileID: 212000010883511554}
   - 58: {fileID: 58000012948093256}
+  - 114: {fileID: 114000012920192490}
   m_Layer: 0
   m_Name: baobab (7)
   m_TagString: Untagged
@@ -773,6 +776,7 @@ GameObject:
   - 4: {fileID: 4000012169200202}
   - 212: {fileID: 212000013260480854}
   - 58: {fileID: 58000011757223498}
+  - 114: {fileID: 114000010673227918}
   m_Layer: 0
   m_Name: Baobab
   m_TagString: Untagged
@@ -1053,7 +1057,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013158658746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32606128, y: 0.0820388, z: 0}
+  m_LocalPosition: {x: 0.296, y: 0.0820388, z: 0}
   m_LocalScale: {x: 0.032051444, y: 0.032051444, z: 0.25641155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1282,7 +1286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010234582308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.062, y: -0.198, z: 0}
+  m_LocalPosition: {x: -0.026, y: -0.152, z: 0}
   m_LocalScale: {x: 0.032051444, y: 0.032051444, z: 0.25641155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1919,6 +1923,36 @@ MonoBehaviour:
   walkTime: 1
   waitTime: 5
   canMove: 0
+--- !u!114 &114000010586329962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012869395284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94464c5503827144806894e463c8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacity: 10
+  bottomFullSprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  bottomEmptySprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  chopSound: {fileID: 8300000, guid: d71fe9bb64a292e4c839b476851c0096, type: 3}
+--- !u!114 &114000010673227918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014206059410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94464c5503827144806894e463c8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacity: 10
+  bottomFullSprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  bottomEmptySprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  chopSound: {fileID: 8300000, guid: d71fe9bb64a292e4c839b476851c0096, type: 3}
 --- !u!114 &114000010905555458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1932,6 +1966,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResourceType: 0
   Amount: 2
+--- !u!114 &114000011810450866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011095758772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94464c5503827144806894e463c8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacity: 10
+  bottomFullSprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  bottomEmptySprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  chopSound: {fileID: 8300000, guid: d71fe9bb64a292e4c839b476851c0096, type: 3}
 --- !u!114 &114000011963233088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1960,6 +2009,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ToolType: 0
+--- !u!114 &114000012920192490
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012995498038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d94464c5503827144806894e463c8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  capacity: 10
+  bottomFullSprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  bottomEmptySprite: {fileID: 21300000, guid: 557bffbcd77895549b20614e95e9ba54, type: 3}
+  chopSound: {fileID: 8300000, guid: d71fe9bb64a292e4c839b476851c0096, type: 3}
 --- !u!114 &114000013630396062
 MonoBehaviour:
   m_ObjectHideFlags: 1
