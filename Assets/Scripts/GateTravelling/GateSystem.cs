@@ -17,6 +17,11 @@ public class GateSystem : MonoBehaviour {
         if (_connectedGates.ContainsKey(address)) {
             var gate = _connectedGates[address];
             player.gameObject.transform.position = gate.transform.position;
+
+            if (address == "abcde") {
+                Fungus.Flowchart.BroadcastFungusMessage("BanditAttack");
+            }
+
             return true;
         } else {
             return false;
