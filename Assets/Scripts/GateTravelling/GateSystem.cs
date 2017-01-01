@@ -1,9 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
+using Assets.Scripts.ResourceManagement;
+using Fungus;
 
 public class GateSystem : MonoBehaviour {
     private readonly Dictionary<string, GateController> _connectedGates = new Dictionary<string, GateController>();
+    private bool _banditsIntro = true;
+    private int _banditsChance;
+    private GameObject _banditSprite;
+
+    public void Start()
+    {
+        _banditSprite = GameObject.FindGameObjectWithTag("BanditSprite");
+        _banditSprite.GetComponent<SpriteRenderer>().enabled = false;
+    }
 
     public void ConnectGate(string address, GateController gateController) {
         if (_connectedGates.ContainsKey(address)) {
@@ -19,7 +31,19 @@ public class GateSystem : MonoBehaviour {
             player.gameObject.transform.position = gate.transform.position;
 
             if (address == "abcde") {
-                Fungus.Flowchart.BroadcastFungusMessage("BanditAttack");
+                if (_banditsIntro) {
+                    Fungus.Flowchart.BroadcastFungusMessage("BanditAttackIntro");
+                    _banditsIntro = false;
+                } else {
+
+                    _banditsChance = Random.Range(0, 10);
+                    if (_banditsChance < 9) {
+                        _banditSprite.GetComponent<SpriteRenderer>().enabled = true;
+                        Fungus.Flowchart.BroadcastFungusMessage("BanditAttack");
+                    } else {
+                        _banditSprite.GetComponent<SpriteRenderer>().enabled = false;
+                    }
+                }
             }
 
             return true;
