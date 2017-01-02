@@ -37,7 +37,7 @@ public class GateSystem : MonoBehaviour {
                 } else {
 
                     _banditsChance = Random.Range(0, 10);
-                    if (_banditsChance < 9) {
+                    if (_banditsChance < 5) {
                         _banditSprite.GetComponent<SpriteRenderer>().enabled = true;
                         Fungus.Flowchart.BroadcastFungusMessage("BanditAttack");
                     } else {
