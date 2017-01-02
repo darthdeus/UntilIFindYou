@@ -2495,6 +2495,7 @@ GameObject:
   - 114: {fileID: 1299294606}
   - 114: {fileID: 1299294596}
   - 114: {fileID: 1299294594}
+  - 114: {fileID: 1299294595}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -2529,6 +2530,33 @@ MonoBehaviour:
   stringData:
     stringRef: {fileID: 0}
     stringVal: 
+--- !u!114 &1299294595
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299294593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: Find the gate and try to interact with it. You will soon find out that
+    you need a unique address in order to activate the travelling. Who knows, maybe
+    some of the elders will help you?
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!114 &1299294596
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2558,8 +2586,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Welcome to Nimmernis, your home planet. It seems like there are no bandits
-    around so it is safe for you to take a look around...
+  storyText: This is Nimmernis, your home planet. You can take a look around but in
+    order to find Yni, you will probably need to travel to different planets through
+    magical gates located on each of this planet.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2609,6 +2638,7 @@ MonoBehaviour:
   eventHandler: {fileID: 1299294607}
   commandList:
   - {fileID: 1299294606}
+  - {fileID: 1299294595}
   - {fileID: 1299294594}
 --- !u!114 &1299294609
 MonoBehaviour:
@@ -2634,8 +2664,9 @@ MonoBehaviour:
     y: -350
     width: 1149
     height: 1004
-  selectedBlock: {fileID: 0}
-  selectedCommands: []
+  selectedBlock: {fileID: 1299294608}
+  selectedCommands:
+  - {fileID: 1299294595}
   variables:
   - {fileID: 1299294596}
   description: 
@@ -5036,7 +5067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2038129328}
+  selectedFlowchart: {fileID: 1299294609}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
