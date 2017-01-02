@@ -597,11 +597,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -154.87506, y: 52.874954}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.6400002
   scrollViewRect:
     serializedVersion: 2
     x: -350
@@ -610,7 +610,7 @@ MonoBehaviour:
     height: 890
   selectedBlock: {fileID: 1522726222}
   selectedCommands:
-  - {fileID: 1522726246}
+  - {fileID: 1522726235}
   variables: []
   description: 
   stepPause: 0
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: Nemesis - the place old as the Universe itself, was once one big planet
+  storyText: Nemesis - a place as old as the Universe itself, was once a big planet
     until it was shattered into million small planets..
   description: 
   character: {fileID: 0}
@@ -945,8 +945,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 26
   indentLevel: 0
-  storyText: Thousands of years after that ... there is a girl and a boy, madly in
-    love until one day a tragedy teared them apart.
+  storyText: Thousands of years after that ... there was a girl and a boy, madly in
+    love until one day a tragedy has separated them.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 23
   indentLevel: 0
-  storyText: 'Orri was the first Kvender who stoped the runes but by doing so he doomed
+  storyText: 'Orre was the first Kvender who stoped the runes but by doing so he doomed
     all Kvenders into a horrible curse. All but one - his own son. '
   description: 
   character: {fileID: 0}
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: There were ancient and magical race called Kvenders who created evil
+  storyText: There lived an ancient and magical race of Kvenders who created evil
     and powerful runes.
   description: 
   character: {fileID: 0}
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 0
-  storyText: You are the girl - Arcalia - and your journey to find Yni just begins!
+  storyText: You are the girl - Arcelia - and your journey to find Yni begins!
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1194,8 +1194,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  storyText: The boy - Yni - got lost while he traveled through magical gate. Gates
-    have been connecting all the small planets together since the Nemezis runocalypse.
+  storyText: The boy was called Yni. He got lost while he travelled through magical
+    gate. Gates have been connecting all the small planets together since the runocalypse
+    of Nemezis.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -1220,9 +1221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  storyText: ' Runes got corrupted by their power and the only way how to stop them
+  storyText: Runes got corrupted by their power and the only way how to stop them
     was to say magical spell so strong that it shattered the entire planet into small
-    pieces.'
+    pieces.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
