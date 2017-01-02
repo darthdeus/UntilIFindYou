@@ -6,7 +6,8 @@ TagManager:
   tags:
   - GateSystem
   - DialingBook
-  - Light
+  - BanditIcon
+  - BanditSprite
   layers:
   - Default
   - TransparentFX
