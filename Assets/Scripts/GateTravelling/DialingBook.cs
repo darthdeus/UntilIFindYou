@@ -183,7 +183,7 @@ namespace Assets
 
         private void MoveBook(GameObject gate)
         {
-            var x = gate.transform.position.x;
+            var x = gate.transform.position.x - 1;
             var y = gate.transform.position.y;
             gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
         }
