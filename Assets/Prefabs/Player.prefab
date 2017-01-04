@@ -27,6 +27,8 @@ GameObject:
   - 114: {fileID: 114000010225979162}
   - 114: {fileID: 114000014020291968}
   - 82: {fileID: 82000011713918064}
+  - 95: {fileID: 95000011468998604}
+  - 114: {fileID: 114000011089659028}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -89,7 +91,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -152,6 +154,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95000011468998604
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011154034186}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4da14709e8b747de97d36e3eb3981b8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010225979162
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -163,6 +182,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689abad2e684e4249a4b33b11f3d951b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BanditChart: {fileID: 0}
+  DefenseWoodAmount: 20
+--- !u!114 &114000011089659028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011154034186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fe32ecfc4ef74eca87e172e7a5d5a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 41e16bf93f4fd4c4cb40ff78bfc45b49, type: 3}
 --- !u!114 &114000011637569796
 MonoBehaviour:
   m_ObjectHideFlags: 1
