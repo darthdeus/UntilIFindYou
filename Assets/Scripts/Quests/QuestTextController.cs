@@ -38,6 +38,8 @@ public class QuestTextController : MonoBehaviour
     public Text taskText;
     int taskIndex;
     QuestTextTweener _tweener;
+    public GameObject DefaultQuestPosition;
+    public GameObject DefaultTaskPosition;
 
     // Use this for initialization
     void Start()
@@ -48,7 +50,7 @@ public class QuestTextController : MonoBehaviour
         questText.text = "";
         taskText.text = "";
 
-        _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"));
+        _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"), DefaultQuestPosition, DefaultTaskPosition);
     }
 
     // Adds all basic events to a quest //

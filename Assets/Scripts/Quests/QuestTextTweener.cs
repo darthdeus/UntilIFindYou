@@ -7,10 +7,10 @@ public class QuestTextTweener
     public event EventHandler Tween;
     TaskTweener taskTweener;
     QuestTweener questTweener;
-    public QuestTextTweener(Text QuestText, Text TaskText, GameObject player)
+    public QuestTextTweener(Text QuestText, Text TaskText, GameObject player, GameObject DefaultQuestPosition, GameObject DefaultTaskPosition)
     {
-        taskTweener = new TaskTweener(this, player, TaskText);
-        questTweener = new QuestTweener(this, player, QuestText);
+        taskTweener = new TaskTweener(this, TaskText, DefaultTaskPosition);
+        questTweener = new QuestTweener(this, QuestText, DefaultQuestPosition);
     }
 
     public void TweeningUpdate()
