@@ -6,24 +6,22 @@ public class QuestTweener
 {
     Quest TweenedQuest;
     QuestTextTweener _parent;
-    GameObject player;
     Text QuestText;
     Vector3 QuestTextDefaultScale;
     Vector3 QuestTextTargetScaleIncrease = new Vector3(0.08f, 0.08f, 0);
     Vector3 QuestTextScaleIncreaseSpeed = new Vector3(0.2f, 0.2f, 0);
-    Vector3 QuestTextAbsolutePosition;
+    GameObject QuestTextDefaultPosition;
     Vector3 questTargetPositionOffset = new Vector3(6, 0, 0);
     float questSpeed = 3.0f;
     float questThreshold = 0.5f;
-    public QuestTweener(QuestTextTweener Parent, GameObject Player, Text QuestText)
+    public QuestTweener(QuestTextTweener Parent, Text QuestText, GameObject DefaultQuestPosition)
     {
         _parent = Parent;
-        player = Player;
         this.QuestText = QuestText;
 
         TweenedQuest = null;
 
-        QuestTextAbsolutePosition = QuestText.transform.position - player.transform.position;
+        QuestTextDefaultPosition = DefaultQuestPosition;
         QuestTextDefaultScale = QuestText.transform.localScale;
     }
     public bool StartTweening(Quest _quest)
@@ -37,7 +35,6 @@ public class QuestTweener
         if (_quest != null && TweenedQuest == null)
         {
             TweenedQuest = _quest;
-            Debug.Log("Quest Tweening Started.");
 
             if (!TweenedQuest.isCompleted() || QuestText.text == "")
             {
@@ -93,7 +90,7 @@ public class QuestTweener
     }
     void QuestMoveRight(object sender, EventArgs e)
     {
-        Vector3 questTargetPosition = player.transform.position + QuestTextAbsolutePosition + questTargetPositionOffset;
+        Vector3 questTargetPosition = QuestTextDefaultPosition.transform.position + questTargetPositionOffset;
         Vector3 direction = questTargetPosition - QuestText.transform.position;
         if (direction.magnitude > questThreshold)
         {
@@ -122,7 +119,7 @@ public class QuestTweener
     void ResetQuestText()
     {
         QuestText.text = "";
-        QuestText.transform.position = player.transform.position + QuestTextAbsolutePosition;
+        QuestText.transform.position = QuestTextDefaultPosition.transform.position;
         QuestText.CrossFadeAlpha(1.00f, 0.00f, true);
     }
 }

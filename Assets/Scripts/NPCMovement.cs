@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class NPCMovement : MonoBehaviour {
@@ -6,21 +6,23 @@ public class NPCMovement : MonoBehaviour {
 	public float moveSpeed= 1 ;
 	private Rigidbody2D myRigidBody;
 	public bool isWalking;
-	
 
+	private BlockCaller theBC;
 
 	public float walkTime = 2,waitTime = 3;
 	private float walkCounter, waitCounter;
 
 	private int walkDirection;
 	public bool canMove;
-	
+
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
 
 		myRigidBody = GetComponent<Rigidbody2D>();
+
+		theBC = FindObjectOfType<BlockCaller>();
 
 		walkCounter = walkTime;
 		waitCounter = waitTime;
@@ -28,12 +30,18 @@ public class NPCMovement : MonoBehaviour {
 		ChooseDirection();
 
 		canMove = true;
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
 	{
+		if(theBC.IntroChart.GetBooleanVariable("isRunning")==false)
+		{
+			canMove = true;
+
+		}
+
 		if (canMove == false)
 		{
 			myRigidBody.velocity = Vector2.zero;
@@ -59,7 +67,7 @@ public class NPCMovement : MonoBehaviour {
 
 		case 3:
 			myRigidBody.velocity = new Vector2 (-moveSpeed,0);
-		
+
 			break;
 		}
 
@@ -68,25 +76,25 @@ public class NPCMovement : MonoBehaviour {
 		{
 
 			walkCounter -= Time.deltaTime;
-			if (walkCounter < 0) 
+			if (walkCounter < 0)
 			{
 				isWalking = false;
 				waitCounter = waitTime;
 			}
-		} 
+		}
 
-		else 
+		else
 		{
 
 			waitCounter -= Time.deltaTime;
 			myRigidBody.velocity = Vector2.zero;
-			if (waitCounter < 0) 
+			if (waitCounter < 0)
 			{
 				ChooseDirection ();
 			}
-			
+
 		}
-	
+
 	}
 
 
