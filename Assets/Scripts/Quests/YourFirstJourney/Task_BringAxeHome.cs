@@ -9,9 +9,6 @@ namespace Assets.Scripts.Quests.YourFirstJourney
     class Task_BringAxeHome : Task
     {
         public GameObject player;
-        PlayerInventory _playerInventory;
-
-        private bool _isCompleted = false;
 
         /// <summary>
         /// Start is called on the frame when a script is enabled just before
@@ -19,8 +16,9 @@ namespace Assets.Scripts.Quests.YourFirstJourney
         /// </summary>
         void Start()
         {
-            _playerInventory = player.GetComponent<PlayerInventory>();
+
         }
+
         public override string GetDescription()
         {
             return "Bring axe home.";
@@ -36,12 +34,12 @@ namespace Assets.Scripts.Quests.YourFirstJourney
 
         public override bool GetStatus()
         {
-            return _isCompleted;
+            return isCompleted;
         }
 
         public override void UpdateStatus_DONOTCALL()
         {
-            _isCompleted = true;
+            isCompleted = true;
         }
     }
 }
