@@ -16,7 +16,7 @@ namespace Assets.Scripts.Quests.YourFirstJourney
         /// </summary>
         void Start()
         {
-
+            isCheckAllowed = false;
         }
 
         public override string GetDescription()

@@ -8,6 +8,7 @@
     {
         isCheckAllowed = false;
     }
+
     public override string GetDescription()
     {
         return "The address of the planet is: stay run always yes moon.";
