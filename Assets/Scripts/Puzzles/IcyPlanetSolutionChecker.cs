@@ -23,10 +23,6 @@ public class IcyPlanetSolutionChecker : MonoBehaviour
 
     public void CheckSolution()
     {
-        Debug.Log(Table1.GetComponent<SpriteRenderer>().sprite.name);
-        Debug.Log(Table2.GetComponent<SpriteRenderer>().sprite.name);
-        Debug.Log(Table3.GetComponent<SpriteRenderer>().sprite.name);
-        Debug.Log(Table4.GetComponent<SpriteRenderer>().sprite.name);
         if (Table1.GetComponent<SpriteRenderer>().sprite.name == "TableCarrot" &&
             Table2.GetComponent<SpriteRenderer>().sprite.name == "TableIcicle" &&
             Table3.GetComponent<SpriteRenderer>().sprite.name == "TableScarf" &&
