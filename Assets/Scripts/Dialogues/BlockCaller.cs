@@ -15,7 +15,8 @@ public class BlockCaller : MonoBehaviour
     // Gets the required flowchart
     void Start()
     {
-        chat.SetActive(false);
+        if (chat != null)
+            chat.SetActive(false);
         foreach (var flowchart in FindObjectsOfType<Flowchart>())
             if (flowchart.name == "Intro")
                 isRunning = flowchart;
@@ -27,10 +28,13 @@ public class BlockCaller : MonoBehaviour
     // Sends message to all flowcharts and flowchart with the matching ReceivingMessage is invoked
     void OnMouseUp()
     {
+        if (others != null)
+            Destroy(others);
+        if (chat != null)
+            chat.SetActive(true);
 
-        Destroy(others);
-        chat.SetActive(true);
-        transform.GetComponent<NPCMovement>() .canMove = false;
+        if (transform.GetComponent<NPCMovement>() != null)
+            transform.GetComponent<NPCMovement>().canMove = false;
 
         if (!IntroChart.GetBooleanVariable("isRunning"))
         {
