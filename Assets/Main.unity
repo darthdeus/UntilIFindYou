@@ -5009,6 +5009,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 58000013943421592, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
+        type: 2}
+      propertyPath: m_Radius
+      value: 0.78723097
+      objectReference: {fileID: 0}
+    - target: {fileID: 58000013943421592, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
   m_IsPrefabParent: 0
@@ -8482,6 +8492,7 @@ GameObject:
   - 114: {fileID: 1827029187}
   - 114: {fileID: 1827029186}
   - 114: {fileID: 1827029185}
+  - 114: {fileID: 1827029190}
   m_Layer: 0
   m_Name: LavaPlanetChat
   m_TagString: Untagged
@@ -8591,6 +8602,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 1827029186}
   - {fileID: 1827029185}
+  - {fileID: 1827029190}
 --- !u!114 &1827029189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8615,7 +8627,8 @@ MonoBehaviour:
     width: 1172
     height: 886
   selectedBlock: {fileID: 1827029188}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1827029190}
   variables: []
   description: 
   stepPause: 0
@@ -8627,6 +8640,33 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &1827029190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827029183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  variable: {fileID: 1299294596}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1 &1830077469 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012995498038, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
