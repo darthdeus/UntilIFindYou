@@ -1,5 +1,6 @@
 ﻿using System;
 using Assets.Scripts;
+using Assets.Scripts.Quests.YourFirstJourney;
 using UnityEngine;
 
 public class Quest_YourFirstJourney : Quest
@@ -19,24 +20,24 @@ public class Quest_YourFirstJourney : Quest
 
     void AddOnQuestStartedEvents(object sender, EventArgs e)
     {
-        _inventory.OnResourcePickedUp += WoodCollectedEvent;
+        //_inventory.OnResourcePickedUp += WoodCollectedEvent;
         _inventory.OnToolPickedUp += AxeCollectedEvent;
     }
 
     void AddOnQuestFinishedEvents(object sender, EventArgs e)
     {
-        _inventory.OnResourcePickedUp -= WoodCollectedEvent;
+        //_inventory.OnResourcePickedUp -= WoodCollectedEvent;
         _inventory.OnToolPickedUp -= AxeCollectedEvent;
     }
 
-    void WoodCollectedEvent(object sender, EventArgs e)
-    {
-        Task WoodTask = Tasks.Find(x => x is Task_GetWood);
-        if (!WoodTask.isCompleted)
-        {
-            WoodTask.UpdateStatus();
-        }
-    }
+    //void WoodCollectedEvent(object sender, EventArgs e)
+    //{
+    //    Task WoodTask = Tasks.Find(x => x is Task_GetWood);
+    //    if (!WoodTask.isCompleted)
+    //    {
+    //        WoodTask.UpdateStatus();
+    //    }
+    //}
 
     void AxeCollectedEvent(object sender, EventArgs e)
     {
