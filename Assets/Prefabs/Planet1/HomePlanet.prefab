@@ -1070,6 +1070,7 @@ GameObject:
   - 114: {fileID: 114000012246071684}
   - 114: {fileID: 114000010795125586}
   - 114: {fileID: 114000011819800900}
+  - 114: {fileID: 114000011403761558}
   m_Layer: 0
   m_Name: Tree Gate
   m_TagString: Untagged
@@ -1351,7 +1352,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010243979030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.94, y: 11.14, z: 0}
+  m_LocalPosition: {x: -23.94, y: 11.141, z: 0}
   m_LocalScale: {x: 9.74327, y: 9.644828, z: 1.0538411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1635,7 +1636,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012544009954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3, y: 5.73, z: 7.504672}
+  m_LocalPosition: {x: 3.09, y: 5.49, z: 7.504672}
   m_LocalScale: {x: 0.6534263, y: 0.65342635, z: 0.65342635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -1980,7 +1981,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013401232768}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.37, y: 9.250351, z: 7.504672}
+  m_LocalPosition: {x: -0.75, y: 10.02, z: 7.504672}
   m_LocalScale: {x: 2.631487, y: 2.6314871, z: 2.6314871}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -2221,7 +2222,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2238,7 +2239,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -2854,6 +2855,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000011403761558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013972482716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440cc8c2387a7ab49a8ee47464ac2db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AssociatedQuest: {fileID: 0}
+  AssociatedTask: {fileID: 0}
+  DialingBook: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &114000011411027054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3004,7 +3020,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013559426398}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4420449f1ce294794b1693d4b09b04c6, type: 3}
   m_Name: 
