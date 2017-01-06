@@ -75,8 +75,9 @@ namespace Assets
                     var go = hit.collider.gameObject;
                     var book = go.GetComponent<DialingBook>();
                     var rune = go.GetComponent<Rune>();
+                    var gate = go.GetComponent<GateController>();
 
-                    if (book != null || rune != null)
+                    if (book != null || rune != null || gate != null)
                     {
                         Debug.Log("Book clicked");
                     }
@@ -183,7 +184,7 @@ namespace Assets
 
         private void MoveBook(GameObject gate)
         {
-            var x = gate.transform.position.x - 1;
+            var x = gate.transform.position.x + 1;
             var y = gate.transform.position.y;
             gameObject.transform.position = new Vector3(x, y, gameObject.transform.position.z);
         }
