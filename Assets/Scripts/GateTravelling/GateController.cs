@@ -4,14 +4,15 @@ using System.Linq;
 using Assets;
 using Fungus;
 
-public class GateController : MonoBehaviour {
+public class GateController : MonoBehaviour
+{
     public string address;
-
     private GateSystem _gateSystem;
     private GameObject _player;
     private DialingBook _dialingBook;
 
-    void Start() {
+    void Start()
+    {
         _gateSystem = GateSystem.Find();
         _gateSystem.ConnectGate(address, this);
 
@@ -21,8 +22,10 @@ public class GateController : MonoBehaviour {
         _dialingBook = DialingBook.Find();
     }
 
-    void OnMouseUp() {
+    void OnMouseUp()
+    {
         Debug.Log("Gate clicked");
-        _dialingBook.Activate(_player, gameObject); 
+        if (GetComponent<SpriteRenderer>().color.a != 0f)
+            _dialingBook.Activate(_player, gameObject);
     }
 }
