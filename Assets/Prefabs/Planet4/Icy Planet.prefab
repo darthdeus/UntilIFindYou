@@ -296,7 +296,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012899451566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008888669, y: 0.0100000175, z: 0}
+  m_LocalPosition: {x: 0.054, y: -0.199, z: 0}
   m_LocalScale: {x: 0.025393272, y: 0.02539329, z: 0.22853962}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -381,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 1000011067269442}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.06, y: -0.038, z: 1}
-  m_LocalScale: {x: 0.0949591, y: 0.08410129, z: 0.6549938}
+  m_LocalScale: {x: 16.39, y: 23.65, z: 0.6549938}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000012691958718}
@@ -1080,7 +1080,7 @@ SpriteRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 051e41788055fb0408593601ec07387d, type: 2}
+  - {fileID: 2100000, guid: 9d4157d162ce8ec409ff94ac4e80fbb4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1096,7 +1096,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d3741d6d381896f4fbac8a9da5fb2315, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4fe4b051cc1bfd40acf0caeaf17053a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

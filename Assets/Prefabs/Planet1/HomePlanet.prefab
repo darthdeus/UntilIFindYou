@@ -1069,8 +1069,7 @@ GameObject:
   - 114: {fileID: 114000011411027054}
   - 114: {fileID: 114000012246071684}
   - 114: {fileID: 114000010795125586}
-  - 114: {fileID: 114000011819800900}
-  - 114: {fileID: 114000011403761558}
+  - 114: {fileID: 114000010849262500}
   m_Layer: 0
   m_Name: Tree Gate
   m_TagString: Untagged
@@ -2818,6 +2817,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000010849262500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013972482716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440cc8c2387a7ab49a8ee47464ac2db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AssociatedQuest: {fileID: 0}
+  AssociatedTask: {fileID: 0}
+  DialingBook: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &114000010904411070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2855,21 +2869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011403761558
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013972482716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 440cc8c2387a7ab49a8ee47464ac2db5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AssociatedQuest: {fileID: 0}
-  AssociatedTask: {fileID: 0}
-  DialingBook: {fileID: 0}
-  player: {fileID: 0}
 --- !u!114 &114000011411027054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2909,21 +2908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000011819800900
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013972482716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 749849dd12dd84940b2a8e9bd1f5328c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorP: {fileID: 0}
-  cursorY: {fileID: 0}
-  cursormode: 0
-  hotSpot: {x: 0, y: 0}
 --- !u!114 &114000011838737376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3175,7 +3159,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012366425116}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4420449f1ce294794b1693d4b09b04c6, type: 3}
   m_Name: 
