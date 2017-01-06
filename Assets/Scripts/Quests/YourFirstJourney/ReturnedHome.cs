@@ -17,14 +17,15 @@ namespace Assets.Scripts.Quests.YourFirstJourney
         // Use this for initialization
         void Start()
         {
-            _playerInventory = player.GetComponent<PlayerInventory>();
+            if (AssociatedTask != null)
+                _playerInventory = player.GetComponent<PlayerInventory>();
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "abcde" &&
-                _playerInventory.HasTool(PlayerInventory.ToolType.Axe)) {
+            if (AssociatedTask != null && !AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "abcde" && _playerInventory.HasTool(PlayerInventory.ToolType.Axe))
+            {
                 AssociatedTask.UpdateStatus();
             }
         }
