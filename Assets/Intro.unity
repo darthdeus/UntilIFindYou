@@ -578,6 +578,8 @@ GameObject:
   - 114: {fileID: 1522726243}
   - 114: {fileID: 1522726248}
   - 114: {fileID: 1522726244}
+  - 114: {fileID: 1522726249}
+  - 114: {fileID: 1522726250}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -597,7 +599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -154.87506, y: 52.874954}
+  scrollPos: {x: -87.68759, y: 43.499954}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -610,7 +612,7 @@ MonoBehaviour:
     height: 890
   selectedBlock: {fileID: 1522726222}
   selectedCommands:
-  - {fileID: 1522726235}
+  - {fileID: 1522726225}
   variables: []
   description: 
   stepPause: 0
@@ -674,6 +676,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 1522726242}
   - {fileID: 1522726225}
+  - {fileID: 1522726249}
+  - {fileID: 1522726250}
   - {fileID: 1522726224}
   - {fileID: 1522726241}
   - {fileID: 1522726240}
@@ -753,8 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: Nemesis - a place as old as the Universe itself, was once a big planet
-    until it was shattered into million small planets..
+  storyText: 
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -763,7 +766,7 @@ MonoBehaviour:
   showCount: 1
   extendPrevious: 0
   fadeWhenDone: 1
-  waitForClick: 1
+  waitForClick: 0
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
 --- !u!114 &1522726226
@@ -1252,3 +1255,45 @@ MonoBehaviour:
   atTime: 0
   loop: 1
   fadeDuration: 1
+--- !u!114 &1522726249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522726218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  targetObject: {fileID: 1522726218}
+  methodName: DisableFungusSound
+  delay: 0
+--- !u!114 &1522726250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1522726218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  storyText: Nemesis - a place as old as the Universe itself, was once a big planet
+    until it was shattered into million small planets..
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}

@@ -9,12 +9,18 @@ public class Intro : MonoBehaviour
     public GameObject Image4;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void DisableFungusSound()
+    {
+        GameObject.Find("SayDialog").GetComponent<Fungus.WriterAudio>().enabled = false;
+    }
 }
