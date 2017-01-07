@@ -342,7 +342,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57.700012, y: -5.900055}
+  m_AnchoredPosition: {x: 46.4, y: -5.900055}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172134785
@@ -522,8 +522,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 201951071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1, y: 2.1, z: 0}
-  m_LocalScale: {x: 0.32150304, y: 0.32150307, z: 0.3215031}
+  m_LocalPosition: {x: 1.87, y: 1.82, z: 0}
+  m_LocalScale: {x: 0.27503237, y: 0.27503237, z: 0.2750324}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2021636733}
@@ -2461,7 +2461,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &214388659
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -2702,8 +2702,7 @@ MonoBehaviour:
     width: 1110
     height: 855
   selectedBlock: {fileID: 291197123}
-  selectedCommands:
-  - {fileID: 291197130}
+  selectedCommands: []
   variables:
   - {fileID: 291197132}
   - {fileID: 291197135}
@@ -2806,7 +2805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: Oh no! The bandits attacked the village again!
+  storyText: Oh no! The bandits have attacked the village again!
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2938,7 +2937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 1
-  storyText: But now it is vulnerable again and only God knows when the bandits will
+  storyText: But now it is vulnerable again and only God knows whether the bandits
     return...
   description: 
   character: {fileID: 0}
@@ -3515,8 +3514,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350068827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 3, z: 0}
-  m_LocalScale: {x: 1.2947615, y: 1.2947615, z: 1.2947614}
+  m_LocalPosition: {x: -0.04, y: 2.56, z: 0}
+  m_LocalScale: {x: 0.72326136, y: 0.72326136, z: 0.7232613}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2021636733}
@@ -5656,7 +5655,7 @@ MonoBehaviour:
     y: -576.56305
     width: 1922.7583
     height: 1571.2144
-  selectedBlock: {fileID: 367162633}
+  selectedBlock: {fileID: 367162632}
   selectedCommands: []
   variables: []
   description: 
@@ -6761,7 +6760,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &367162641
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367162506}
@@ -7201,6 +7200,11 @@ Prefab:
       propertyPath: IntroChart
       value: 
       objectReference: {fileID: 1299294609}
+    - target: {fileID: 114000012616040232, guid: d8425466cbab1da4aa5d4bb20c8a17fa,
+        type: 2}
+      propertyPath: address
+      value: iejca
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8425466cbab1da4aa5d4bb20c8a17fa, type: 2}
   m_IsPrefabParent: 0
@@ -7345,6 +7349,11 @@ Prefab:
         type: 2}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013998173718, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
+        type: 2}
+      propertyPath: address
+      value: kbfhn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
@@ -7871,8 +7880,8 @@ RectTransform:
   m_RootOrder: 14
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 286.7, y: -288.6}
-  m_SizeDelta: {x: -738.7, y: -333}
+  m_AnchoredPosition: {x: 303, y: -288.6}
+  m_SizeDelta: {x: -706.2, y: -333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &914234349
 MonoBehaviour:
@@ -8545,6 +8554,101 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 3.6
       objectReference: {fileID: 0}
+    - target: {fileID: 61000013859499882, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.11586749
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013859499882, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 1.1717358
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013859499882, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.23174436
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000013859499882, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.1334896
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013591904430, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: company
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011934764350, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: may
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011680007640, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: good
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011117293050, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: death
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011497008626, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: seek
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013708054872, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: not
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012077994252, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011173279176, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: be
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012965198544, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: always
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010410498960, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: a
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013457523880, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010431756004, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: hide
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012940918632, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: mystery
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011822349264, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: harmful
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014192241946, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+        type: 2}
+      propertyPath: RuneTranslation
+      value: frost
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
   m_IsPrefabParent: 0
@@ -8672,8 +8776,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1149022074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.05, y: 3.18, z: 0}
-  m_LocalScale: {x: 0.859661, y: 0.85966086, z: 0.85966086}
+  m_LocalPosition: {x: 0, y: 2.51, z: 0}
+  m_LocalScale: {x: 0.48177934, y: 0.48177928, z: 0.48177928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1924838812}
@@ -9370,7 +9474,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &1299294599
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299294593}
@@ -9389,7 +9493,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &1299294600
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299294593}
@@ -9471,12 +9575,12 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1299294607}
   commandList:
-  - {fileID: 1299294606}
-  - {fileID: 1299294595}
   - {fileID: 1299294597}
   - {fileID: 1299294598}
   - {fileID: 1299294600}
   - {fileID: 1299294599}
+  - {fileID: 1299294606}
+  - {fileID: 1299294595}
   - {fileID: 1299294594}
 --- !u!114 &1299294609
 MonoBehaviour:
@@ -9503,9 +9607,7 @@ MonoBehaviour:
     width: 1149
     height: 1004
   selectedBlock: {fileID: 1299294608}
-  selectedCommands:
-  - {fileID: 1299294599}
-  - {fileID: 1299294600}
+  selectedCommands: []
   variables:
   - {fileID: 1299294596}
   description: 
@@ -10202,6 +10304,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013935035308, guid: 957e8ab3b5f23ca44ae5f68e4c680977,
+        type: 2}
+      propertyPath: address
+      value: ihjoa
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 957e8ab3b5f23ca44ae5f68e4c680977, type: 2}
   m_IsPrefabParent: 0
@@ -10423,6 +10530,11 @@ Prefab:
       propertyPath: others
       value: 
       objectReference: {fileID: 2045748050}
+    - target: {fileID: 114000012326510146, guid: 4c2cf2c474aa50a44908266ba2a27078,
+        type: 2}
+      propertyPath: address
+      value: gbljm
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c2cf2c474aa50a44908266ba2a27078, type: 2}
   m_IsPrefabParent: 0
@@ -10783,6 +10895,7 @@ GameObject:
   - 114: {fileID: 1737955561}
   - 114: {fileID: 1737955555}
   - 114: {fileID: 1737955573}
+  - 114: {fileID: 1737955574}
   m_Layer: 0
   m_Name: Your First Journey
   m_TagString: Untagged
@@ -10822,11 +10935,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 22.174988, y: 112.0417}
+  scrollPos: {x: -9.929535, y: -14.047852}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.6700002
   scrollViewRect:
     serializedVersion: 2
     x: -350
@@ -10835,7 +10948,7 @@ MonoBehaviour:
     height: 892
   selectedBlock: {fileID: 1737955554}
   selectedCommands:
-  - {fileID: 1737955573}
+  - {fileID: 1737955566}
   variables:
   - {fileID: 1737955553}
   - {fileID: 1737955552}
@@ -10953,6 +11066,7 @@ MonoBehaviour:
   - {fileID: 1737955560}
   - {fileID: 1737955559}
   - {fileID: 1737955557}
+  - {fileID: 1737955574}
   - {fileID: 1737955556}
   - {fileID: 1737955566}
   - {fileID: 1737955573}
@@ -10998,7 +11112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 17
   indentLevel: 0
-  storyText: 'Write it down, it is important: stay run always yes moon.'
+  storyText: 'Write it down, it is important: fire may not be harmful.'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11024,8 +11138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   indentLevel: 0
-  storyText: 'Every planet has unique address composed of 5 runes in sequence. This
-    one is: stay run always yes moon. '
+  storyText: Every planet has unique address composed of 5 runes in sequence.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11147,7 +11260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: 'As you wish, but I will not help you with gate travelling. '
+  storyText: As you wish, but I will not help you until you change your mind.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11241,8 +11354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 24
   indentLevel: 0
-  storyText: You need to know address of this planet as well, otherwise you would
-    NEVER return home.
+  storyText: You need to know the address of this planet, Nimmernis, as well, otherwise
+    you will NEVER be able to return back home.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11268,7 +11381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: 'So you want to go through the gate to be looking for Yni? '
+  storyText: 'So you want to go through the gate and search for Yni? '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11382,7 +11495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 0
-  text: Will you go get it?
+  text: Will you go and try finding it?
   description: 
   targetBlock: {fileID: 0}
   hideIfVisited: 0
@@ -11403,7 +11516,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 70
   indentLevel: 0
-  storyText: 'Your home address is: yes moon friend stay run. '
+  storyText: 'Our home address is: always seek a good company.'
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1737955574
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737955546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  storyText: 'The friendly planet has an address : fire may not be harmful'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11738,8 +11876,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: 'If you ever forgot your way back home, address to Nimmernis is: yes
-    moon friend stay run. '
+  storyText: If you ever forgot your way back home, you have to always seek a good
+    company and you will get back.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -11827,7 +11965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -127, y: -9}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -11840,7 +11978,7 @@ MonoBehaviour:
     height: 886
   selectedBlock: {fileID: 1827029188}
   selectedCommands:
-  - {fileID: 1827029190}
+  - {fileID: 1827029185}
   variables: []
   description: 
   stepPause: 0
@@ -12774,8 +12912,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 76
   indentLevel: 1
-  storyText: You can give me the resources anytime. If you bring at least 20 pcs of
-    wood, village will be safe until the next attack.
+  storyText: You can provide the resources anytime. If you bring at least 20 logs
+    of wood, village will be safe until the next attack.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -12801,7 +12939,7 @@ MonoBehaviour:
   itemId: 75
   indentLevel: 1
   storyText: You can save us, you will be travelling to other planets while searching
-    for Yni anyway- you can come back once in a while and bring resources.
+    for Yni anyway - you can come back once in a while and bring resources.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -12826,7 +12964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 74
   indentLevel: 1
-  storyText: 'The bandits attacked us! We are completely out of resources. '
+  storyText: 'The bandits have attacked us! We are completely out of resources. '
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -12943,8 +13081,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 85
   indentLevel: 0
-  storyText: 'If you follow the runes backwards, they will lead to this place. Do
-    not start in the beginning, think oppositely. '
+  storyText: Don't be afraid to explore and discover something new! Remember, a planet
+    may hide a mystery.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -12969,8 +13107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 84
   indentLevel: 0
-  storyText: 'This village know only the planet you have just been to, but my grandmother
-    once told me about another one, far far away. She told me:'
+  storyText: 'This village only knows about the planet you have just been to, but
+    my grandmother once told me about another one, far far away. She told me:'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -13348,7 +13486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 56.37271, y: 144.49744}
+  scrollPos: {x: -9.341568, y: 105.925995}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 404
@@ -13359,8 +13497,9 @@ MonoBehaviour:
     y: -548.36145
     width: 2020.1145
     height: 1244.1168
-  selectedBlock: {fileID: 2038129321}
-  selectedCommands: []
+  selectedBlock: {fileID: 2038129289}
+  selectedCommands:
+  - {fileID: 2038129287}
   variables: []
   description: 
   stepPause: 0
@@ -13511,8 +13650,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045748050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 2.96, z: 0}
-  m_LocalScale: {x: 0.8246197, y: 0.82461905, z: 0.824619}
+  m_LocalPosition: {x: 0.15, y: 2.46, z: 0}
+  m_LocalScale: {x: 0.51637995, y: 0.5163796, z: 0.51637954}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 388310889}
@@ -13642,7 +13781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 214388586}
+  selectedFlowchart: {fileID: 1737955548}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1

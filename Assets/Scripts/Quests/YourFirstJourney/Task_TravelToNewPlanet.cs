@@ -11,7 +11,7 @@
 
     public override string GetDescription()
     {
-        return "The address of the planet is: stay run always yes moon.";
+        return "The address of the planet is: fire may not be harmful.";
     }
 
     public override string GetProgress()

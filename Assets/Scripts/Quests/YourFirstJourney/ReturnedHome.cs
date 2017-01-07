@@ -23,7 +23,7 @@ namespace Assets.Scripts.Quests.YourFirstJourney
         // Update is called once per frame
         void Update()
         {
-            if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "abcde" && _playerInventory.HasTool(PlayerInventory.ToolType.Axe))
+            if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "iejca" && _playerInventory.HasTool(PlayerInventory.ToolType.Axe))
             {
                 AssociatedTask.UpdateStatus();
             }
