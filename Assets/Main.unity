@@ -685,6 +685,7 @@ GameObject:
   - 114: {fileID: 214388656}
   - 114: {fileID: 214388657}
   - 114: {fileID: 214388658}
+  - 114: {fileID: 214388659}
   m_Layer: 0
   m_Name: DeathPlanetPuzzle
   m_TagString: Untagged
@@ -759,19 +760,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 832.94165, y: 55.294067}
+  scrollPos: {x: 849.9645, y: 91.21236}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.85000014
+  zoom: 0.49000037
   scrollViewRect:
     serializedVersion: 2
     x: -1151.1765
     y: -432.35287
     width: 2030.5885
     height: 1067.0591
-  selectedBlock: {fileID: 0}
-  selectedCommands: []
+  selectedBlock: {fileID: 214388644}
+  selectedCommands:
+  - {fileID: 214388659}
   variables:
   - {fileID: 214388625}
   description: 
@@ -2145,6 +2147,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 214388641}
+  - {fileID: 214388659}
   - {fileID: 214388640}
   - {fileID: 214388657}
   - {fileID: 214388639}
@@ -2454,6 +2457,25 @@ MonoBehaviour:
   _visible:
     booleanRef: {fileID: 0}
     booleanVal: 0
+  affectChildren: 1
+  visibleOLD: 0
+--- !u!114 &214388659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214388582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cd462c89cb047158ccfb8a8df3f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 231
+  indentLevel: 0
+  spriteRenderer: {fileID: 1338185165}
+  _visible:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
   affectChildren: 1
   visibleOLD: 0
 --- !u!1001 &235448752
@@ -3493,7 +3515,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350068827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 3.7, z: 0}
+  m_LocalPosition: {x: 0.1, y: 3, z: 0}
   m_LocalScale: {x: 1.2947615, y: 1.2947615, z: 1.2947614}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -3692,6 +3714,7 @@ GameObject:
   - 114: {fileID: 367162624}
   - 114: {fileID: 367162557}
   - 114: {fileID: 367162640}
+  - 114: {fileID: 367162641}
   m_Layer: 0
   m_Name: IcePlanetPuzzle
   m_TagString: Untagged
@@ -5622,7 +5645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 167.89671, y: 43.31888}
+  scrollPos: {x: -73.531784, y: -416.68106}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -5633,7 +5656,7 @@ MonoBehaviour:
     y: -576.56305
     width: 1922.7583
     height: 1571.2144
-  selectedBlock: {fileID: 367162585}
+  selectedBlock: {fileID: 367162633}
   selectedCommands: []
   variables: []
   description: 
@@ -6561,6 +6584,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 367162624}
+  - {fileID: 367162641}
   - {fileID: 367162640}
   - {fileID: 367162639}
 --- !u!114 &367162634
@@ -6735,6 +6759,25 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &367162641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367162506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cd462c89cb047158ccfb8a8df3f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 211
+  indentLevel: 0
+  spriteRenderer: {fileID: 1866112850}
+  _visible:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  affectChildren: 1
+  visibleOLD: 0
 --- !u!1 &388310881 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012899451566, guid: 4c2cf2c474aa50a44908266ba2a27078,
@@ -8486,6 +8529,22 @@ Prefab:
       propertyPath: m_Name
       value: DialingBook
       objectReference: {fileID: 0}
+    - target: {fileID: 4000010567114432, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010567114432, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013973422878, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013973422878, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a07fbb239a13e0d4fbafd8c7b17f8892, type: 2}
   m_IsPrefabParent: 0
@@ -9194,6 +9253,8 @@ GameObject:
   - 114: {fileID: 1299294595}
   - 114: {fileID: 1299294597}
   - 114: {fileID: 1299294598}
+  - 114: {fileID: 1299294599}
+  - 114: {fileID: 1299294600}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -9307,6 +9368,44 @@ MonoBehaviour:
     booleanVal: 0
   affectChildren: 1
   visibleOLD: 0
+--- !u!114 &1299294599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299294593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cd462c89cb047158ccfb8a8df3f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 208
+  indentLevel: 0
+  spriteRenderer: {fileID: 1866112850}
+  _visible:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  affectChildren: 1
+  visibleOLD: 0
+--- !u!114 &1299294600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1299294593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10cd462c89cb047158ccfb8a8df3f60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 209
+  indentLevel: 0
+  spriteRenderer: {fileID: 1338185165}
+  _visible:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  affectChildren: 1
+  visibleOLD: 0
 --- !u!114 &1299294606
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -9376,6 +9475,8 @@ MonoBehaviour:
   - {fileID: 1299294595}
   - {fileID: 1299294597}
   - {fileID: 1299294598}
+  - {fileID: 1299294600}
+  - {fileID: 1299294599}
   - {fileID: 1299294594}
 --- !u!114 &1299294609
 MonoBehaviour:
@@ -9403,7 +9504,8 @@ MonoBehaviour:
     height: 1004
   selectedBlock: {fileID: 1299294608}
   selectedCommands:
-  - {fileID: 1299294598}
+  - {fileID: 1299294599}
+  - {fileID: 1299294600}
   variables:
   - {fileID: 1299294596}
   description: 
@@ -9554,6 +9656,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!212 &1338185165 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212000010792804390, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+    type: 2}
+  m_PrefabInternal: {fileID: 1073210327}
 --- !u!1 &1353241272
 GameObject:
   m_ObjectHideFlags: 0
@@ -11892,6 +11999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &1866112850 stripped
+SpriteRenderer:
+  m_PrefabParentObject: {fileID: 212000014007316368, guid: a07fbb239a13e0d4fbafd8c7b17f8892,
+    type: 2}
+  m_PrefabInternal: {fileID: 1073210327}
 --- !u!1 &1924838811 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011296366368, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
@@ -13530,7 +13642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 291197117}
+  selectedFlowchart: {fileID: 214388586}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1

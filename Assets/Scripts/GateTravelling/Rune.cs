@@ -29,8 +29,10 @@ public class Rune : MonoBehaviour
 
         var sounds = GetComponentsInParent<AudioSource>();
 
-        foreach (var sound in sounds) {
-            if (sound.clip.name == "GotItem") {
+        foreach (var sound in sounds)
+        {
+            if (sound.clip.name == "GotItem")
+            {
                 _sound = sound;
             }
         }
@@ -38,13 +40,14 @@ public class Rune : MonoBehaviour
 
     void Update()
     {
-  //      _text.transform.position = GameObject.Find("RuneTooltipPosition").transform.position;
+        //      _text.transform.position = GameObject.Find("RuneTooltipPosition").transform.position;
         _bg.transform.position = GameObject.Find("RuneTooltipPosition").transform.position;
     }
 
     void OnMouseOver()
     {
-        if (_dialingBook.GetComponent<DialingBook>()._isVisible) {
+        if (_dialingBook.GetComponent<DialingBook>()._isVisible && gameObject.GetComponent<SpriteRenderer>().color.a != 0)
+        {
             _text.text = RuneTranslation;
             _text.enabled = true;
             _bg.enabled = true;
@@ -59,18 +62,23 @@ public class Rune : MonoBehaviour
 
     void OnMouseUp()
     {
-        if (_book.GetComponent<Renderer>().isVisible) {
-            if (_book.CurrentAddress.Length < 4) {
+        if (_book.GetComponent<Renderer>().isVisible && gameObject.GetComponent<SpriteRenderer>().color.a != 0)
+        {
+            if (_book.CurrentAddress.Length < 4)
+            {
                 _sound.Play();
             }
 
             if (_book.CurrentAddress.Length < 5)
-                if (_alreadyClicked) {
+                if (_alreadyClicked)
+                {
                     _book.UnsetSlot();
                     _alreadyClicked = false;
 
                     GetComponent<SpriteRenderer>().material.color = Color.white;
-                } else {
+                }
+                else
+                {
                     _book.SetSlot(RuneName);
                     _alreadyClicked = true;
 
