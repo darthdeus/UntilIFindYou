@@ -1,6 +1,4 @@
-
 using UnityEngine;
-using System.Collections;
 using Fungus;
 
 public class BlockCaller : MonoBehaviour
@@ -16,7 +14,15 @@ public class BlockCaller : MonoBehaviour
     void Start()
     {
         if (chat != null)
+        {
             chat.SetActive(false);
+            chat.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+        if (others != null)
+        {
+            others.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+        
         foreach (var flowchart in FindObjectsOfType<Flowchart>())
             if (flowchart.name == "Intro")
                 isRunning = flowchart;
