@@ -8,6 +8,9 @@ TagManager:
   - DialingBook
   - BanditIcon
   - BanditSprite
+  - Light
+  - HomePlanet
+  - Lake
   layers:
   - Default
   - TransparentFX
