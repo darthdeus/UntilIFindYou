@@ -3584,7 +3584,7 @@ Animator:
   m_GameObject: {fileID: 350068827}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d2b196cde2874834b63c38b401f9d77, type: 2}
+  m_Controller: {fileID: 9100000, guid: bd4d7c16635e94b0cab08cd55af2bb86, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10527,7 +10527,8 @@ MonoBehaviour:
     width: 1081
     height: 899
   selectedBlock: {fileID: 1507939783}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1507939792}
   variables: []
   description: 
   stepPause: 0
@@ -14373,7 +14374,7 @@ Animator:
   m_GameObject: {fileID: 2045748050}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d2b196cde2874834b63c38b401f9d77, type: 2}
+  m_Controller: {fileID: 9100000, guid: bd4d7c16635e94b0cab08cd55af2bb86, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
