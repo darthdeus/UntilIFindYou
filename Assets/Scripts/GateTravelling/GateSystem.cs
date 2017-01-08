@@ -30,14 +30,14 @@ public class GateSystem : MonoBehaviour {
             var gate = _connectedGates[address];
             player.gameObject.transform.position = gate.transform.position;
 
-            if (address == "abcde") {
+            if (address == "iejca") {
                 if (_banditsIntro) {
                     Fungus.Flowchart.BroadcastFungusMessage("BanditAttackIntro");
                     _banditsIntro = false;
                 } else {
 
                     _banditsChance = Random.Range(0, 10);
-                    if (_banditsChance < 5) {
+                    if (_banditsChance < 6) {
                         _banditSprite.GetComponent<SpriteRenderer>().enabled = true;
                         Fungus.Flowchart.BroadcastFungusMessage("BanditAttack");
                     } else {
