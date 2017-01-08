@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 769.5521, y: 115.954636}
+  scrollPos: {x: 700.3213, y: 58.811783}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -790,9 +790,8 @@ MonoBehaviour:
     y: -432.35287
     width: 2030.5885
     height: 1067.0591
-  selectedBlock: {fileID: 214388644}
-  selectedCommands:
-  - {fileID: 214388660}
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables:
   - {fileID: 214388625}
   description: 
@@ -7566,6 +7565,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4000012986026802, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014242055696, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 212000013194294584, guid: 4b90233e6f4cf574b84a5e74861f3d7e,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b90233e6f4cf574b84a5e74861f3d7e, type: 2}
   m_IsPrefabParent: 0
@@ -10686,7 +10698,7 @@ MonoBehaviour:
   sendingMessage: DeathClue
   IntroChart: {fileID: 1507939781}
   others: {fileID: 490997744}
-  chat: {fileID: 490997744}
+  chat: {fileID: 0}
 --- !u!114 &1507939790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14544,7 +14556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 214388586}
+  selectedFlowchart: {fileID: 1507939781}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
