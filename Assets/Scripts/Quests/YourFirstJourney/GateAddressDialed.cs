@@ -15,7 +15,7 @@ public class GateAddressDialed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "defab")
+        if (!AssociatedTask.isCompleted && AssociatedQuest.isActive() && DialingBook.CurrentAddress == "kbfhn")
             AssociatedTask.UpdateStatus();
     }
 }
