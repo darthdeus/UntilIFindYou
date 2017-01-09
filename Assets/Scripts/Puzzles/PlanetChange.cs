@@ -25,12 +25,18 @@ namespace Assets.Scripts.Puzzles
             col.points = originalCollider.points;
 
             //Only for DEATH planet
-            if (PlanetName == "death") {
+            if (PlanetName == "death")
+            {
                 var gameObjects = GameObject.FindGameObjectsWithTag("Lake");
 
                 for (var i = 0; i < gameObjects.Length; i++)
                     Destroy(gameObjects[i]);
             }
+        }
+
+        void SetMeshToNone()
+        {
+            GameObject.Find("DeathPlanetBG").GetComponent<SpriteRenderer>().color = Color.black;
         }
     }
 }
