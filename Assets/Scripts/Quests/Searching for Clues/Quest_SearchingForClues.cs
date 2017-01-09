@@ -2,14 +2,23 @@
 using Assets.Scripts;
 using System.Collections;
 using System;
+using Assets;
+using Assets.Scripts.Quests.SearchingForClues;
 
 public class Quest_SearchingForClues : Quest
 {
-    void AxeCollectedEvent(object sender, EventArgs e)
+    void TravelledBackHomeEvent(object sender, EventArgs e)
     {
-        // Task AxeTask = Tasks.Find(x => x is Task_GetAxe);
-        // if (!AxeTask.GetStatus() && _inventory.HasTool(PlayerInventory.ToolType.Axe))
-        //     AxeTask.UpdateStatus();
+        Task TBTask = Tasks.Find(x => x is Task_TravelBack);
+        if (!TBTask.GetStatus() && ((DialingBook)sender).CurrentAddress == "iejca")
+            TBTask.UpdateStatus();
+    }
+
+    void DiscoveredNewPlanetEvent(object sender, EventArgs e)
+    {
+        Task TBTask = Tasks.Find(x => x is Task_DiscoverPlanet);
+        if (!TBTask.GetStatus() && ((DialingBook)sender).CurrentAddress == "ihjoa")
+            TBTask.UpdateStatus();
     }
     public override void UpdateStatus_DONOTCALL()
     {
@@ -21,7 +30,6 @@ public class Quest_SearchingForClues : Quest
         {
             this.MakeCompletable();
             this.FinishQuest();
-            Fungus.Flowchart.BroadcastFungusMessage("YFJCompl");
             Debug.Log("Active: " + this.isActive() + " Completed: " + this.isCompleted() + " Status: " + this.GetStatus() + " Finished Tasks: " + NumberOfFinishedTasks + " Total Tasks: " + TotalNumberOfTasks);
         }
     }
@@ -40,9 +48,13 @@ public class Quest_SearchingForClues : Quest
     }
     void AddOnQuestStartedEvents(object sender, EventArgs e)
     {
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += TravelledBackHomeEvent;
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += DiscoveredNewPlanetEvent;
     }
 
     void AddOnQuestFinishedEvents(object sender, EventArgs e)
     {
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= TravelledBackHomeEvent;
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= DiscoveredNewPlanetEvent;
     }
 }

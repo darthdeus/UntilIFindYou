@@ -1291,6 +1291,9 @@ GameObject:
   - 114: {fileID: 214388659}
   - 114: {fileID: 214388660}
   - 114: {fileID: 214388661}
+  - 114: {fileID: 214388664}
+  - 114: {fileID: 214388663}
+  - 114: {fileID: 214388662}
   m_Layer: 0
   m_Name: DeathPlanetPuzzle
   m_TagString: Untagged
@@ -1347,6 +1350,9 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 214388584}
   commandList:
+  - {fileID: 214388664}
+  - {fileID: 214388663}
+  - {fileID: 214388662}
   - {fileID: 214388620}
   - {fileID: 214388616}
   - {fileID: 214388618}
@@ -1365,7 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 555.49365, y: 89.84625}
+  scrollPos: {x: 384.80408, y: 7.087677}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -1376,9 +1382,9 @@ MonoBehaviour:
     y: -432.35287
     width: 2030.5885
     height: 1067.0591
-  selectedBlock: {fileID: 214388599}
+  selectedBlock: {fileID: 214388585}
   selectedCommands:
-  - {fileID: 214388661}
+  - {fileID: 214388663}
   variables:
   - {fileID: 214388625}
   description: 
@@ -3103,7 +3109,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &214388661
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3117,6 +3123,62 @@ MonoBehaviour:
   targetObject: {fileID: 718557990}
   methodName: StartQuest
   delay: 0
+--- !u!114 &214388662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214388582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 236
+  indentLevel: 0
+--- !u!114 &214388663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214388582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 235
+  indentLevel: 1
+  targetObject: {fileID: 904924825}
+  methodName: CheckStatus
+  delay: 0
+--- !u!114 &214388664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 214388582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 234
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 1755320519}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1 &230506219 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013603568274, guid: 4c2cf2c474aa50a44908266ba2a27078,
@@ -4435,6 +4497,7 @@ GameObject:
   - 114: {fileID: 367162648}
   - 114: {fileID: 367162645}
   - 114: {fileID: 367162644}
+  - 114: {fileID: 367162649}
   m_Layer: 0
   m_Name: IcePlanetPuzzle
   m_TagString: Untagged
@@ -5542,6 +5605,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 367162554}
   commandList:
+  - {fileID: 367162649}
   - {fileID: 367162537}
   - {fileID: 367162637}
   - {fileID: 367162636}
@@ -6369,7 +6433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 55.235336, y: 31.26419}
+  scrollPos: {x: -85.860535, y: -298.87274}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6380,9 +6444,9 @@ MonoBehaviour:
     y: -576.56305
     width: 1922.7583
     height: 1571.2144
-  selectedBlock: {fileID: 367162589}
+  selectedBlock: {fileID: 367162555}
   selectedCommands:
-  - {fileID: 367162645}
+  - {fileID: 367162537}
   variables: []
   description: 
   stepPause: 0
@@ -7540,7 +7604,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &367162644
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367162506}
@@ -7553,7 +7617,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &367162645
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367162506}
@@ -7604,7 +7668,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &367162648
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367162506}
@@ -7629,6 +7693,22 @@ MonoBehaviour:
   stringData:
     stringRef: {fileID: 0}
     stringVal: 
+--- !u!114 &367162649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367162506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 224
+  indentLevel: 0
+  targetObject: {fileID: 2095563216}
+  methodName: CheckStatus
+  delay: 0
 --- !u!1 &388310881 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000012899451566, guid: 4c2cf2c474aa50a44908266ba2a27078,
@@ -12345,11 +12425,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: -354
     y: -350
-    width: 1081
+    width: 1083
     height: 899
   selectedBlock: {fileID: 1507939783}
   selectedCommands:
-  - {fileID: 1507939792}
+  - {fileID: 1507939794}
   variables: []
   description: 
   stepPause: 0
@@ -12397,8 +12477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 207
-    y: 89
+    x: 209
+    y: 90
     width: 120
     height: 40
   itemId: 0
@@ -12406,6 +12486,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1507939785}
   commandList:
+  - {fileID: 1507939794}
   - {fileID: 1507939784}
   - {fileID: 1507939782}
   - {fileID: 1507939793}
@@ -12597,6 +12678,22 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 3
   durationOLD: 0
+--- !u!114 &1507939794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 96
+  indentLevel: 0
+  targetObject: {fileID: 1049603267}
+  methodName: CheckStatus
+  delay: 0
 --- !u!1 &1531624042 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011336387506, guid: 957e8ab3b5f23ca44ae5f68e4c680977,
@@ -16935,7 +17032,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &2038129297
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -16948,7 +17045,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &2038129298
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -16964,7 +17061,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &2038129299
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -16991,7 +17088,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &2038129300
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -17004,7 +17101,7 @@ MonoBehaviour:
   indentLevel: 1
 --- !u!114 &2038129301
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -17031,7 +17128,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &2038129302
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -17044,7 +17141,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &2038129303
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -17060,7 +17157,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &2038129304
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038129268}
@@ -17318,9 +17415,11 @@ MonoBehaviour:
     y: -548.36145
     width: 2020.1145
     height: 1244.1168
-  selectedBlock: {fileID: 2038129289}
+  selectedBlock: {fileID: 2038129276}
   selectedCommands:
-  - {fileID: 2038129299}
+  - {fileID: 2038129304}
+  - {fileID: 2038129302}
+  - {fileID: 2038129303}
   variables: []
   description: 
   stepPause: 0
@@ -17813,7 +17912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 367162590}
+  selectedFlowchart: {fileID: 214388586}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
