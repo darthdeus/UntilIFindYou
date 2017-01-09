@@ -5,12 +5,6 @@ using System;
 
 public class Quest_RevealingAMystery : Quest
 {
-    void AxeCollectedEvent(object sender, EventArgs e)
-    {
-        // Task AxeTask = Tasks.Find(x => x is Task_GetAxe);
-        // if (!AxeTask.GetStatus() && _inventory.HasTool(PlayerInventory.ToolType.Axe))
-        //     AxeTask.UpdateStatus();
-    }
     public override void UpdateStatus_DONOTCALL()
     {
         int TotalNumberOfTasks;

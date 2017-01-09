@@ -13,13 +13,17 @@ public abstract class Task : MonoBehaviour, IStatus, ITask
     public abstract void UpdateStatus_DONOTCALL();
     public void UpdateStatus()
     {
-        UpdateStatus_DONOTCALL();
-        if (OnStatusUpdate != null)
-            OnStatusUpdate(this, EventArgs.Empty);
+        if (!GetStatus())
+        {
+            UpdateStatus_DONOTCALL();
+            if (OnStatusUpdate != null)
+                OnStatusUpdate(this, EventArgs.Empty);
+        }
     }
 
     // Checks the status of the quest - same effect as UpdateStatus() but does not Invoke OnStatusUpdate //
-    public void CheckStatus(){
+    public void CheckStatus()
+    {
         UpdateStatus_DONOTCALL();
     }
 }

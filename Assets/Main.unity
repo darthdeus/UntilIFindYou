@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 986.5276, y: 95.01868}
+  scrollPos: {x: 883.0792, y: 138.1221}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -3162,7 +3162,7 @@ MonoBehaviour:
   itemId: 235
   indentLevel: 1
   targetObject: {fileID: 904924825}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &214388664
 MonoBehaviour:
@@ -3193,7 +3193,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &214388665
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3206,7 +3206,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &214388666
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3218,11 +3218,11 @@ MonoBehaviour:
   itemId: 241
   indentLevel: 1
   targetObject: {fileID: 962816627}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &214388667
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3249,7 +3249,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &214388668
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3262,7 +3262,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &214388669
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -3274,11 +3274,11 @@ MonoBehaviour:
   itemId: 238
   indentLevel: 1
   targetObject: {fileID: 1037557197}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &214388670
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 214388582}
@@ -6557,7 +6557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -85.860535, y: -298.87274}
+  scrollPos: {x: -77.64139, y: -255.03706}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6570,7 +6570,7 @@ MonoBehaviour:
     height: 1571.2144
   selectedBlock: {fileID: 367162555}
   selectedCommands:
-  - {fileID: 367162537}
+  - {fileID: 367162649}
   variables: []
   description: 
   stepPause: 0
@@ -7753,7 +7753,7 @@ MonoBehaviour:
   itemId: 221
   indentLevel: 1
   targetObject: {fileID: 302334128}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &367162646
 MonoBehaviour:
@@ -7819,7 +7819,7 @@ MonoBehaviour:
     stringVal: 
 --- !u!114 &367162649
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 367162506}
@@ -7831,7 +7831,7 @@ MonoBehaviour:
   itemId: 224
   indentLevel: 0
   targetObject: {fileID: 2095563216}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!1 &388310881 stripped
 GameObject:
@@ -12804,7 +12804,7 @@ MonoBehaviour:
   durationOLD: 0
 --- !u!114 &1507939794
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1507939779}
@@ -12816,7 +12816,7 @@ MonoBehaviour:
   itemId: 96
   indentLevel: 0
   targetObject: {fileID: 1049603267}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!1 &1531624042 stripped
 GameObject:
@@ -16161,7 +16161,7 @@ MonoBehaviour:
     width: 132
     height: 40
   itemId: 0
-  blockName: New Block
+  blockName: End of Beta
   description: 
   eventHandler: {fileID: 2025262711}
   commandList:
@@ -16210,7 +16210,7 @@ MonoBehaviour:
     height: 884
   selectedBlock: {fileID: 2025262712}
   selectedCommands:
-  - {fileID: 2025262725}
+  - {fileID: 2025262724}
   variables: []
   description: 
   stepPause: 0
@@ -16381,7 +16381,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &2025262723
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025262702}
@@ -16394,7 +16394,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &2025262724
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025262702}
@@ -16406,11 +16406,11 @@ MonoBehaviour:
   itemId: 96
   indentLevel: 1
   targetObject: {fileID: 56089499}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &2025262725
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025262702}
@@ -16534,7 +16534,6 @@ GameObject:
   - 114: {fileID: 2038129332}
   - 114: {fileID: 2038129334}
   - 114: {fileID: 2038129272}
-  - 114: {fileID: 2038129271}
   - 114: {fileID: 2038129270}
   - 114: {fileID: 2038129278}
   - 114: {fileID: 2038129277}
@@ -16553,17 +16552,14 @@ GameObject:
   - 114: {fileID: 2038129287}
   - 114: {fileID: 2038129286}
   - 114: {fileID: 2038129285}
-  - 114: {fileID: 2038129307}
-  - 114: {fileID: 2038129306}
-  - 114: {fileID: 2038129305}
   - 114: {fileID: 2038129304}
   - 114: {fileID: 2038129303}
   - 114: {fileID: 2038129302}
-  - 114: {fileID: 2038129301}
-  - 114: {fileID: 2038129300}
   - 114: {fileID: 2038129299}
   - 114: {fileID: 2038129298}
   - 114: {fileID: 2038129297}
+  - 114: {fileID: 2038129308}
+  - 114: {fileID: 2038129271}
   m_Layer: 0
   m_Name: SandPlanetNPC
   m_TagString: Untagged
@@ -16617,7 +16613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 68
+  itemId: 113
   indentLevel: 0
   variable: {fileID: 1299294596}
   setOperator: 0
@@ -16749,6 +16745,7 @@ MonoBehaviour:
   - {fileID: 2038129281}
   - {fileID: 2038129280}
   - {fileID: 2038129279}
+  - {fileID: 2038129308}
   - {fileID: 2038129284}
   - {fileID: 2038129293}
   - {fileID: 2038129282}
@@ -17244,7 +17241,7 @@ MonoBehaviour:
   itemId: 101
   indentLevel: 1
   targetObject: {fileID: 1576996208}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &2038129299
 MonoBehaviour:
@@ -17258,46 +17255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 100
-  indentLevel: 0
-  compareOperator: 0
-  variable: {fileID: 1927841258}
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
---- !u!114 &2038129300
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038129268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 99
-  indentLevel: 1
---- !u!114 &2038129301
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038129268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 97
   indentLevel: 0
   compareOperator: 0
   variable: {fileID: 1927841258}
@@ -17340,7 +17297,7 @@ MonoBehaviour:
   itemId: 95
   indentLevel: 1
   targetObject: {fileID: 1887635312}
-  methodName: CheckStatus
+  methodName: UpdateStatus
   delay: 0
 --- !u!114 &2038129304
 MonoBehaviour:
@@ -17369,7 +17326,7 @@ MonoBehaviour:
   stringData:
     stringRef: {fileID: 0}
     stringVal: 
---- !u!114 &2038129305
+--- !u!114 &2038129308
 MonoBehaviour:
   m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
@@ -17377,54 +17334,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2038129268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17a200dbd67304446a3019434503338a, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 93
-  indentLevel: 2
-  targetObject: {fileID: 1211878919}
-  methodName: CheckStatus
-  delay: 0
---- !u!114 &2038129306
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038129268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 92
+  itemId: 103
   indentLevel: 1
-  compareOperator: 0
-  variable: {fileID: 291197132}
-  booleanData:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  integerData:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  floatData:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  stringData:
-    stringRef: {fileID: 0}
-    stringVal: 
---- !u!114 &2038129307
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038129268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 91
-  indentLevel: 0
+  storyText: Wood can be harvested from trees.
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!114 &2038129320
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -17591,7 +17517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -9.341568, y: 105.925995}
+  scrollPos: {x: -273.62726, y: 191.64027}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 405
@@ -17602,11 +17528,9 @@ MonoBehaviour:
     y: -548.36145
     width: 2020.1145
     height: 1244.1168
-  selectedBlock: {fileID: 2038129276}
+  selectedBlock: {fileID: 2038129333}
   selectedCommands:
-  - {fileID: 2038129302}
-  - {fileID: 2038129304}
-  - {fileID: 2038129303}
+  - {fileID: 2038129271}
   variables: []
   description: 
   stepPause: 0
@@ -17658,11 +17582,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 2038129332}
   - {fileID: 2038129271}
-  - {fileID: 2038129301}
-  - {fileID: 2038129306}
-  - {fileID: 2038129305}
-  - {fileID: 2038129300}
-  - {fileID: 2038129307}
 --- !u!114 &2038129334
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18099,7 +18018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2025262713}
+  selectedFlowchart: {fileID: 214388586}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1

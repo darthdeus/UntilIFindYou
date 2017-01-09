@@ -7,10 +7,10 @@ using Assets.Scripts.Quests.SearchingForClues;
 
 public class Quest_SearchingForClues : Quest
 {
-    void TravelledBackHomeEvent(object sender, EventArgs e)
+    void TravelledBackToLavaEvent(object sender, EventArgs e)
     {
         Task TBTask = Tasks.Find(x => x is Task_TravelBack);
-        if (!TBTask.GetStatus() && ((DialingBook)sender).CurrentAddress == "iejca")
+        if (!TBTask.GetStatus() && ((DialingBook)sender).CurrentAddress == "kbfhn")
             TBTask.UpdateStatus();
     }
 
@@ -48,13 +48,13 @@ public class Quest_SearchingForClues : Quest
     }
     void AddOnQuestStartedEvents(object sender, EventArgs e)
     {
-        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += TravelledBackHomeEvent;
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += TravelledBackToLavaEvent;
         GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += DiscoveredNewPlanetEvent;
     }
 
     void AddOnQuestFinishedEvents(object sender, EventArgs e)
     {
-        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= TravelledBackHomeEvent;
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= TravelledBackToLavaEvent;
         GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= DiscoveredNewPlanetEvent;
     }
 }

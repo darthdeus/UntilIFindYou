@@ -15,7 +15,7 @@ namespace Assets.Scripts.Quests.SearchingForClues
 
         public override string GetDescription()
         {
-            return "Travel back to the well known planet.";
+            return "Travel back to the well known lava planet.";
         }
 
         public override string GetProgress()

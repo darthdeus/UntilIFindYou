@@ -55,7 +55,7 @@ public class Quest_YourFirstJourney : Quest
         {
             this.MakeCompletable();
             this.FinishQuest();
-            Fungus.Flowchart.BroadcastFungusMessage("YFJCompl");
+         //   Fungus.Flowchart.BroadcastFungusMessage("YFJCompl");
             Debug.Log("Active: " + this.isActive() + " Completed: " + this.isCompleted() + " Status: " + this.GetStatus() + " Finished Tasks: " + NumberOfFinishedTasks + " Total Tasks: " + TotalNumberOfTasks);
         }
     }

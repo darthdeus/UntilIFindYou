@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
+using Assets.Scripts.Quests.TheAdventureContinues;
 
-namespace Assets.Scripts {
+namespace Assets.Scripts
+{
     public class PlayerInventory : MonoBehaviour
     {
         public readonly HashSet<ToolType> Tools = new HashSet<ToolType>();
@@ -37,9 +39,12 @@ namespace Assets.Scripts {
 
         public int ResourceCount(ResourceType type)
         {
-            if (Resources.ContainsKey(type)) {
+            if (Resources.ContainsKey(type))
+            {
                 return Resources[type];
-            } else {
+            }
+            else
+            {
                 return 0;
             }
         }
@@ -59,16 +64,22 @@ namespace Assets.Scripts {
         public bool PickupResource(ResourceType resourceType, int amount)
         {
             var requiredTool = RequiredTools[resourceType];
-            if (HasTool(requiredTool)) {
-                if (Resources.ContainsKey(resourceType)) {
+            if (HasTool(requiredTool))
+            {
+                if (Resources.ContainsKey(resourceType))
+                {
                     Resources[resourceType] += amount;
-                } else {
+                }
+                else
+                {
                     Resources[resourceType] = amount;
                 }
                 if (OnResourcePickedUp != null)
                     OnResourcePickedUp(this, EventArgs.Empty);
                 return true;
-            } else {
+            }
+            else
+            {
                 return false;
             }
         }
@@ -86,17 +97,22 @@ namespace Assets.Scripts {
 
         public void TransferResourcesToVillage(ResourceType type, int count)
         {
-            if (!VillageResources.ContainsKey(type)) {
+            if (!VillageResources.ContainsKey(type))
+            {
                 VillageResources.Add(type, 0);
             }
 
-            if (!Resources.ContainsKey(type)) {
+            if (!Resources.ContainsKey(type))
+            {
                 Resources.Add(type, 0);
             }
 
-            if (Resources[type] < count) {
+            if (Resources[type] < count)
+            {
                 Debug.Log("Trying to transfer more resources than the player has.");
-            } else {
+            }
+            else
+            {
                 VillageResources[type] += count;
                 Resources[type] -= count;
             }
@@ -105,7 +121,7 @@ namespace Assets.Scripts {
         public bool IsVillageDefendable()
         {
             return VillageResources.ContainsKey(ResourceType.Wood) &&
-                   VillageResources[ResourceType.Wood] > DefenseWoodAmount;
+                   VillageResources[ResourceType.Wood] >= DefenseWoodAmount;
         }
 
         public void Start()
@@ -115,10 +131,14 @@ namespace Assets.Scripts {
 
         public void Update()
         {
-            if (IsVillageDefendable()) {
+            if (IsVillageDefendable())
+            {
                 _banditIcon.GetComponent<SpriteRenderer>().enabled = false;
                 BanditChart.SetBooleanVariable("isDefendable", true);
-            } else {
+                GameObject.Find("Task_GiveWood").GetComponent<Task_GiveWood>().UpdateStatus();
+            }
+            else
+            {
                 _banditIcon.GetComponent<SpriteRenderer>().enabled = true;
                 BanditChart.SetBooleanVariable("isDefendable", false);
             }
