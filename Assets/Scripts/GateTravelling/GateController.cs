@@ -26,7 +26,11 @@ public class GateController : MonoBehaviour
     {
         Debug.Log("Gate clicked");
         if (!_dialingBook._isVisible)
-            if (GetComponent<SpriteRenderer>().color.a != 0f)
+        {
+            if (GetComponent<SpriteRenderer>().color.a != 0.0f)
+            {
                 _dialingBook.Activate(_player, gameObject);
+            }
+        }
     }
 }

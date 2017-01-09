@@ -64,6 +64,11 @@ public class Rune : MonoBehaviour
     {
         if (_book.GetComponent<Renderer>().isVisible && gameObject.GetComponent<SpriteRenderer>().color.a != 0)
         {
+            if (RuneTranslation == "death")
+            {
+                Fungus.Flowchart.BroadcastFungusMessage("DeathTouched");
+            }
+
             if (_book.CurrentAddress.Length < 4)
             {
                 _sound.Play();

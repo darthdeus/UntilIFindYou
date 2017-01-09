@@ -161,6 +161,7 @@ namespace Assets
             {
                 r.enabled = visible;
             }
+            if (!visible) transform.position += new Vector3(2f, 2f, 2f);
         }
 
         private void ResetRunes()
