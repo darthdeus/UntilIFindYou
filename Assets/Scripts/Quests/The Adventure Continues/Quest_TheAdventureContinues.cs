@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
-using Assets.Scripts;
-using System.Collections;
 using System;
+using Assets.Scripts.Quests.TheAdventureContinues;
+using Assets;
 
 public class Quest_TheAdventureContinues : Quest
 {
-    void AxeCollectedEvent(object sender, EventArgs e)
+    void AddressFiguredEvent(object sender, EventArgs e)
     {
-        // Task AxeTask = Tasks.Find(x => x is Task_GetAxe);
-        // if (!AxeTask.GetStatus() && _inventory.HasTool(PlayerInventory.ToolType.Axe))
-        //     AxeTask.UpdateStatus();
+        Task AFTask = Tasks.Find(x => x is Task_FigureAddress);
+        if (!AFTask.GetStatus() && ((DialingBook)sender).CurrentAddress == "gbljm")
+            AFTask.UpdateStatus();
     }
     public override void UpdateStatus_DONOTCALL()
     {
@@ -21,7 +21,6 @@ public class Quest_TheAdventureContinues : Quest
         {
             this.MakeCompletable();
             this.FinishQuest();
-            Fungus.Flowchart.BroadcastFungusMessage("YFJCompl");
             Debug.Log("Active: " + this.isActive() + " Completed: " + this.isCompleted() + " Status: " + this.GetStatus() + " Finished Tasks: " + NumberOfFinishedTasks + " Total Tasks: " + TotalNumberOfTasks);
         }
     }
@@ -40,9 +39,11 @@ public class Quest_TheAdventureContinues : Quest
     }
     void AddOnQuestStartedEvents(object sender, EventArgs e)
     {
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim += AddressFiguredEvent;
     }
 
     void AddOnQuestFinishedEvents(object sender, EventArgs e)
     {
+        GameObject.Find("DialingBook").GetComponent<DialingBook>().OnTeleportAnim -= AddressFiguredEvent;
     }
 }

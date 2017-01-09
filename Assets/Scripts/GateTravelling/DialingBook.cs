@@ -14,7 +14,7 @@ namespace Assets
         private bool _readyToGo = false;
         private SpriteRenderer _spriteRenderer;
         private Animator _lightAnimator;
-        event EventHandler OnTeleportAnim;
+        public event EventHandler OnTeleportAnim;
 
         public bool _isVisible
         {
