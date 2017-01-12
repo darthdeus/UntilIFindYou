@@ -6558,7 +6558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -77.64139, y: -255.03706}
+  scrollPos: {x: -77.64139, y: -357.7768}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -6569,9 +6569,8 @@ MonoBehaviour:
     y: -576.56305
     width: 1922.7583
     height: 1571.2144
-  selectedBlock: {fileID: 367162555}
-  selectedCommands:
-  - {fileID: 367162649}
+  selectedBlock: {fileID: 367162633}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -14268,7 +14267,7 @@ MonoBehaviour:
     height: 892
   selectedBlock: {fileID: 1737955554}
   selectedCommands:
-  - {fileID: 1737955560}
+  - {fileID: 1737955574}
   variables:
   - {fileID: 1737955553}
   - {fileID: 1737955552}
@@ -14861,7 +14860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 71
   indentLevel: 0
-  storyText: 'The friendly planet has an address : fire may not be harmful'
+  storyText: 'Our friendly Lava Planet has an address : fire may not be harmful'
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -17924,7 +17923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -273.62726, y: 191.64027}
+  scrollPos: {x: 230.65851, y: 214.49742}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 405
@@ -17935,9 +17934,9 @@ MonoBehaviour:
     y: -548.36145
     width: 2020.1145
     height: 1244.1168
-  selectedBlock: {fileID: 2038129333}
+  selectedBlock: {fileID: 2038129321}
   selectedCommands:
-  - {fileID: 2038129271}
+  - {fileID: 2038129296}
   variables: []
   description: 
   stepPause: 0
@@ -18425,7 +18424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1507939781}
+  selectedFlowchart: {fileID: 1737955548}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
