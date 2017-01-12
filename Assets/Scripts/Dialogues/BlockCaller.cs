@@ -22,7 +22,7 @@ public class BlockCaller : MonoBehaviour
         {
             others.GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
-        
+
         foreach (var flowchart in FindObjectsOfType<Flowchart>())
             if (flowchart.name == "Intro")
                 isRunning = flowchart;
@@ -34,21 +34,23 @@ public class BlockCaller : MonoBehaviour
     // Sends message to all flowcharts and flowchart with the matching ReceivingMessage is invoked
     void OnMouseUp()
     {
-        if (others != null)
-            Destroy(others);
-        if (chat != null)
-            chat.SetActive(true);
-
-        if (transform.GetComponent<NPCMovement>() != null)
-            transform.GetComponent<NPCMovement>().canMove = false;
-
-        if (!IntroChart.GetBooleanVariable("isRunning"))
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerMovementController>().isCloseEnough(gameObject.transform.position))
         {
+            if (others != null)
+                Destroy(others);
+            if (chat != null)
+                chat.SetActive(true);
 
-            isRunning.SetBooleanVariable("isRunning", true);
-            IntroChart.SetBooleanVariable("isRunning", true);
-            Flowchart.BroadcastFungusMessage(sendingMessage);
+            if (transform.GetComponent<NPCMovement>() != null)
+                transform.GetComponent<NPCMovement>().canMove = false;
+
+            if (!IntroChart.GetBooleanVariable("isRunning"))
+            {
+
+                isRunning.SetBooleanVariable("isRunning", true);
+                IntroChart.SetBooleanVariable("isRunning", true);
+                Flowchart.BroadcastFungusMessage(sendingMessage);
+            }
         }
-
     }
 }

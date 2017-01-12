@@ -61,14 +61,18 @@ namespace Assets.Scripts.ResourceManagement
 
         void OnMouseUp()
         {
-            if (!hasWood) return;
-
-            if (_inventory.HasTool(PlayerInventory.ToolType.Axe) &&
-             _inventory.PickupResource(PlayerInventory.ResourceType.Wood, 1))
+            if (_player.GetComponent<PlayerMovementController>().isCloseEnough(gameObject.transform.position))
             {
-                _player.GetComponent<AudioSource>().PlayOneShot(chopSound);
-                capacity--;
+                if (!hasWood) return;
+
+                if (_inventory.HasTool(PlayerInventory.ToolType.Axe) &&
+                 _inventory.PickupResource(PlayerInventory.ResourceType.Wood, 1))
+                {
+                    _player.GetComponent<AudioSource>().PlayOneShot(chopSound);
+                    capacity--;
+                }
             }
+            else Debug.Log("Out of reach");
         }
     }
 }

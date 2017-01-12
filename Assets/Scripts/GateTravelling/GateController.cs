@@ -25,11 +25,14 @@ public class GateController : MonoBehaviour
     void OnMouseUp()
     {
         Debug.Log("Gate clicked");
-        if (!_dialingBook._isVisible)
+        if (_player.GetComponent<PlayerMovementController>().isCloseEnough(gameObject.transform.position))
         {
-            if (GetComponent<SpriteRenderer>().color.a != 0.0f)
+            if (!_dialingBook._isVisible)
             {
-                _dialingBook.Activate(_player, gameObject);
+                if (GetComponent<SpriteRenderer>().color.a != 0.0f)
+                {
+                    _dialingBook.Activate(_player, gameObject);
+                }
             }
         }
     }
