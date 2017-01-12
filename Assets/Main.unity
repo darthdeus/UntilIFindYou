@@ -617,6 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
+  minInteractDistance: 1
 --- !u!50 &166136621
 Rigidbody2D:
   serializedVersion: 2
@@ -8963,6 +8964,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 688444687}
   - 212: {fileID: 688444686}
+  - 60: {fileID: 688444690}
+  - 114: {fileID: 688444689}
+  - 114: {fileID: 688444688}
   m_Layer: 0
   m_Name: Clue
   m_TagString: Untagged
@@ -9016,6 +9020,299 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1507939780}
   m_RootOrder: 1
+--- !u!114 &688444688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688444685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7d415bdffaae948b29c3f74894334a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendingMessage: HideClue
+  IntroChart: {fileID: 1299294609}
+  others: {fileID: 0}
+  chat: {fileID: 0}
+--- !u!114 &688444689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688444685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0376d0c16f8aa4383509c368065cb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &688444690
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 688444685}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -6.0299997, y: -5.24}
+      - {x: -5.94, y: -5.22}
+      - {x: -5.81, y: -5.19}
+      - {x: -5.68, y: -5.17}
+      - {x: -5.6, y: -5.14}
+      - {x: -5.45, y: -5.1}
+      - {x: -5.19, y: -5.0299997}
+      - {x: -5.0099998, y: -4.98}
+      - {x: -4.5899997, y: -4.8599997}
+      - {x: -4.56, y: -4.85}
+      - {x: -4.42, y: -4.81}
+      - {x: -4.39, y: -4.7999997}
+      - {x: -4.3199997, y: -4.7799997}
+      - {x: -4.22, y: -4.75}
+      - {x: -4.0899997, y: -4.71}
+      - {x: -3.86, y: -4.64}
+      - {x: -3.73, y: -4.6}
+      - {x: -3.51, y: -4.5299997}
+      - {x: -3.4399998, y: -4.5099998}
+      - {x: -3.31, y: -4.47}
+      - {x: -3.1499999, y: -4.42}
+      - {x: -2.8899999, y: -4.3399997}
+      - {x: -2.57, y: -4.24}
+      - {x: -2.31, y: -4.15}
+      - {x: -2.2, y: -4.11}
+      - {x: -1.93, y: -4.0099998}
+      - {x: -1.73, y: -3.9399998}
+      - {x: -1.61, y: -3.8899999}
+      - {x: -1.29, y: -3.77}
+      - {x: -1.1, y: -3.6999998}
+      - {x: -0.84999996, y: -3.61}
+      - {x: -0.35, y: -3.4399998}
+      - {x: -0.01, y: -3.34}
+      - {x: 0.42999998, y: -3.23}
+      - {x: 0.7, y: -3.1799998}
+      - {x: 0.9, y: -3.1499999}
+      - {x: 1.31, y: -3.08}
+      - {x: 1.48, y: -3.05}
+      - {x: 1.5799999, y: -3.03}
+      - {x: 1.77, y: -2.99}
+      - {x: 1.81, y: -2.98}
+      - {x: 1.9599999, y: -2.95}
+      - {x: 2.04, y: -2.9299998}
+      - {x: 2.3799999, y: -2.84}
+      - {x: 2.53, y: -2.8}
+      - {x: 2.59, y: -2.78}
+      - {x: 2.75, y: -2.72}
+      - {x: 2.84, y: -2.6799998}
+      - {x: 2.95, y: -2.61}
+      - {x: 3.05, y: -2.54}
+      - {x: 3.23, y: -2.4099998}
+      - {x: 3.35, y: -2.32}
+      - {x: 3.5, y: -2.2}
+      - {x: 3.6899998, y: -2.06}
+      - {x: 3.85, y: -1.9499999}
+      - {x: 3.9599998, y: -1.87}
+      - {x: 4.16, y: -1.73}
+      - {x: 4.2799997, y: -1.65}
+      - {x: 4.36, y: -1.5999999}
+      - {x: 4.49, y: -1.53}
+      - {x: 4.5699997, y: -1.52}
+      - {x: 4.61, y: -1.4599999}
+      - {x: 4.62, y: -1.38}
+      - {x: 4.56, y: -1.27}
+      - {x: 4.36, y: -1.0799999}
+      - {x: 4.22, y: -0.95}
+      - {x: 4.04, y: -0.78999996}
+      - {x: 3.7099998, y: -0.5}
+      - {x: 3.6999998, y: -0.45999998}
+      - {x: 3.6399999, y: -0.32999998}
+      - {x: 3.51, y: -0.03}
+      - {x: 3.4099998, y: 0.19999999}
+      - {x: 3.37, y: 0.29}
+      - {x: 3.27, y: 0.52}
+      - {x: 3.1299999, y: 0.84}
+      - {x: 3.1, y: 0.91999996}
+      - {x: 3.1799998, y: 0.89}
+      - {x: 3.37, y: 0.82}
+      - {x: 3.5, y: 0.77}
+      - {x: 3.83, y: 0.64}
+      - {x: 4.13, y: 0.52}
+      - {x: 4.4, y: 0.41}
+      - {x: 4.83, y: 0.22999999}
+      - {x: 4.95, y: 0.17999999}
+      - {x: 5.02, y: 0.16}
+      - {x: 5.12, y: 0.14}
+      - {x: 5.29, y: 0.12}
+      - {x: 5.47, y: 0.12}
+      - {x: 5.54, y: 0.13}
+      - {x: 5.6099997, y: 0.14999999}
+      - {x: 5.68, y: 0.17999999}
+      - {x: 5.73, y: 0.22999999}
+      - {x: 5.7599998, y: 0.28}
+      - {x: 5.8199997, y: 0.51}
+      - {x: 5.9, y: 0.83}
+      - {x: 5.9, y: 0.88}
+      - {x: 5.85, y: 1.05}
+      - {x: 5.8399997, y: 1.12}
+      - {x: 5.8399997, y: 1.1999999}
+      - {x: 5.8599997, y: 1.31}
+      - {x: 5.92, y: 1.39}
+      - {x: 5.98, y: 1.52}
+      - {x: 6, y: 1.5699999}
+      - {x: 6.04, y: 1.6899999}
+      - {x: 6.06, y: 1.76}
+      - {x: 6.0899997, y: 1.9}
+      - {x: 6.1, y: 1.9699999}
+      - {x: 6.25, y: 2.1699998}
+      - {x: 6.3199997, y: 2.28}
+      - {x: 6.33, y: 2.34}
+      - {x: 6.33, y: 2.57}
+      - {x: 6.3399997, y: 2.58}
+      - {x: 6.3599997, y: 2.8899999}
+      - {x: 6.37, y: 2.8999999}
+      - {x: 6.3999996, y: 3.09}
+      - {x: 6.44, y: 3.27}
+      - {x: 6.46, y: 3.33}
+      - {x: 6.52, y: 3.5}
+      - {x: 6.56, y: 3.57}
+      - {x: 6.67, y: 3.74}
+      - {x: 6.74, y: 3.86}
+      - {x: 6.83, y: 4.0499997}
+      - {x: 6.8599997, y: 4.12}
+      - {x: 6.8999996, y: 4.25}
+      - {x: 6.91, y: 4.29}
+      - {x: 6.91, y: 4.67}
+      - {x: 6.85, y: 4.7999997}
+      - {x: 6.75, y: 4.93}
+      - {x: 6.69, y: 4.97}
+      - {x: 6.64, y: 5.0099998}
+      - {x: 6.56, y: 5.0499997}
+      - {x: 6.47, y: 5.0899997}
+      - {x: 6.42, y: 5.1099997}
+      - {x: 6.2999997, y: 5.16}
+      - {x: 6.19, y: 5.21}
+      - {x: 6.06, y: 5.22}
+      - {x: 5.96, y: 5.23}
+      - {x: 5.8399997, y: 5.24}
+      - {x: 5.69, y: 5.25}
+      - {x: 5.5, y: 5.2599998}
+      - {x: 5.2799997, y: 5.2599998}
+      - {x: 5.27, y: 5.27}
+      - {x: 4.98, y: 5.27}
+      - {x: 4.97, y: 5.2799997}
+      - {x: 4.6, y: 5.2799997}
+      - {x: 4.5899997, y: 5.29}
+      - {x: 4.08, y: 5.29}
+      - {x: 4.0699997, y: 5.2999997}
+      - {x: -3.83, y: 5.2999997}
+      - {x: -3.84, y: 5.29}
+      - {x: -4.93, y: 5.29}
+      - {x: -4.94, y: 5.2799997}
+      - {x: -5.72, y: 5.2799997}
+      - {x: -5.74, y: 5.27}
+      - {x: -5.87, y: 5}
+      - {x: -5.94, y: 4.8399997}
+      - {x: -6.02, y: 4.63}
+      - {x: -6.0699997, y: 4.48}
+      - {x: -6.1, y: 4.37}
+      - {x: -6.1299996, y: 4.25}
+      - {x: -6.15, y: 4.15}
+      - {x: -6.17, y: 4.02}
+      - {x: -6.18, y: 3.9099998}
+      - {x: -6.18, y: 3.6799998}
+      - {x: -6.17, y: 3.49}
+      - {x: -6.18, y: 3.48}
+      - {x: -6.22, y: 3.1999998}
+      - {x: -6.16, y: 3.12}
+      - {x: -6.12, y: 3.12}
+      - {x: -5.95, y: 3.11}
+      - {x: -5.72, y: 3.08}
+      - {x: -5.52, y: 3.05}
+      - {x: -5.2999997, y: 3.02}
+      - {x: -5.15, y: 3.01}
+      - {x: -5.13, y: 2.99}
+      - {x: -5.21, y: 2.72}
+      - {x: -5.24, y: 2.62}
+      - {x: -5.3199997, y: 2.34}
+      - {x: -5.35, y: 2.24}
+      - {x: -5.38, y: 2.1299999}
+      - {x: -5.42, y: 1.99}
+      - {x: -5.49, y: 1.74}
+      - {x: -5.58, y: 1.41}
+      - {x: -5.62, y: 1.26}
+      - {x: -5.7799997, y: 0.62}
+      - {x: -5.83, y: 0.39}
+      - {x: -5.83, y: 0.22}
+      - {x: -5.8199997, y: 0.19}
+      - {x: -5.79, y: 0.12}
+      - {x: -5.7, y: 0.04}
+      - {x: -5.65, y: 0.02}
+      - {x: -5.58, y: 0}
+      - {x: -5.5099998, y: -0.01}
+      - {x: -5.35, y: -0.01}
+      - {x: -5.25, y: 0}
+      - {x: -5.18, y: 0.01}
+      - {x: -4.87, y: 0.06}
+      - {x: -4.67, y: 0.12}
+      - {x: -4.43, y: 0.16}
+      - {x: -4.42, y: 0.14}
+      - {x: -4.14, y: -0.02}
+      - {x: -3.97, y: -0.14}
+      - {x: -3.84, y: -0.22999999}
+      - {x: -3.6999998, y: -0.35}
+      - {x: -3.6999998, y: -0.35999998}
+      - {x: -3.6399999, y: -0.45999998}
+      - {x: -3.6299999, y: -0.51}
+      - {x: -3.6599998, y: -0.55}
+      - {x: -3.73, y: -0.57}
+      - {x: -3.77, y: -0.58}
+      - {x: -3.8899999, y: -0.59}
+      - {x: -3.9299998, y: -0.57}
+      - {x: -3.97, y: -0.57}
+      - {x: -4.14, y: -0.71999997}
+      - {x: -4.3399997, y: -0.88}
+      - {x: -4.49, y: -1.01}
+      - {x: -4.74, y: -1.1999999}
+      - {x: -4.88, y: -1.3}
+      - {x: -5.02, y: -1.39}
+      - {x: -5.2, y: -1.49}
+      - {x: -5.31, y: -1.55}
+      - {x: -5.44, y: -1.5999999}
+      - {x: -5.5299997, y: -1.62}
+      - {x: -5.6099997, y: -1.63}
+      - {x: -5.7, y: -1.65}
+      - {x: -5.83, y: -1.6899999}
+      - {x: -5.98, y: -1.76}
+      - {x: -6.04, y: -1.8}
+      - {x: -6.21, y: -1.9699999}
+      - {x: -6.27, y: -2.05}
+      - {x: -6.33, y: -2.18}
+      - {x: -6.35, y: -2.23}
+      - {x: -6.37, y: -2.3}
+      - {x: -6.39, y: -2.4099998}
+      - {x: -6.3999996, y: -2.51}
+      - {x: -6.3999996, y: -2.73}
+      - {x: -6.41, y: -2.74}
+      - {x: -6.44, y: -2.9299998}
+      - {x: -6.5, y: -3.1999998}
+      - {x: -6.54, y: -3.35}
+      - {x: -6.5899997, y: -3.54}
+      - {x: -6.72, y: -4.02}
+      - {x: -6.7799997, y: -4.24}
+      - {x: -6.7999997, y: -4.3199997}
+      - {x: -6.8799996, y: -4.66}
+      - {x: -6.91, y: -4.81}
+      - {x: -6.91, y: -5.19}
+      - {x: -6.89, y: -5.24}
+      - {x: -6.85, y: -5.2799997}
+      - {x: -6.79, y: -5.2999997}
+      - {x: -6.39, y: -5.2999997}
+      - {x: -6.25, y: -5.2799997}
+      - {x: -6.2, y: -5.27}
 --- !u!1 &718557990
 GameObject:
   m_ObjectHideFlags: 0
@@ -12540,7 +12837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 0, y: 1}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -12549,12 +12846,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: -354
     y: -350
-    width: 1083
+    width: 1245
     height: 899
-  selectedBlock: {fileID: 1507939783}
-  selectedCommands:
-  - {fileID: 1507939794}
-  variables: []
+  selectedBlock: {fileID: 1507939792}
+  selectedCommands: []
+  variables:
+  - {fileID: 1507939784}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -12606,15 +12903,16 @@ MonoBehaviour:
     width: 120
     height: 40
   itemId: 0
-  blockName: Clue
+  blockName: ShowClue
   description: 
   eventHandler: {fileID: 1507939785}
   commandList:
   - {fileID: 1507939794}
-  - {fileID: 1507939784}
+  - {fileID: 1507939802}
+  - {fileID: 1507939801}
+  - {fileID: 1507939800}
+  - {fileID: 1507939799}
   - {fileID: 1507939782}
-  - {fileID: 1507939793}
-  - {fileID: 1507939792}
   - {fileID: 1507939791}
 --- !u!114 &1507939784
 MonoBehaviour:
@@ -12624,23 +12922,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507939779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  storyText: You found something in the tent!
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  scope: 0
+  key: ClueSeen
+  value: 0
 --- !u!114 &1507939785
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12770,21 +13057,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507939779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 7
-  indentLevel: 0
-  spriteRenderer: {fileID: 688444686}
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 1
-  _targetColor:
-    colorRef: {fileID: 0}
-    colorVal: {r: 1, g: 1, b: 1, a: 0}
-  waitUntilFinished: 1
-  durationOLD: 0
-  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+  nodeRect:
+    serializedVersion: 2
+    x: 370
+    y: 88
+    width: 120
+    height: 40
+  itemId: 101
+  blockName: HideClue
+  description: 
+  eventHandler: {fileID: 1507939798}
+  commandList:
+  - {fileID: 1507939797}
+  - {fileID: 1507939793}
 --- !u!114 &1507939793
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12793,15 +13081,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507939779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 6
+  itemId: 110
   indentLevel: 0
-  _duration:
+  variable: {fileID: 1299294596}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
     floatRef: {fileID: 0}
-    floatVal: 3
-  durationOLD: 0
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!114 &1507939794
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12818,6 +13116,134 @@ MonoBehaviour:
   targetObject: {fileID: 1049603267}
   methodName: UpdateStatus
   delay: 0
+--- !u!114 &1507939797
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 109
+  indentLevel: 0
+  spriteRenderer: {fileID: 688444686}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1507939798
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1507939792}
+  message: HideClue
+--- !u!114 &1507939799
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  indentLevel: 0
+--- !u!114 &1507939800
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb77d0ce495044f6e9feb91b31798e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  indentLevel: 1
+  variable: {fileID: 1507939784}
+  setOperator: 0
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &1507939801
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  indentLevel: 1
+  storyText: You found something in the tent!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &1507939802
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507939779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 1507939784}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1 &1531624042 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011336387506, guid: 957e8ab3b5f23ca44ae5f68e4c680977,
@@ -17999,7 +18425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2025262713}
+  selectedFlowchart: {fileID: 1507939781}
 --- !u!4 &2074272892
 Transform:
   m_ObjectHideFlags: 1
