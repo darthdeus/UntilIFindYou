@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovementController : MonoBehaviour
@@ -12,8 +13,11 @@ public class PlayerMovementController : MonoBehaviour
     private bool playerMoving;
     private Vector2 lastMove;
 
+    public Text OutOfRangeText;
+
     void Start()
     {
+        OutOfRangeText.CrossFadeAlpha(0f, 0f, true);
         _rigidbody2D = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
@@ -26,11 +30,19 @@ public class PlayerMovementController : MonoBehaviour
             return true;
         else
         {
+            StartCoroutine(ShowAndHideOoRText());
             Debug.Log("Interacted GObject is out of reach:");
             Debug.Log("minInteractDistance: " + minInteractDistance);
             Debug.Log("InteractedObjectDistance: " + MagnitudeOf3DVectorIn2D);
             return false;
         }
+    }
+
+    IEnumerator ShowAndHideOoRText()
+    {
+        OutOfRangeText.CrossFadeAlpha(1f, 0.5f, true);
+        yield return new WaitForSeconds(1.5f);
+        OutOfRangeText.CrossFadeAlpha(0f, 0.5f, true);
     }
 
     void Update()
