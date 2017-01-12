@@ -610,9 +610,9 @@ MonoBehaviour:
     y: -350
     width: 1271
     height: 890
-  selectedBlock: {fileID: 1522726222}
+  selectedBlock: {fileID: 1522726223}
   selectedCommands:
-  - {fileID: 1522726225}
+  - {fileID: 1522726248}
   variables: []
   description: 
   stepPause: 0
@@ -1251,13 +1251,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 32
   indentLevel: 0
-  musicClip: {fileID: 8300000, guid: 363d4aa6a70a34db7bfaf8258db02c8d, type: 3}
+  musicClip: {fileID: 8300000, guid: 4d13276b4af52a94797cf1cf6ef3f171, type: 3}
   atTime: 0
   loop: 1
   fadeDuration: 1
 --- !u!114 &1522726249
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522726218}
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1522726250
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522726218}
