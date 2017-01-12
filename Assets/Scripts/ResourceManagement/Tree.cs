@@ -36,7 +36,8 @@ namespace Assets.Scripts.ResourceManagement
             list.Remove(_bottomRenderer);
             childRenderers = list.ToArray();
 
-            if (childRenderers.Length != 1) {
+            if (childRenderers.Length != 1)
+            {
                 Debug.LogError("Tree script only works when there's one child with a single sprite renderer, got " + childRenderers.Length + " on " +
                                gameObject.name);
             }
@@ -46,10 +47,13 @@ namespace Assets.Scripts.ResourceManagement
 
         void Update()
         {
-            if (hasWood) {
+            if (hasWood)
+            {
                 _topRenderer.enabled = true;
                 _bottomRenderer.sprite = bottomFullSprite;
-            } else {
+            }
+            else
+            {
                 _topRenderer.enabled = false;
                 _bottomRenderer.sprite = bottomEmptySprite;
             }
@@ -57,12 +61,18 @@ namespace Assets.Scripts.ResourceManagement
 
         void OnMouseUp()
         {
-            if (!hasWood) return;
+            if (_player.GetComponent<PlayerMovementController>().isCloseEnough(gameObject.transform.position))
+            {
+                if (!hasWood) return;
 
-            if (_inventory.PickupResource(PlayerInventory.ResourceType.Wood, 1)) {
-                _player.GetComponent<AudioSource>().PlayOneShot(chopSound);
-                capacity--;
+                if (_inventory.HasTool(PlayerInventory.ToolType.Axe) &&
+                 _inventory.PickupResource(PlayerInventory.ResourceType.Wood, 1))
+                {
+                    _player.GetComponent<AudioSource>().PlayOneShot(chopSound);
+                    capacity--;
+                }
             }
+            else Debug.Log("Out of reach");
         }
     }
 }

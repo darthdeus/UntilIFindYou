@@ -22,7 +22,10 @@ public class GateClicked : MonoBehaviour
     /// </summary>
     void OnMouseUp()
     {
-        if (!AssociatedTask.isCompleted && AssociatedQuest.isActive())
-            AssociatedTask.UpdateStatus();
+        if (GameObject.FindWithTag("Player").GetComponent<PlayerMovementController>().isCloseEnough(gameObject.transform.position))
+        {
+            if (!AssociatedTask.isCompleted && AssociatedQuest.isActive())
+                AssociatedTask.UpdateStatus();
+        }
     }
 }

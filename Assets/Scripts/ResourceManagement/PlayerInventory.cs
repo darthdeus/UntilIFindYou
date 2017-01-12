@@ -64,7 +64,7 @@ namespace Assets.Scripts
         public bool PickupResource(ResourceType resourceType, int amount)
         {
             var requiredTool = RequiredTools[resourceType];
-            if (HasTool(requiredTool))
+            if (requiredTool == ToolType.Axe || HasTool(requiredTool))
             {
                 if (Resources.ContainsKey(resourceType))
                 {
