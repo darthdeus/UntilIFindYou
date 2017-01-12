@@ -36,4 +36,9 @@ public class GateController : MonoBehaviour
             }
         }
     }
+
+    public void Interact()
+    {
+        OnMouseUp();
+    }
 }

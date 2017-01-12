@@ -53,4 +53,8 @@ public class BlockCaller : MonoBehaviour
             }
         }
     }
+    public void Interact()
+    {
+        OnMouseUp();
+    }
 }

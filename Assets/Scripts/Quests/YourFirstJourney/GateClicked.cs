@@ -28,4 +28,9 @@ public class GateClicked : MonoBehaviour
                 AssociatedTask.UpdateStatus();
         }
     }
+
+    public void Interact()
+    {
+        OnMouseUp();
+    }
 }

@@ -74,5 +74,10 @@ namespace Assets.Scripts.ResourceManagement
             }
             else Debug.Log("Out of reach");
         }
+
+        public void Interact()
+        {
+            OnMouseUp();
+        }
     }
 }
