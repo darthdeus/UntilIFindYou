@@ -51,6 +51,9 @@ public class QuestTextController : MonoBehaviour
         taskText.text = "";
 
         _tweener = new QuestTextTweener(questText, taskText, GameObject.FindWithTag("Player"), DefaultQuestPosition, DefaultTaskPosition);
+
+        questText.transform.position = DefaultQuestPosition.transform.position;
+        taskText.transform.position = DefaultTaskPosition.transform.position;
     }
 
     // Adds all basic events to a quest //

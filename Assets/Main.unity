@@ -664,6 +664,7 @@ GameObject:
   - 114: {fileID: 166136612}
   - 114: {fileID: 166136613}
   - 82: {fileID: 166136624}
+  - 114: {fileID: 166136625}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -807,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  minInteractDistance: 1
+  minInteractDistance: 1.5
   OutOfRangeText: {fileID: 630331677}
 --- !u!50 &166136621
 Rigidbody2D:
@@ -954,6 +955,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &166136625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166136611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49aadff6fa2c7d84097d3c4700c24767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactableObject: {fileID: 0}
 --- !u!1 &170562980
 GameObject:
   m_ObjectHideFlags: 0
@@ -9501,7 +9514,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: c4fe4b051cc1bfd40acf0caeaf17053a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb3ef2235976a7c419153064c5e618bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12237,7 +12250,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9a716d34d13cee7468dd8c73b96b28d3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97b791aa178a6be408f0ea18f82c56d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13901,7 +13914,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 97b791aa178a6be408f0ea18f82c56d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4fe4b051cc1bfd40acf0caeaf17053a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14569,7 +14582,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 51717afaf769e4b409e4242fb8eac834, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a716d34d13cee7468dd8c73b96b28d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15305,7 +15318,7 @@ MonoBehaviour:
     y: -350
     width: 1245
     height: 899
-  selectedBlock: {fileID: 1507939792}
+  selectedBlock: {fileID: 0}
   selectedCommands: []
   variables:
   - {fileID: 1507939784}

@@ -28,10 +28,10 @@ public class DeathSolutionCheck : MonoBehaviour
     {
         if (GetComponent<SpriteRenderer>().color.a != 0f)
         {
-            if (Digit1.sprite.name == "bg7" &&
-               Digit2.sprite.name == "bg5" &&
-               Digit3.sprite.name == "bg5" &&
-               Digit4.sprite.name == "bg4")
+            if (Digit1.sprite.name == "bg8" &&
+               Digit2.sprite.name == "bg2" &&
+               Digit3.sprite.name == "bg3" &&
+               Digit4.sprite.name == "bg1")
             {
                 Correct();
             }
